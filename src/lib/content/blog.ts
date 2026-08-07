@@ -761,6 +761,45 @@ const fullPosts: Record<string, BlogPost> = {
     ],
   },
 
+  "give-your-dog-a-vacation-too-this-labor-day-weekend-at-planet-pooch-pet-resort": {
+    slug: "give-your-dog-a-vacation-too-this-labor-day-weekend-at-planet-pooch-pet-resort",
+    title: "Heading Out for Labor Day? Here's How to Give Your Dog a Getaway of Their Own",
+    metaTitle: "Labor Day Dog Boarding at Planet Pooch | Planet Pooch Blog",
+    metaDescription:
+      "Heading out for Labor Day weekend? Give your dog a getaway of their own with boarding at Planet Pooch — book early, because spots fill up fast.",
+    hasFullContent: true,
+    intro:
+      "Labor Day weekend is the last big hurrah of summer — a long weekend for barbecues, lake trips, road trips, and one final soak of sunshine before the calendar tips toward fall. It's the perfect time to get away. The only hitch? That hopeful face by the front door, wondering if they're coming too. Sometimes the answer is yes. But when your plans involve a packed car, a busy hotel, or a friend's place that isn't exactly dog-friendly, the kindest thing you can do is give your pup a vacation of their very own. That's where we come in.",
+    sections: [
+      {
+        heading: "A home away from home",
+        paragraphs: [
+          "Boarding with us isn't about tucking your dog away until you get back — it's about giving them a weekend they'll actually enjoy. From the moment they trot through our doors, they're greeted by people who genuinely love dogs and know how to make a nervous newcomer feel right at ease. Comfy resting spots, plenty of fresh water, familiar routines, and lots of belly rubs: this is the good life, tail-wag guaranteed.",
+          "Your dog gets room to stretch their legs, sniff out new friends, and burn off that summer energy with supervised playtime. And when the day winds down, they'll curl up somewhere cozy and safe — no fireworks, no chaos, just a peaceful night's sleep.",
+        ],
+      },
+      {
+        heading: "Why book ahead for the holiday",
+        paragraphs: [
+          "Labor Day is one of the busiest boarding weekends of the year, and spots fill up fast. Reserving early means you get the dates you want without the last-minute scramble — and you get to start your own weekend without a worry in the world.",
+          "A few things that make drop-off smooth and stress-free:",
+        ],
+        bullets: [
+          "Bring the familiar — a favorite toy, blanket, or their usual food helps your dog settle in quickly.",
+          "Keep vaccines current — it keeps every four-legged guest happy and healthy, so have those records handy.",
+          "Share the little details — loves fetch? Shy around big dogs? Needs meds at dinner? Tell us everything, because the more we know, the better we care.",
+        ],
+      },
+      {
+        heading: "Go enjoy your weekend — we've got the rest",
+        paragraphs: [
+          "The best part of boarding your dog with us is the peace of mind. While you're firing up the grill or watching the sun set over the water, you can relax knowing your best friend is in caring, capable hands — being fed, played with, and fussed over like family. Because that's exactly how we see them.",
+          "Ready to book your dog's Labor Day staycation? Reach out today to reserve their spot — the calendar is filling up fast, and we'd love to have them.",
+        ],
+      },
+    ],
+  },
+
   "training-puppies-and-adult-dogs-why-its-important-at-every-age": {
     slug: "training-puppies-and-adult-dogs-why-its-important-at-every-age",
     title: "Training Puppies and Adult Dogs: Why It's Important at Every Age",
@@ -823,7 +862,6 @@ const stubSlugs: ReadonlyArray<string> = [
   "does-your-dog-have-separation-anxiety-heres-how-mobile-grooming-can-help",
   "our-new-6-week-enrichment-program",
   "weve-partnered-with-three-dog-bakery-for-a-special-giveaway",
-  "give-your-dog-a-vacation-too-this-labor-day-weekend-at-planet-pooch-pet-resort",
   "is-your-pup-bouncing-off-the-walls-while-youre-at-work",
   "its-bark-to-school-season-at-planet-pooch",
   "a-longer-happier-life-for-your-dog-starts-here",

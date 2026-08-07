@@ -16,9 +16,9 @@ import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 
 const featuredBlogSlugs = [
+  "give-your-dog-a-vacation-too-this-labor-day-weekend-at-planet-pooch-pet-resort",
   "how-often-should-you-get-your-dog-groomed",
   "is-it-bad-to-shave-my-goldendoodle-what-you-need-to-know",
-  "why-mobile-grooming-is-good-for-your-pet",
 ] as const;
 
 const featuredBlogPosts = featuredBlogSlugs.map((slug) => blogPosts[slug]);
