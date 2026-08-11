@@ -800,6 +800,55 @@ const fullPosts: Record<string, BlogPost> = {
       },
     ],
   },
+  "book-now-dont-let-labor-day-weekend-sneak-up-on-you": {
+    slug: "book-now-dont-let-labor-day-weekend-sneak-up-on-you",
+    title: "Book Now: Don't Let Labor Day Weekend Sneak Up on You",
+    metaTitle: "Book Labor Day Weekend Dog Boarding Early | Planet Pooch Blog",
+    metaDescription:
+      "Labor Day is one of the busiest boarding weekends of the year and spots fill up fast. Here's why boarding beats the alternatives — and how to prepare for drop-off.",
+    hasFullContent: true,
+    intro:
+      "Summer always seems to end faster than we expect. One minute you're planning beach days, and the next you're staring down Labor Day weekend with a road trip on the calendar and no plan for your pup. If that sounds familiar, you're not alone — and now is the time to get ahead of it.",
+    sections: [
+      {
+        heading: "The last big getaway of the season",
+        paragraphs: [
+          "Labor Day is one of the busiest travel weekends of the year, which means it's also one of our busiest boarding weekends. Families squeeze in that final lake trip, cabin stay, or long drive to see relatives before school schedules take over. It's the perfect send-off to summer — as long as your dog has a comfortable, safe place to stay while you're away.",
+          "Here's the catch: those spots fill up fast. Every year we have wonderful clients call us the week before the holiday, hoping to snag a kennel, only to find we're fully booked. We hate turning anyone away, so consider this your friendly nudge to reserve early.",
+        ],
+      },
+      {
+        heading: "Why boarding beats the alternatives",
+        paragraphs: [
+          "Leaving your dog with a boarding facility isn't just convenient — it's often the best thing for them. Instead of being alone at home for long stretches or shuffled between friends who mean well but have busy lives, your dog gets:",
+        ],
+        bullets: [
+          "Round-the-clock supervision from people who know how to spot when something's off",
+          "A consistent routine with regular meals, potty breaks, and rest",
+          "Plenty of playtime and social time to burn off that end-of-summer energy",
+          "Peace of mind for you, so you can actually relax on your trip",
+        ],
+      },
+      {
+        paragraphs: [
+          "Many dogs come home from boarding happily tired and a little more social than when they left. It turns out a weekend of new friends and supervised play is pretty good for them, too.",
+        ],
+      },
+      {
+        heading: "A few tips before you go",
+        paragraphs: [
+          "To make drop-off smooth, make sure your dog's vaccinations are current — we'll need those records on file. Pack their regular food to avoid an upset stomach, and feel free to bring a favorite toy or blanket that smells like home. And if your pup has never boarded before, ask us about a short trial stay so their first real visit feels familiar.",
+        ],
+      },
+      {
+        heading: "Reserve your spot today",
+        paragraphs: [
+          "Summer's not over yet, but the calendar moves quickly. Give your dog a fun, safe staycation while you enjoy your last big weekend — and give yourself the gift of not scrambling at the last minute.",
+          "Call us or book online today to lock in Labor Day boarding before we fill up. We can't wait to spoil your best friend one more time before the season ends.",
+        ],
+      },
+    ],
+  },
 };
 
 const stubSlugs: ReadonlyArray<string> = [
