@@ -849,6 +849,51 @@ const fullPosts: Record<string, BlogPost> = {
       },
     ],
   },
+
+  "the-last-weeks-of-summer-booking-boarding-before-the-rush": {
+    slug: "the-last-weeks-of-summer-booking-boarding-before-the-rush",
+    title: "The Last Weeks of Summer: Booking Boarding Before the Rush",
+    metaTitle: "Book Late-Summer Dog Boarding Before It Fills | Planet Pooch Blog",
+    metaDescription:
+      "The last two weeks of summer are our busiest stretch of the year. Here's why late-August boarding fills up fast, plus a short pre-boarding checklist.",
+    hasFullContent: true,
+    intro:
+      "Labor Day weekend is closer than it feels. If there's one more trip on your calendar before the school year swallows everything — a long weekend at the lake, a family wedding, a final drive to the coast — now is the moment to sort out where your dog is staying.",
+    sections: [
+      {
+        heading: "Why late August fills up fast",
+        paragraphs: [
+          "The last two weeks of summer are the busiest stretch of our year, and it isn't close. Everyone is squeezing in the same trip at the same time, which means the runs and suites that sit open in February are spoken for by mid-August. Holiday weekends book out first, and the requests we hate turning down most are the ones that come in three days ahead.",
+          "If you already know your dates, get them on the calendar. If you think you might travel, reserve anyway — it's far easier to cancel a spot than to find one.",
+        ],
+      },
+      {
+        heading: "A short pre-boarding checklist",
+        paragraphs: [
+          "A little prep makes the stay smoother for everyone, especially your dog.",
+        ],
+        bullets: [
+          "Check vaccine records now, not the morning of drop-off — rabies, distemper, and Bordetella all need to be current, and vet offices book up in late summer too. Bordetella in particular can take a few days to take effect.",
+          "Bring their own food — sudden diet changes are the number one cause of an upset stomach away from home. Pre-portion meals into labeled bags if you can.",
+          "Send something that smells like home — a worn t-shirt or a familiar blanket does more for a nervous dog than any toy.",
+          "Write down the details — medications, quirks, the command that actually works, what they do during thunderstorms. There is no such thing as too much information.",
+          "Keep drop-off short — a long, emotional goodbye tells your dog something is wrong. A quick handoff and a confident exit works better than you'd expect.",
+        ],
+      },
+      {
+        heading: "Thinking past the trip",
+        paragraphs: [
+          "Once fall hits, the rhythm at home changes — kids back at school, longer workdays, less midday attention. A lot of families use the end of summer as a natural moment to add a regular daycare day or two. If that's on your mind, mention it at pickup and we'll talk through what makes sense for your dog.",
+        ],
+      },
+      {
+        heading: "Ready when you are",
+        paragraphs: [
+          "Give us a call or book online to lock in your dates. We'd love to have your pup for one more summer stay before the leaves start turning.",
+        ],
+      },
+    ],
+  },
 };
 
 const stubSlugs: ReadonlyArray<string> = [
