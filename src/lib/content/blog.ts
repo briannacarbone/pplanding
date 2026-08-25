@@ -894,6 +894,53 @@ const fullPosts: Record<string, BlogPost> = {
       },
     ],
   },
+
+  "the-science-of-social-what-daycare-really-does-for-your-dog": {
+    slug: "the-science-of-social-what-daycare-really-does-for-your-dog",
+    title: "The Science of Social: What Daycare Really Does for Your Dog",
+    metaTitle: "The Science of Social: What Dog Daycare Really Does | Planet Pooch Blog",
+    metaDescription:
+      "Socialization is one of the most studied — and most misunderstood — parts of dog behavior. Here's what the research says, and where daycare fits in.",
+    hasFullContent: true,
+    intro:
+      "If you've ever watched your dog light up at the sight of another dog — or freeze at the sight of one — you've seen canine socialization at work. It's one of the most studied and most misunderstood parts of dog behavior, and it's the reason daycare is more than just a place to burn off energy.",
+    sections: [
+      {
+        heading: "Socialization starts earlier than most people think",
+        paragraphs: [
+          "The American Veterinary Society of Animal Behavior identifies the first three months of life as the primary window for socialization — a stretch when, in their words, “sociability outweighs fear.” Puppies in this period are wired to approach new things rather than avoid them. What they meet, they tend to accept for life.",
+          "That window matters more than most new owners realize. AVSAB notes that behavioral issues, not infectious diseases, are the leading cause of death in dogs under three years old, and that behavior problems are the number one reason dogs are surrendered to shelters. That's why they recommend puppies start socialization classes as early as 7–8 weeks, after one set of vaccines.",
+        ],
+      },
+      {
+        heading: "But it doesn't end there",
+        paragraphs: [
+          "Here's the part that surprises people: socialization isn't a box you check at four months. Dogs move through adolescence roughly between six and eighteen months, and it's common for a confident puppy to become a suddenly suspicious teenager. Social skills, like any skill, fade without practice.",
+          "This is where regular group play earns its keep. A dog who interacts with a rotating cast of other dogs each week keeps rehearsing the vocabulary of dog communication — the play bow, the pause, the self-interrupt, the graceful exit. Those signals are how dogs prevent conflict, and they get rusty in isolation.",
+        ],
+      },
+      {
+        heading: "Tired isn't the same as fulfilled",
+        paragraphs: [
+          "A long walk exercises your dog's body. Play with other dogs exercises something else: the ability to read a partner, adjust, negotiate, and recover. Behavior professionals often point out that mental and social engagement leaves dogs more settled than physical exercise alone. Many owners notice the difference at home — less barking at the window, less chewing, less of the restless pacing that comes from a brain with nothing to do.",
+        ],
+      },
+      {
+        heading: "Daycare isn't for every dog — and that's okay",
+        paragraphs: [
+          "Good, honest daycare programs will tell you this themselves. Some dogs genuinely prefer human company or one steady canine friend to a busy group. Older dogs, dogs recovering from injury, and dogs with a history of conflict may do better with structured walks or one-on-one play. A quality facility screens for fit, groups dogs by size and play style, keeps staff-to-dog ratios low, and builds in rest — because an overtired, over-aroused dog isn't learning anything good.",
+        ],
+      },
+      {
+        heading: "What to take away",
+        paragraphs: [
+          "Socialization isn't about your dog loving every dog. It's about your dog being comfortable in the world, fluent enough in dog language to handle a surprise encounter on the sidewalk without falling apart.",
+          "For dogs who enjoy the company, daycare is one of the most practical ways to keep that fluency alive. If you're curious whether your dog is a fit, ask about a trial day and an assessment. A good program will be as interested in the answer as you are.",
+          "Sources. Developmental and behavioral figures are drawn from the American Veterinary Society of Animal Behavior (AVSAB) Position Statement on Puppy Socialization, available at avsab.org.",
+        ],
+      },
+    ],
+  },
 };
 
 const stubSlugs: ReadonlyArray<string> = [
