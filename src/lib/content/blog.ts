@@ -894,6 +894,54 @@ const fullPosts: Record<string, BlogPost> = {
       },
     ],
   },
+
+  "back-to-school-dog-daycare": {
+    slug: "back-to-school-dog-daycare",
+    title: "The School Year Starts for Your Dog, Too",
+    metaTitle: "Back-to-School Dog Daycare in Franklin Square | Planet Pooch Blog",
+    metaDescription:
+      "September empties the house all day and your dog feels it. Here's how a day or two of daycare fits the school-year routine — plus the free temperament evaluation that starts it.",
+    hasFullContent: true,
+    intro:
+      "The bus comes back around, the alarm goes off an hour earlier, and suddenly your afternoons belong to soccer practice, homework, and whatever got left in a locker. September reshuffles the whole family calendar — and the one member of the household who didn't get a copy of the schedule is the dog.",
+    sections: [
+      {
+        paragraphs: [
+          "All summer, your dog had company. Kids home, doors opening and closing, someone throwing a ball in the yard at 2pm. Now the house empties out at 7:30am and stays that way until 3:00 or later. That's a long, quiet stretch, and dogs tend to fill it with things you'd rather they didn't: chewed baseboards, barking at the mail carrier, or a pile of energy that gets dumped on you the second everyone walks back in the door.",
+        ],
+      },
+      {
+        heading: "Daycare solves a scheduling problem, not just a dog problem",
+        paragraphs: [
+          "Here's the part parents figure out by October: daycare isn't only for the dog. It's for the two hours you were going to spend driving home mid-day to let him out. It's for the afternoon you can stay at work late without doing the math on how long he's been crated. It's for the evening you get to spend on homework instead of walking a dog who's been storing up energy since breakfast.",
+          "A day at Planet Pooch runs on structured play with dogs matched by size and temperament, plus rest breaks so nobody burns out. Dogs come home tired in the good way — the way where they eat dinner, flop on the floor, and let the family have its evening back.",
+        ],
+      },
+      {
+        heading: "Working it into the school-year routine",
+        paragraphs: [
+          "You don't need five days a week. Most Franklin Square families we see pick the two or three days that are hardest:",
+        ],
+        bullets: [
+          "The long days — early meeting plus late pickup, the ones where nobody's home from 7am to 6pm.",
+          "Practice and game days — when the afternoon turns into a shuttle route.",
+          "The transition weeks — the first month of school, while your dog adjusts to the new quiet.",
+        ],
+      },
+      {
+        paragraphs: [
+          "We're open Monday through Saturday, 7am to 7pm, which lines up with most school and work schedules on Long Island. Drop off on your way to the bus stop, pick up on your way home from practice.",
+        ],
+      },
+      {
+        heading: "Start with an evaluation",
+        paragraphs: [
+          "Every new daycare dog goes through a free temperament evaluation before their first full day — it's how we make sure your dog is grouped with the right playmates and actually enjoys being here. It takes one visit, and then you're set for the whole school year.",
+          "Give us a call or stop by 1114 Hempstead Turnpike in Franklin Square to schedule an evaluation. September fills up fast — everyone figures this out at the same time.",
+        ],
+      },
+    ],
+  },
 };
 
 const stubSlugs: ReadonlyArray<string> = [
