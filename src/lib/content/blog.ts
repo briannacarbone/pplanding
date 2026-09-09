@@ -32,7 +32,172 @@ const stub = (slug: string, title?: string): BlogPost => {
   };
 };
 
+// Newest first — insertion order drives the Featured grid on /blog and the
+// order of blog entries in the sitemap. Add new posts at the top.
 const fullPosts: Record<string, BlogPost> = {
+  "back-to-school-back-to-routine-why-dog-daycare-can-help-your-pup": {
+    slug: "back-to-school-back-to-routine-why-dog-daycare-can-help-your-pup",
+    title: "Back to School, Back to Routine: Why Dog Daycare Can Help Your Pup",
+    metaTitle: "Back-to-School Dog Daycare for a New Fall Routine | Planet Pooch Blog",
+    metaDescription:
+      "When the kids head back to school, the house gets quiet. Here's how dog daycare helps your pup settle into a new fall routine and stay out of trouble at home.",
+    hasFullContent: true,
+    intro:
+      "Summer is winding down, backpacks are coming out, and families everywhere are getting ready to head back to school. For kids, it means new teachers, new routines, and busy days. For your dog, it can mean something very different: a suddenly quiet house. After a summer filled with extra family time, walks, adventures, and attention, your pup may notice the change when everyone heads back to school and work. That's where dog daycare can make the transition a whole lot easier.",
+    sections: [
+      {
+        heading: "A new routine for your dog",
+        paragraphs: [
+          "Dogs thrive on routine. When the family schedule changes, some dogs may become bored or restless simply because their normal day looks different. Instead of spending hours alone at home, daycare gives your dog a fun and structured place to spend the day.",
+          "At Planet Pooch, your pup can enjoy a day filled with:",
+        ],
+        bullets: [
+          "Socialization with other dogs",
+          "Playtime and enrichment",
+          "Attention from our caring team",
+          "Rest periods throughout the day",
+          "A consistent daily routine",
+        ],
+      },
+      {
+        heading: "Backpacks for the kids, playtime for the dogs",
+        paragraphs: [
+          "Back-to-school season doesn't have to mean your dog gets left behind. While the kids are learning, making new friends, and getting back into their routines, your pup can have their own day of fun.",
+          "For social dogs who love to play, daycare provides an opportunity to burn off energy and enjoy plenty of interaction. For dogs who simply enjoy being around people, having a familiar team caring for them can make the day feel much less lonely.",
+        ],
+      },
+      {
+        heading: "Helping prevent boredom at home",
+        paragraphs: [
+          "A long day alone can leave some dogs looking for ways to entertain themselves. That extra energy might show up as:",
+        ],
+        bullets: [
+          "Excessive barking",
+          "Chewing",
+          "Getting into things they shouldn't",
+          "Restlessness",
+          "Attention-seeking behavior",
+        ],
+      },
+      {
+        heading: "Every dog is different",
+        paragraphs: [
+          "Keeping your dog mentally and physically engaged during the day can help them come home ready to relax with the family.",
+          "Of course, every dog is different. Some pups love a full day of activity, while others are happiest with a combination of play and plenty of downtime. The goal is to find a routine that works for your individual dog.",
+        ],
+      },
+      {
+        heading: "Your dog deserves a back-to-school routine too",
+        paragraphs: [
+          "The start of a new school year is all about establishing a routine that works for the entire family. Maybe that means daycare once or twice a week. Maybe your pup thrives with a regular weekly schedule. Or maybe you simply need a safe, fun place for them to spend the occasional busy day.",
+          "Whatever your family's schedule looks like this fall, creating consistency can make the transition easier for everyone — including your four-legged family member.",
+        ],
+      },
+      {
+        heading: "Back to school for the kids, back to fun for the pups",
+        paragraphs: [
+          "If your dog's summer routine is changing, consider making daycare part of their new fall routine. They'll have something exciting to look forward to while you tackle the busy school-year schedule. Because nobody should have to miss out on a great day — especially your dog.",
+          "Ready to make daycare part of your pup's fall routine? Contact Planet Pooch to learn more about our daycare program and find the schedule that works best for your dog.",
+        ],
+      },
+    ],
+  },
+
+  "the-last-weeks-of-summer-booking-boarding-before-the-rush": {
+    slug: "the-last-weeks-of-summer-booking-boarding-before-the-rush",
+    title: "The Last Weeks of Summer: Booking Boarding Before the Rush",
+    metaTitle: "Book Late-Summer Dog Boarding Before It Fills | Planet Pooch Blog",
+    metaDescription:
+      "The last two weeks of summer are our busiest stretch of the year. Here's why late-August boarding fills up fast, plus a short pre-boarding checklist.",
+    hasFullContent: true,
+    intro:
+      "Labor Day weekend is closer than it feels. If there's one more trip on your calendar before the school year swallows everything — a long weekend at the lake, a family wedding, a final drive to the coast — now is the moment to sort out where your dog is staying.",
+    sections: [
+      {
+        heading: "Why late August fills up fast",
+        paragraphs: [
+          "The last two weeks of summer are the busiest stretch of our year, and it isn't close. Everyone is squeezing in the same trip at the same time, which means the runs and suites that sit open in February are spoken for by mid-August. Holiday weekends book out first, and the requests we hate turning down most are the ones that come in three days ahead.",
+          "If you already know your dates, get them on the calendar. If you think you might travel, reserve anyway — it's far easier to cancel a spot than to find one.",
+        ],
+      },
+      {
+        heading: "A short pre-boarding checklist",
+        paragraphs: [
+          "A little prep makes the stay smoother for everyone, especially your dog.",
+        ],
+        bullets: [
+          "Check vaccine records now, not the morning of drop-off — rabies, distemper, and Bordetella all need to be current, and vet offices book up in late summer too. Bordetella in particular can take a few days to take effect.",
+          "Bring their own food — sudden diet changes are the number one cause of an upset stomach away from home. Pre-portion meals into labeled bags if you can.",
+          "Send something that smells like home — a worn t-shirt or a familiar blanket does more for a nervous dog than any toy.",
+          "Write down the details — medications, quirks, the command that actually works, what they do during thunderstorms. There is no such thing as too much information.",
+          "Keep drop-off short — a long, emotional goodbye tells your dog something is wrong. A quick handoff and a confident exit works better than you'd expect.",
+        ],
+      },
+      {
+        heading: "Thinking past the trip",
+        paragraphs: [
+          "Once fall hits, the rhythm at home changes — kids back at school, longer workdays, less midday attention. A lot of families use the end of summer as a natural moment to add a regular daycare day or two. If that's on your mind, mention it at pickup and we'll talk through what makes sense for your dog.",
+        ],
+      },
+      {
+        heading: "Ready when you are",
+        paragraphs: [
+          "Give us a call or book online to lock in your dates. We'd love to have your pup for one more summer stay before the leaves start turning.",
+        ],
+      },
+    ],
+  },
+
+  "book-now-dont-let-labor-day-weekend-sneak-up-on-you": {
+    slug: "book-now-dont-let-labor-day-weekend-sneak-up-on-you",
+    title: "Book Now: Don't Let Labor Day Weekend Sneak Up on You",
+    metaTitle: "Book Labor Day Weekend Dog Boarding Early | Planet Pooch Blog",
+    metaDescription:
+      "Labor Day is one of the busiest boarding weekends of the year and spots fill up fast. Here's why boarding beats the alternatives — and how to prepare for drop-off.",
+    hasFullContent: true,
+    intro:
+      "Summer always seems to end faster than we expect. One minute you're planning beach days, and the next you're staring down Labor Day weekend with a road trip on the calendar and no plan for your pup. If that sounds familiar, you're not alone — and now is the time to get ahead of it.",
+    sections: [
+      {
+        heading: "The last big getaway of the season",
+        paragraphs: [
+          "Labor Day is one of the busiest travel weekends of the year, which means it's also one of our busiest boarding weekends. Families squeeze in that final lake trip, cabin stay, or long drive to see relatives before school schedules take over. It's the perfect send-off to summer — as long as your dog has a comfortable, safe place to stay while you're away.",
+          "Here's the catch: those spots fill up fast. Every year we have wonderful clients call us the week before the holiday, hoping to snag a kennel, only to find we're fully booked. We hate turning anyone away, so consider this your friendly nudge to reserve early.",
+        ],
+      },
+      {
+        heading: "Why boarding beats the alternatives",
+        paragraphs: [
+          "Leaving your dog with a boarding facility isn't just convenient — it's often the best thing for them. Instead of being alone at home for long stretches or shuffled between friends who mean well but have busy lives, your dog gets:",
+        ],
+        bullets: [
+          "Round-the-clock supervision from people who know how to spot when something's off",
+          "A consistent routine with regular meals, potty breaks, and rest",
+          "Plenty of playtime and social time to burn off that end-of-summer energy",
+          "Peace of mind for you, so you can actually relax on your trip",
+        ],
+      },
+      {
+        paragraphs: [
+          "Many dogs come home from boarding happily tired and a little more social than when they left. It turns out a weekend of new friends and supervised play is pretty good for them, too.",
+        ],
+      },
+      {
+        heading: "A few tips before you go",
+        paragraphs: [
+          "To make drop-off smooth, make sure your dog's vaccinations are current — we'll need those records on file. Pack their regular food to avoid an upset stomach, and feel free to bring a favorite toy or blanket that smells like home. And if your pup has never boarded before, ask us about a short trial stay so their first real visit feels familiar.",
+        ],
+      },
+      {
+        heading: "Reserve your spot today",
+        paragraphs: [
+          "Summer's not over yet, but the calendar moves quickly. Give your dog a fun, safe staycation while you enjoy your last big weekend — and give yourself the gift of not scrambling at the last minute.",
+          "Call us or book online today to lock in Labor Day boarding before we fill up. We can't wait to spoil your best friend one more time before the season ends.",
+        ],
+      },
+    ],
+  },
+
   "why-you-should-have-your-dog-socialized-and-how-not-socializing-them-can-lead-to-separation-anxiety": {
     slug: "why-you-should-have-your-dog-socialized-and-how-not-socializing-them-can-lead-to-separation-anxiety",
     title: "Why You Should Have Your Dog Socialized — And How Not Socializing Them Can Lead to Separation Anxiety",
@@ -796,100 +961,6 @@ const fullPosts: Record<string, BlogPost> = {
         paragraphs: [
           "Training is about more than obedience — it improves quality of life for both you and your dog. A trained dog is safer in public, calmer at home, and better equipped to handle new situations. And the process of working together strengthens the bond between you.",
           "With patience, consistency, and positive reinforcement, every dog can become a more confident, well-mannered companion.",
-        ],
-      },
-    ],
-  },
-  "book-now-dont-let-labor-day-weekend-sneak-up-on-you": {
-    slug: "book-now-dont-let-labor-day-weekend-sneak-up-on-you",
-    title: "Book Now: Don't Let Labor Day Weekend Sneak Up on You",
-    metaTitle: "Book Labor Day Weekend Dog Boarding Early | Planet Pooch Blog",
-    metaDescription:
-      "Labor Day is one of the busiest boarding weekends of the year and spots fill up fast. Here's why boarding beats the alternatives — and how to prepare for drop-off.",
-    hasFullContent: true,
-    intro:
-      "Summer always seems to end faster than we expect. One minute you're planning beach days, and the next you're staring down Labor Day weekend with a road trip on the calendar and no plan for your pup. If that sounds familiar, you're not alone — and now is the time to get ahead of it.",
-    sections: [
-      {
-        heading: "The last big getaway of the season",
-        paragraphs: [
-          "Labor Day is one of the busiest travel weekends of the year, which means it's also one of our busiest boarding weekends. Families squeeze in that final lake trip, cabin stay, or long drive to see relatives before school schedules take over. It's the perfect send-off to summer — as long as your dog has a comfortable, safe place to stay while you're away.",
-          "Here's the catch: those spots fill up fast. Every year we have wonderful clients call us the week before the holiday, hoping to snag a kennel, only to find we're fully booked. We hate turning anyone away, so consider this your friendly nudge to reserve early.",
-        ],
-      },
-      {
-        heading: "Why boarding beats the alternatives",
-        paragraphs: [
-          "Leaving your dog with a boarding facility isn't just convenient — it's often the best thing for them. Instead of being alone at home for long stretches or shuffled between friends who mean well but have busy lives, your dog gets:",
-        ],
-        bullets: [
-          "Round-the-clock supervision from people who know how to spot when something's off",
-          "A consistent routine with regular meals, potty breaks, and rest",
-          "Plenty of playtime and social time to burn off that end-of-summer energy",
-          "Peace of mind for you, so you can actually relax on your trip",
-        ],
-      },
-      {
-        paragraphs: [
-          "Many dogs come home from boarding happily tired and a little more social than when they left. It turns out a weekend of new friends and supervised play is pretty good for them, too.",
-        ],
-      },
-      {
-        heading: "A few tips before you go",
-        paragraphs: [
-          "To make drop-off smooth, make sure your dog's vaccinations are current — we'll need those records on file. Pack their regular food to avoid an upset stomach, and feel free to bring a favorite toy or blanket that smells like home. And if your pup has never boarded before, ask us about a short trial stay so their first real visit feels familiar.",
-        ],
-      },
-      {
-        heading: "Reserve your spot today",
-        paragraphs: [
-          "Summer's not over yet, but the calendar moves quickly. Give your dog a fun, safe staycation while you enjoy your last big weekend — and give yourself the gift of not scrambling at the last minute.",
-          "Call us or book online today to lock in Labor Day boarding before we fill up. We can't wait to spoil your best friend one more time before the season ends.",
-        ],
-      },
-    ],
-  },
-
-  "the-last-weeks-of-summer-booking-boarding-before-the-rush": {
-    slug: "the-last-weeks-of-summer-booking-boarding-before-the-rush",
-    title: "The Last Weeks of Summer: Booking Boarding Before the Rush",
-    metaTitle: "Book Late-Summer Dog Boarding Before It Fills | Planet Pooch Blog",
-    metaDescription:
-      "The last two weeks of summer are our busiest stretch of the year. Here's why late-August boarding fills up fast, plus a short pre-boarding checklist.",
-    hasFullContent: true,
-    intro:
-      "Labor Day weekend is closer than it feels. If there's one more trip on your calendar before the school year swallows everything — a long weekend at the lake, a family wedding, a final drive to the coast — now is the moment to sort out where your dog is staying.",
-    sections: [
-      {
-        heading: "Why late August fills up fast",
-        paragraphs: [
-          "The last two weeks of summer are the busiest stretch of our year, and it isn't close. Everyone is squeezing in the same trip at the same time, which means the runs and suites that sit open in February are spoken for by mid-August. Holiday weekends book out first, and the requests we hate turning down most are the ones that come in three days ahead.",
-          "If you already know your dates, get them on the calendar. If you think you might travel, reserve anyway — it's far easier to cancel a spot than to find one.",
-        ],
-      },
-      {
-        heading: "A short pre-boarding checklist",
-        paragraphs: [
-          "A little prep makes the stay smoother for everyone, especially your dog.",
-        ],
-        bullets: [
-          "Check vaccine records now, not the morning of drop-off — rabies, distemper, and Bordetella all need to be current, and vet offices book up in late summer too. Bordetella in particular can take a few days to take effect.",
-          "Bring their own food — sudden diet changes are the number one cause of an upset stomach away from home. Pre-portion meals into labeled bags if you can.",
-          "Send something that smells like home — a worn t-shirt or a familiar blanket does more for a nervous dog than any toy.",
-          "Write down the details — medications, quirks, the command that actually works, what they do during thunderstorms. There is no such thing as too much information.",
-          "Keep drop-off short — a long, emotional goodbye tells your dog something is wrong. A quick handoff and a confident exit works better than you'd expect.",
-        ],
-      },
-      {
-        heading: "Thinking past the trip",
-        paragraphs: [
-          "Once fall hits, the rhythm at home changes — kids back at school, longer workdays, less midday attention. A lot of families use the end of summer as a natural moment to add a regular daycare day or two. If that's on your mind, mention it at pickup and we'll talk through what makes sense for your dog.",
-        ],
-      },
-      {
-        heading: "Ready when you are",
-        paragraphs: [
-          "Give us a call or book online to lock in your dates. We'd love to have your pup for one more summer stay before the leaves start turning.",
         ],
       },
     ],
