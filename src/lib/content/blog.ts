@@ -894,6 +894,74 @@ const fullPosts: Record<string, BlogPost> = {
       },
     ],
   },
+
+  "back-to-school-back-to-routine-why-dog-daycare-can-help-your-pup": {
+    slug: "back-to-school-back-to-routine-why-dog-daycare-can-help-your-pup",
+    title: "Back to School, Back to Routine: Why Dog Daycare Can Help Your Pup",
+    metaTitle: "Back-to-School Dog Daycare for a New Fall Routine | Planet Pooch Blog",
+    metaDescription:
+      "When the kids head back to school, the house gets quiet. Here's how dog daycare helps your pup settle into a new fall routine and stay out of trouble at home.",
+    hasFullContent: true,
+    intro:
+      "Summer is winding down, backpacks are coming out, and families everywhere are getting ready to head back to school. For kids, it means new teachers, new routines, and busy days. For your dog, it can mean something very different: a suddenly quiet house. After a summer filled with extra family time, walks, adventures, and attention, your pup may notice the change when everyone heads back to school and work. That's where dog daycare can make the transition a whole lot easier.",
+    sections: [
+      {
+        heading: "A new routine for your dog",
+        paragraphs: [
+          "Dogs thrive on routine. When the family schedule changes, some dogs may become bored or restless simply because their normal day looks different. Instead of spending hours alone at home, daycare gives your dog a fun and structured place to spend the day.",
+          "At Planet Pooch, your pup can enjoy a day filled with:",
+        ],
+        bullets: [
+          "Socialization with other dogs",
+          "Playtime and enrichment",
+          "Attention from our caring team",
+          "Rest periods throughout the day",
+          "A consistent daily routine",
+        ],
+      },
+      {
+        heading: "Backpacks for the kids, playtime for the dogs",
+        paragraphs: [
+          "Back-to-school season doesn't have to mean your dog gets left behind. While the kids are learning, making new friends, and getting back into their routines, your pup can have their own day of fun.",
+          "For social dogs who love to play, daycare provides an opportunity to burn off energy and enjoy plenty of interaction. For dogs who simply enjoy being around people, having a familiar team caring for them can make the day feel much less lonely.",
+        ],
+      },
+      {
+        heading: "Helping prevent boredom at home",
+        paragraphs: [
+          "A long day alone can leave some dogs looking for ways to entertain themselves. That extra energy might show up as:",
+        ],
+        bullets: [
+          "Excessive barking",
+          "Chewing",
+          "Getting into things they shouldn't",
+          "Restlessness",
+          "Attention-seeking behavior",
+        ],
+      },
+      {
+        heading: "Every dog is different",
+        paragraphs: [
+          "Keeping your dog mentally and physically engaged during the day can help them come home ready to relax with the family.",
+          "Of course, every dog is different. Some pups love a full day of activity, while others are happiest with a combination of play and plenty of downtime. The goal is to find a routine that works for your individual dog.",
+        ],
+      },
+      {
+        heading: "Your dog deserves a back-to-school routine too",
+        paragraphs: [
+          "The start of a new school year is all about establishing a routine that works for the entire family. Maybe that means daycare once or twice a week. Maybe your pup thrives with a regular weekly schedule. Or maybe you simply need a safe, fun place for them to spend the occasional busy day.",
+          "Whatever your family's schedule looks like this fall, creating consistency can make the transition easier for everyone — including your four-legged family member.",
+        ],
+      },
+      {
+        heading: "Back to school for the kids, back to fun for the pups",
+        paragraphs: [
+          "If your dog's summer routine is changing, consider making daycare part of their new fall routine. They'll have something exciting to look forward to while you tackle the busy school-year schedule. Because nobody should have to miss out on a great day — especially your dog.",
+          "Ready to make daycare part of your pup's fall routine? Contact Planet Pooch to learn more about our daycare program and find the schedule that works best for your dog.",
+        ],
+      },
+    ],
+  },
 };
 
 const stubSlugs: ReadonlyArray<string> = [
