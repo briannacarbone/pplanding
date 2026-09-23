@@ -894,6 +894,79 @@ const fullPosts: Record<string, BlogPost> = {
       },
     ],
   },
+
+  "fall-dog-care-on-long-island-why-daycare-boarding-training-grooming-matter": {
+    slug: "fall-dog-care-on-long-island-why-daycare-boarding-training-grooming-matter",
+    title: "Fall Dog Care on Long Island: Why Daycare, Boarding, Training & Grooming Matter",
+    metaTitle: "Fall Dog Care on Long Island | Daycare, Boarding, Training & Grooming",
+    metaDescription:
+      "Get your dog ready for fall with daycare, boarding, training and grooming at Planet Pooch. Discover why a consistent pet care routine matters this season.",
+    hasFullContent: true,
+    intro:
+      "Fall is a great time for dogs on Long Island. Cooler temperatures mean more comfortable outdoor play, families are getting back into their regular routines, and the holiday season is quickly approaching. It's also the perfect time to make sure your pup's daycare, boarding, training, and grooming needs are taken care of.",
+    sections: [
+      {
+        paragraphs: [
+          "At Planet Pooch Pet Resort, we help dogs stay active, happy, well cared for, and looking their best throughout the year. From dog daycare and boarding to professional dog training and grooming, maintaining a consistent care routine can be especially helpful during the busy fall season.",
+        ],
+      },
+      {
+        heading: "Dog daycare keeps your pup active this fall",
+        paragraphs: [
+          "As summer ends, many families return to work, school, and busier schedules. For dogs, that can mean spending more time at home and having fewer opportunities for exercise and socialization.",
+          "Dog daycare gives your pup a fun way to stay active, socialize, and enjoy their day while you're busy.",
+          "At Planet Pooch, our dog daycare provides supervised play, enrichment activities, interaction with our team, and opportunities to socialize with other dogs. Our playgroups are organized with each dog's size and temperament in mind, helping create an enjoyable daycare experience.",
+          "Regular daycare can provide valuable physical exercise and mental stimulation while giving dogs an outlet for their energy. After a full day of playing, exploring, and spending time with friends, your pup can head home ready to relax.",
+        ],
+      },
+      {
+        heading: "Book fall and holiday dog boarding early",
+        paragraphs: [
+          "Planning a Thanksgiving trip, fall getaway, or holiday vacation? Fall is one of the most important times of year to start thinking about dog boarding.",
+          "Holiday boarding dates can fill quickly, especially around Thanksgiving and other popular travel periods. Making your dog's boarding reservation early helps ensure their accommodations are taken care of before your trip.",
+          "At Planet Pooch Pet Resort, our boarding services give dogs a comfortable place to stay with personalized care, attention, playtime, and enrichment while their families are away.",
+          "For dogs already familiar with Planet Pooch through daycare or previous boarding stays, returning to a place they know can also help maintain some familiarity while you're traveling.",
+          "If you already have fall or holiday travel plans, don't wait until the last minute to reserve your pup's stay.",
+        ],
+      },
+      {
+        heading: "Fall is the perfect time for dog training",
+        paragraphs: [
+          "A change in seasons is a great opportunity to work on your dog's routine and reinforce positive behaviors.",
+          "Dog training isn't only about learning commands. Consistent training can help improve communication between dogs and their families while providing valuable mental stimulation and encouraging good everyday habits.",
+          "Fall is an especially useful time to work on obedience, leash manners, listening skills, and other behaviors before the holiday season begins.",
+          "With visitors coming to the house, family gatherings, holiday activities, and changes in your normal schedule, reinforcing your dog's training ahead of time can help prepare them for a busier environment.",
+          "Whether you have a puppy learning the basics or an adult dog who could use a refresher, consistent training can benefit dogs at many different stages of life.",
+        ],
+      },
+      {
+        heading: "Keep up with dog grooming during the fall",
+        paragraphs: [
+          "It's easy to associate grooming with warmer weather, but dog grooming is just as important during the fall.",
+          "Many dogs experience seasonal coat changes that can lead to increased shedding, loose fur, tangles, or matting. Fall weather can also mean wet grass, leaves, dirt, and mud getting caught in your dog's paws and coat.",
+          "Regular professional grooming can help maintain your dog's coat, nails, ears, paws, and overall hygiene throughout the season.",
+          "Keeping your pup on a consistent grooming schedule also helps prevent small grooming issues, such as tangles or overgrown nails, from becoming bigger problems.",
+          "And, of course, a freshly groomed pup is always a nice bonus before fall photos, Thanksgiving gatherings, and holiday celebrations.",
+        ],
+      },
+      {
+        heading: "Complete dog care at Planet Pooch",
+        paragraphs: [
+          "Your dog's needs don't stop when the seasons change. Keeping them active, engaged, clean, and cared for can help maintain a healthy routine throughout the fall and into the busy holiday season.",
+          "With dog daycare, dog boarding, dog training, and dog grooming services, Planet Pooch makes it easier to take care of multiple parts of your pup's routine in one place.",
+          "Whether your dog needs a fun day of play, a comfortable place to stay while you're traveling, help developing better habits, or a fresh groom for the season, our team is here to help.",
+        ],
+      },
+      {
+        heading: "Get your pup ready for fall at Planet Pooch",
+        paragraphs: [
+          "Fall schedules and holiday plans can fill up quickly, so now is a great time to start planning ahead for your pup.",
+          "If you're looking for dog daycare, dog boarding, dog training, or dog grooming on Long Island, contact Planet Pooch Pet Resort to learn more about our services and find the right options for your dog.",
+          "We can't wait to make this fall a fun one for you and your pup!",
+        ],
+      },
+    ],
+  },
 };
 
 const stubSlugs: ReadonlyArray<string> = [
