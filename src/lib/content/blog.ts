@@ -894,6 +894,71 @@ const fullPosts: Record<string, BlogPost> = {
       },
     ],
   },
+
+  "fall-dog-daycare-franklin-square": {
+    slug: "fall-dog-daycare-franklin-square",
+    title: "Fall Dog Daycare in Franklin Square: Keeping Your Pup Active, Social, and Happy This Autumn",
+    metaTitle: "Fall Dog Daycare in Franklin Square | Planet Pooch Blog",
+    metaDescription:
+      "Shorter days and busier schedules? Fall dog daycare at Planet Pooch in Franklin Square keeps your pup active, social, and happy with seasonal enrichment and supervised play.",
+    hasFullContent: true,
+    intro:
+      "Shorter days, cooler mornings, and a calendar that suddenly fills up with school pickups and work deadlines. Fall changes the routine for everyone in the house, including your dog. At Planet Pooch Pet Resort in Franklin Square, autumn is one of our favorite seasons for daycare. The weather is perfect for long play sessions, and there's plenty of seasonal enrichment to keep minds as busy as paws. Here's why fall is a great time to start (or get back into) dog daycare.",
+    sections: [
+      {
+        heading: "1. Burn off energy when walks get shorter",
+        paragraphs: [
+          "Once the clocks fall back in early November, it's dark on Long Island before 5 p.m., and that evening walk tends to get shorter or skipped altogether. Pent-up energy usually shows up somewhere: chewed shoes, barking at the window, or zoomies at 10 p.m.",
+          "A day at daycare gives your dog hours of supervised play and activity, so they come home tired and content instead of restless. Our daycare program is tailored to each dog's personality, play style, and comfort level, so every pup plays at a pace that suits them.",
+        ],
+      },
+      {
+        heading: "2. Fall enrichment that works the brain, too",
+        paragraphs: [
+          "Physical exercise is only half the equation. Mental stimulation builds confidence, prevents boredom, and helps dogs settle. A dog who has had to think is often more relaxed than one who has only run around. This season, our pups enjoy:",
+        ],
+        bullets: [
+          "Pumpkin enrichment games — puzzle and foraging activities that encourage curiosity and problem-solving.",
+          "Fall scent games — nose-work challenges that put a dog's strongest sense to work.",
+          "Seasonal treats — dog-safe snacks inspired by autumn flavors.",
+          "Fall photo ops — seasonal snapshots of your pup to remember the season by.",
+        ],
+      },
+      {
+        paragraphs: [
+          "Enrichment turns daycare into more than playtime. It gives dogs a chance to explore, learn, and try something new in a safe, supervised setting.",
+        ],
+      },
+      {
+        heading: "3. Friends for social pups, one-on-one time for everyone else",
+        paragraphs: [
+          "Summer may be over, but the friendships don't have to be. Regular daycare keeps social dogs in touch with their buddies and gives them daily practice with good play manners in supervised group play.",
+          "Not every dog loves a crowd, and that's okay. For pups who prefer a quieter day, our one-on-one enrichment sessions offer personal attention, engaging activities, and plenty of love from our team.",
+        ],
+      },
+      {
+        heading: "4. Consistency when your schedule isn't",
+        paragraphs: [
+          "Fall often means back-to-school mornings, longer workdays, and busier weekends. Dogs thrive on routine, and when yours changes, a consistent daycare schedule helps them feel secure.",
+          "Daycare runs Monday through Saturday, 7 a.m. to 7 p.m., so drop-off and pickup fit around a commute. Instead of spending the day waiting by the door, your dog gets a structured day of play, enrichment, rest, and attention.",
+        ],
+      },
+      {
+        heading: "5. A head start on holiday boarding",
+        paragraphs: [
+          "Thanksgiving and the winter holidays are closer than they seem, and holiday boarding spots go quickly. Fall is the ideal time to get your dog comfortable with us before a longer stay.",
+          "Dogs who already come to daycare know our team, our building, and our daily routine, so their first overnight feels familiar instead of new. If holiday travel is on your calendar, book boarding early and make sure your dog's Bordetella vaccine is current at least 7 days before arrival.",
+        ],
+      },
+      {
+        heading: "Make this fall a pawsome one at Planet Pooch",
+        paragraphs: [
+          "From pumpkin puzzles to new best friends, there's always something happening at Planet Pooch Pet Resort. We're located on Hempstead Turnpike in Franklin Square, a short drive from Elmont, West Hempstead, Garden City, Floral Park, and Valley Stream.",
+          "Every new daycare dog starts with an evaluation, so we can get to know your pup and find the right fit. Give us a call or book online to schedule a daycare evaluation and give your dog a fall full of fun.",
+        ],
+      },
+    ],
+  },
 };
 
 const stubSlugs: ReadonlyArray<string> = [
