@@ -873,7 +873,7 @@ const fullPosts: Record<string, BlogPost> = {
           "A little prep makes the stay smoother for everyone, especially your dog.",
         ],
         bullets: [
-          "Check vaccine records now, not the morning of drop-off — rabies, distemper, and Bordetella all need to be current, and vet offices book up in late summer too. Bordetella in particular can take a few days to take effect.",
+          "Check vaccine records now, not the morning of drop-off — rabies, distemper, and Bordetella all need to be current, and vet offices book up in late summer too. Bordetella in particular has to be given at least 10 days before drop-off.",
           "Bring their own food — sudden diet changes are the number one cause of an upset stomach away from home. Pre-portion meals into labeled bags if you can.",
           "Send something that smells like home — a worn t-shirt or a familiar blanket does more for a nervous dog than any toy.",
           "Write down the details — medications, quirks, the command that actually works, what they do during thunderstorms. There is no such thing as too much information.",
@@ -930,7 +930,7 @@ const fullPosts: Record<string, BlogPost> = {
         heading: "4. A head start on holiday boarding",
         paragraphs: [
           "Thanksgiving and the winter holidays are closer than they seem, and holiday boarding spots go quickly. Fall is the ideal time to get your dog comfortable with us before a longer stay.",
-          "Dogs who already come to daycare know our team, our building, and our daily routine, so their first overnight feels familiar instead of new. If holiday travel is on your calendar, book boarding early and make sure your dog's Bordetella vaccine is current at least 7 days before arrival.",
+          "Dogs who already come to daycare know our team, our building, and our daily routine, so their first overnight feels familiar instead of new. If holiday travel is on your calendar, book boarding early and make sure your dog's Bordetella vaccine is current at least 10 days before arrival.",
         ],
       },
       {
@@ -1012,7 +1012,7 @@ const fullPosts: Record<string, BlogPost> = {
         ],
         bullets: [
           "Keep their routine consistent. Share your dog's regular feeding schedule, medications, and any special care instructions with our team.",
-          "Make sure vaccinations are up to date. Check boarding vaccination requirements ahead of time to avoid any last-minute surprises.",
+          "Make sure vaccinations are up to date. Check boarding vaccination requirements ahead of time to avoid any last-minute surprises. Bordetella must be given at least 10 days before your dog's stay.",
           "Schedule a daycare visit before boarding. If your dog is new to boarding, spending time at the facility beforehand may help them become more familiar with the environment.",
           "Consider enrichment activities. Adding mental stimulation and personalized attention can help keep your dog happily occupied during their holiday stay.",
         ],

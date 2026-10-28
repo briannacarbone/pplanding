@@ -186,7 +186,7 @@ export const prosePages = {
         paragraphs: [
           "The Distemper-Parvo vaccine protects against multiple diseases. After the initial series, periodic boosters are needed as determined by a veterinarian. Ideally, boosters should be administered at least 2 weeks before boarding.",
           "Rabies vaccination is mandated by state law and required every 1 to 3 years.",
-          "Bordetella must be given at least 1 week before boarding and requires annual administration at minimum. A 7-day waiting period is enforced for recently vaccinated pets to allow maximum immunity development.",
+          "Bordetella must be given at least 10 days before boarding and requires annual administration at minimum. A 10-day waiting period is enforced for recently vaccinated pets to allow maximum immunity development.",
           "Veterinary Hospital: A & A Veterinary Hospital, 414 Franklin Ave, Franklin Square, NY 11010 — (516) 437-7222 — aandavets@gmail.com",
         ],
       },
