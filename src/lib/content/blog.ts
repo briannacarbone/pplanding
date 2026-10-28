@@ -942,6 +942,100 @@ const fullPosts: Record<string, BlogPost> = {
       },
     ],
   },
+
+  "holiday-dog-boarding-long-island": {
+    slug: "holiday-dog-boarding-long-island",
+    title: "Holiday Dog Boarding on Long Island: Give Your Pup a Vacation, Too",
+    metaTitle: "Holiday Dog Boarding on Long Island | Planet Pooch Pet Resort",
+    metaDescription:
+      "Planning Thanksgiving or Christmas travel? Discover safe, fun holiday dog boarding at Planet Pooch Pet Resort on Long Island. Book your pup's stay early!",
+    hasFullContent: true,
+    intro:
+      "The holiday season is approaching! Make sure your furry family member has a safe, comfortable, and fun place to stay while you're away.",
+    sections: [
+      {
+        paragraphs: [
+          "As the leaves change colors and the holiday season approaches, calendars start filling up with family gatherings, Thanksgiving celebrations, and holiday travel plans. While you're preparing for the festivities, there's one important family member you don't want to forget — your dog!",
+          "At Planet Pooch Pet Resort, we know your pup is part of the family. Whether you're heading out of town for Thanksgiving, planning a fall getaway, or getting an early start on Christmas travel, we're here to make sure your dog enjoys a holiday of their own.",
+        ],
+      },
+      {
+        heading: "Why you should book holiday dog boarding early",
+        paragraphs: [
+          "Thanksgiving and Christmas are two of the busiest times of the year for dog boarding facilities. With so many families traveling, boarding accommodations can fill up quickly.",
+        ],
+        bullets: [
+          "Secure your preferred dates: Avoid the stress of last-minute boarding arrangements.",
+          "Plan your holiday with confidence: Know your pup will be cared for while you're away.",
+          "Customize your dog's stay: Explore daycare, enrichment activities, and additional services to make their visit extra special.",
+        ],
+      },
+      {
+        paragraphs: [
+          "The earlier you plan, the easier it is to check one more thing off your holiday to-do list!",
+        ],
+      },
+      {
+        heading: "More than just boarding — a vacation for your dog!",
+        paragraphs: [
+          "Your dog deserves a little vacation, too! At Planet Pooch Pet Resort, we offer more than just a place to sleep. Our boarding services are designed to keep dogs comfortable, active, and engaged throughout their stay.",
+        ],
+      },
+      {
+        heading: "Fun-filled dog daycare",
+        paragraphs: [
+          "For dogs who enjoy making friends, our daycare program provides opportunities for supervised group play, socialization, and plenty of fun. It's a great way for social pups to stay active while their families are away.",
+        ],
+      },
+      {
+        heading: "Personalized one-on-one enrichment",
+        paragraphs: [
+          "Not every dog enjoys group play, and that's perfectly okay! Our one-on-one enrichment options provide individualized attention and activities based on your dog's needs and preferences. From interactive games and mental stimulation to quality time with our caring staff, we help make every dog's stay enjoyable.",
+        ],
+      },
+      {
+        heading: "Outdoor playtime & fresh air",
+        paragraphs: [
+          "Even as the temperatures begin to cool, dogs still need opportunities to stretch their legs and enjoy the outdoors. Our boarding guests receive multiple outdoor yard breaks throughout the day.",
+        ],
+      },
+      {
+        heading: "Extra love & attention",
+        paragraphs: [
+          "Being away from home doesn't mean missing out on affection! Our team loves spending time with our boarding guests, whether that means playtime, enrichment, or some extra cuddles.",
+        ],
+      },
+      {
+        heading: "Keeping your dog comfortable during fall & winter boarding",
+        paragraphs: [
+          "The transition into cooler weather and the busy holiday season can bring changes to your dog's regular routine. Here are a few ways to help prepare your pup for their upcoming boarding stay:",
+        ],
+        bullets: [
+          "Keep their routine consistent. Share your dog's regular feeding schedule, medications, and any special care instructions with our team.",
+          "Make sure vaccinations are up to date. Check boarding vaccination requirements ahead of time to avoid any last-minute surprises.",
+          "Schedule a daycare visit before boarding. If your dog is new to boarding, spending time at the facility beforehand may help them become more familiar with the environment.",
+          "Consider enrichment activities. Adding mental stimulation and personalized attention can help keep your dog happily occupied during their holiday stay.",
+        ],
+      },
+      {
+        heading: "Traveling for Thanksgiving? Don't wait until the last minute!",
+        paragraphs: [
+          "Thanksgiving is a time for family, delicious food, and making memories. Whether you're visiting relatives for a long weekend or taking an extended holiday vacation, your pup deserves a comfortable place to stay.",
+          "At Planet Pooch, we're excited to welcome our furry guests for the holiday season and give them plenty of attention while their families celebrate. And don't forget — Christmas and New Year's travel will be here before you know it!",
+        ],
+      },
+      {
+        heading: "Make Planet Pooch your dog's holiday home away from home",
+        paragraphs: [
+          "The holidays should be filled with excitement, not stress about your dog's care.",
+          "At Planet Pooch Pet Resort, we're passionate about providing a fun, loving, and engaging experience for every dog who stays with us. With boarding, daycare, personalized enrichment, and additional services available, we're here to help make your pup's holiday just as special as yours.",
+          "Holiday boarding reservations are filling up, so plan ahead!",
+          "Contact Planet Pooch Pet Resort today to learn more about our boarding options and reserve your dog's stay for Thanksgiving, Christmas, or your next fall getaway.",
+          "Because your dog deserves a vacation, too!",
+        ],
+      },
+    ],
+  },
 };
 
 const stubSlugs: ReadonlyArray<string> = [
