@@ -75,7 +75,7 @@ export function MobileMenu({ ctaHref }: { ctaHref: string }) {
             <div className="mt-auto border-t border-white/15 pt-5">
               <div className="grid grid-cols-2 gap-3">
                 <Link href="/contact/" onClick={() => setOpen(false)} className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 text-sm font-semibold">Contact us</Link>
-                <BookNowModal ctaHref={ctaHref} className="pp-cta min-h-12 justify-center rounded-full px-3" icon="paw" />
+                <BookNowModal ctaHref={ctaHref} className="pp-cta min-h-12 justify-center rounded-full px-3! gap-2! tracking-normal! whitespace-nowrap" icon="paw" />
               </div>
               <a href={SITE.phone.href} data-track="phone-click" className="mt-3 flex min-h-11 items-center justify-center gap-2 text-sm text-white/75"><Phone className="h-4 w-4" aria-hidden />{SITE.phone.display}</a>
             </div>
