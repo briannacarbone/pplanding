@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, Pause, Play, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Play, Star } from "lucide-react";
 import type { googleReviews } from "../lib/google-reviews";
 
 type Review = (typeof googleReviews)[number];
@@ -60,11 +60,8 @@ export function ReviewCarousel({ reviews }: { reviews: readonly Review[] }) {
 
   return (
     <div className="mt-10" role="region" aria-roledescription="carousel" aria-label="Five-star Google reviews">
-      <div className="mb-4 flex items-center justify-end gap-2">
-        <button type="button" onClick={() => move(-1)} aria-label="Scroll reviews left" className="review-control"><ArrowLeft aria-hidden size={18} /></button>
-        <button type="button" onClick={() => pause(!isPaused)} aria-label={isPaused ? "Play scrolling reviews" : "Pause scrolling reviews"} aria-pressed={isPaused} className="review-control">{isPaused ? <Play aria-hidden size={18} /> : <Pause aria-hidden size={18} />}</button>
-        <button type="button" onClick={() => move(1)} aria-label="Scroll reviews right" className="review-control"><ArrowRight aria-hidden size={18} /></button>
-      </div>
+      <div className="review-layout">
+        <button type="button" onClick={() => move(-1)} aria-label="Scroll reviews left" className="review-control review-side"><ChevronLeft aria-hidden size={26} /></button>
       <div ref={viewport} onScroll={wrap} onMouseEnter={() => { hovered.current = true; }} onMouseLeave={() => { hovered.current = false; }} onFocusCapture={() => { focused.current = true; }} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) focused.current = false; }} onPointerDown={() => pause(true)} onWheel={() => pause(true)} onKeyDown={event => { if (event.key === "ArrowLeft" || event.key === "ArrowRight") { event.preventDefault(); move(event.key === "ArrowLeft" ? -1 : 1); } }} tabIndex={0} aria-label="Reviews. Use the arrow keys or swipe to scroll." className="review-viewport flex overflow-x-auto focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
         {[0, 1, 2].map(copy => (
           <div key={copy} aria-hidden={copy !== 1 ? true : undefined} inert={copy !== 1 ? true : undefined} className="flex shrink-0 gap-6 pr-6">
@@ -111,6 +108,11 @@ export function ReviewCarousel({ reviews }: { reviews: readonly Review[] }) {
             ))}
           </div>
         ))}
+      </div>
+        <button type="button" onClick={() => move(1)} aria-label="Scroll reviews right" className="review-control review-side"><ChevronRight aria-hidden size={26} /></button>
+      </div>
+      <div className="mt-4 flex justify-center">
+        <button type="button" onClick={() => pause(!isPaused)} aria-label={isPaused ? "Play scrolling reviews" : "Pause scrolling reviews"} aria-pressed={isPaused} className="review-control">{isPaused ? <Play aria-hidden size={16} /> : <Pause aria-hidden size={16} />}</button>
       </div>
     </div>
   );
