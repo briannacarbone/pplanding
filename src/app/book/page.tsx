@@ -49,7 +49,7 @@ const bookingPaths = [
   },
   {
     icon: Building2,
-    title: "Pet Resort",
+    title: "Pet Resort (Includes In-House Grooming)",
     body: "Daycare, boarding, training, enrichment, and in-house grooming at our Franklin Square resort.",
     actions: [
       {
