@@ -6,7 +6,7 @@ import { NewClientForm } from "./new-client-form";
 import styles from "./new-client.module.css";
 
 export function ServiceSelector() {
-  const [service, setService] = useState("resort");
+  const [service, setService] = useState("");
   return <>
     <fieldset className={styles.serviceSelector}>
       <legend className={styles.selectorHeading}>Choose your service</legend>
