@@ -8,7 +8,7 @@ import styles from "./new-client.module.css";
 
 const BREEDS = ["Mixed Breed", "Unknown", "Australian Shepherd", "Beagle", "Bernedoodle", "Bichon Frise", "Border Collie", "Boston Terrier", "Boxer", "Cavapoo", "Cavalier King Charles Spaniel", "Chihuahua", "Cockapoo", "Cocker Spaniel", "Dachshund", "Doberman Pinscher", "English Bulldog", "French Bulldog", "German Shepherd", "Golden Retriever", "Goldendoodle", "Great Dane", "Havanese", "Labradoodle", "Labrador Retriever", "Maltese", "Maltipoo", "Miniature Schnauzer", "Pomeranian", "Poodle", "Pug", "Rottweiler", "Shih Tzu", "Siberian Husky", "Yorkshire Terrier"];
 
-export function NewClientForm() {
+export function NewClientForm({ serviceMode = "resort" }: { serviceMode?: "resort" | "grooming" }) {
   const [pets, setPets] = useState([0]);
   const nextPet = useRef(1);
   const submissionId = useRef<string | null>(null);
@@ -63,11 +63,11 @@ export function NewClientForm() {
         {pets.length > 1 && <div className={styles.petHeading}><h3>Dog {index + 1}</h3>{index > 0 && <button type="button" onClick={() => setPets(pets.filter(p => p !== id))} aria-label={`Remove dog ${index + 1}`}><X size={17} /> Remove</button>}</div>}
         <div className={styles.grid}>
           <label>Dog type <span>*</span><select name={`pet-type-${id}`} required defaultValue="DOG"><option value="DOG">Dog</option></select></label>
-          <label>Dog breed <span>*</span><input name={`pet-breed-${id}`} list="dog-breeds" placeholder="Search or enter breed" required maxLength={100} /></label>
+          <label>Dog breed <span>*</span><input name={`pet-breed-${id}`} list={`dog-breeds-${serviceMode}`} placeholder="Search or enter breed" required maxLength={100} /></label>
           <label className={styles.full}>Dog name <span>*</span><input name={`pet-name-${id}`} placeholder="Your pup’s name" required maxLength={100} /></label>
         </div>
       </div>)}
-      <datalist id="dog-breeds">{BREEDS.map(breed => <option key={breed} value={breed} />)}</datalist>
+      <datalist id={`dog-breeds-${serviceMode}`}>{BREEDS.map(breed => <option key={breed} value={breed} />)}</datalist>
       {pets.length < 10 && <button type="button" className={styles.add} onClick={() => setPets([...pets, nextPet.current++])}><Plus size={18} /> Additional dog</button>}
     </fieldset>
     <fieldset disabled={busy} className={styles.section}>
@@ -79,9 +79,9 @@ export function NewClientForm() {
         <label>Email <span>*</span><input name="email" type="email" autoComplete="email" required maxLength={254} /></label>
       </div>
     </fieldset>
-    <fieldset disabled={busy} className={styles.services}><legend>Which services are you interested in?</legend>
-      <div>{SERVICES.map(service => <label key={service}><input type="checkbox" name="services" value={service} /><span>{service}</span></label>)}</div>
-    </fieldset>
+    {serviceMode === "grooming" ? <input type="hidden" name="services" value="In-house grooming" /> : <fieldset disabled={busy} className={styles.services}><legend>Which services are you interested in?</legend>
+      <div>{SERVICES.filter(service => service !== "In-house grooming").map(service => <label key={service}><input type="checkbox" name="services" value={service} /><span>{service}</span></label>)}</div>
+    </fieldset>}
     <div className={styles.trap} aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
     <fieldset disabled={busy} className={styles.marketing}><legend>Marketing messages (optional)</legend>
     <label className={styles.consent}><input type="checkbox" name="marketingConsent" disabled={busy} /><span>{CONSENT_TEXT} View <a href="https://moego.pet/Html5/privacyPolicy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://moego.pet/Html5/termsAndConditions.html" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span></label>
