@@ -221,10 +221,10 @@ export default function HomePage() {
             <div>
               <div className="overflow-hidden border border-white/15 bg-[var(--pp-night)] shadow-[0_24px_70px_rgba(20,30,36,0.32)]">
                 <Image
-                  src="/our-resort-exterior.jpeg"
+                  src="/our-resort-exterior.webp"
                   alt="Planet Pooch Pet Resort exterior with daycare and boarding entrances"
-                  width={1300}
-                  height={650}
+                  width={1080}
+                  height={540}
                   sizes="(min-width: 1024px) 56rem, 100vw"
                   className="h-auto w-full object-cover"
                 />
