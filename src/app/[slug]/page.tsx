@@ -18,6 +18,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const entry = getDispatchEntry(slug);
   if (!entry) return {};
 
+  if (entry.type === "blog") {
+    const post = entry.data;
+    const image = post.image ?? "/opengraph-image.png";
+    return {
+      title: { absolute: post.metaTitle },
+      description: post.metaDescription,
+      alternates: { canonical: `/${slug}/` },
+      authors: [{ name: post.author ?? "Planet Pooch Pet Resort" }],
+      openGraph: {
+        title: post.metaTitle,
+        description: post.metaDescription,
+        url: `/${slug}/`,
+        siteName: "Planet Pooch Pet Resort",
+        locale: "en_US",
+        type: "article",
+        publishedTime: post.datePublished,
+        modifiedTime: post.dateModified ?? post.datePublished,
+        authors: [post.author ?? "Planet Pooch Pet Resort"],
+        images: [image],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: post.metaTitle,
+        description: post.metaDescription,
+        images: [image],
+      },
+    };
+  }
+
   const data = entry.data;
   return {
     title: { absolute: data.metaTitle },
@@ -27,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: data.metaTitle,
       description: data.metaDescription,
       url: `/${slug}/`,
-      type: entry.type === "blog" ? "article" : "website",
+      type: "website",
     },
   };
 }

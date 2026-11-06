@@ -1477,7 +1477,12 @@ const fullPosts: Record<string, BlogPost> = {
 
 export const blogPosts: Record<string, BlogPost> = {
   ...fullPosts,
-  ...restoredPosts,
+  // Duplicate WordPress URLs redirect to the canonical articles. Keep them out
+  // of the index, related articles, generated routes, and XML sitemap.
+  ...Object.fromEntries(Object.entries(restoredPosts).filter(([slug]) =>
+    slug !== "what-is-dog-daycare-a-complete-guide-for-pet-parents-2" &&
+    slug !== "make-this-long-weekend-a-holiday-for-your-pup-too-2",
+  )),
 };
 
 // Fail the build rather than publish a post with a missing or invalid sort date.

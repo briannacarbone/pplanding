@@ -75,7 +75,7 @@ export function articleSchema({
       },
     },
     author: {
-      "@type": authorName ? "Person" : "Organization",
+      "@type": authorName && authorName !== SITE.name && authorName !== SITE.legalName ? "Person" : "Organization",
       name: authorName ?? SITE.legalName,
     },
     ...(image ? { image: image.startsWith("http") ? image : `${SITE.url}${image}` } : {}),

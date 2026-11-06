@@ -136,13 +136,13 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
             ← Back to Blog
           </Link>
           {post.datePublished ? (
-            <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--pp-main)]/65">
+            <time dateTime={post.datePublished} className="mt-4 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--pp-main)]/65">
               {new Date(`${post.datePublished}T12:00:00`).toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",
                 year: "numeric",
               })}
-            </p>
+            </time>
           ) : null}
 
           {post.hasFullContent && post.sections ? (
