@@ -24,10 +24,11 @@ export const headerNavItems: ReadonlyArray<NavItem> = [
 /** Compact desktop navigation; mobile keeps its existing service shortcuts. */
 export const desktopNavItems: ReadonlyArray<NavItem> = [
   { label: "Mobile Grooming", href: "/mobile-grooming/" },
+  { label: "In-House Grooming", href: "/in-house-grooming/" },
   {
     label: "Pet Resort",
     items: [
-      { label: "In-House Grooming", href: "/in-house-grooming/" },
+
       { label: "Daycare", href: "/dog-daycare/" },
       { label: "Boarding", href: "/dog-boarding/" },
       { label: "Training", href: "/dog-training/" },
