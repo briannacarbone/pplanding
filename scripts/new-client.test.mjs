@@ -26,6 +26,13 @@ test('normalizes contact information and accepts optional consent', () => {
   assert.match(request.lead.pets[0].notes[0].content, /Services: Daycare/);
   assert.match(request.lead.pets[0].notes[0].content, /utm_source: facebook/);
 });
+test('current form requires exactly one service while older open forms remain compatible', () => {
+  for (const services of [[], ['Boarding', 'Daycare']]) {
+    assert.throws(() => parseIntake({ ...valid(), serviceSelectionVersion: 2, services }), /select one service/);
+  }
+  assert.deepEqual(parseIntake({ ...valid(), serviceSelectionVersion: 2 }).services, ['Daycare']);
+  assert.deepEqual(parseIntake({ ...valid(), services: ['Boarding', 'Daycare'] }).services, ['Boarding', 'Daycare']);
+});
 test('requires explicit marketing consent and retains evidence', () => {
   const request = buildLeadRequest(parseIntake({ ...valid(), marketingConsent: true }), 'company');
   assert.equal(request.complianceConfig.marketingCampaignsChannels.channels.length, 2);

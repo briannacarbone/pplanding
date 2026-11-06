@@ -31,7 +31,7 @@ export function NewClientForm({ serviceMode = "resort" }: { serviceMode?: "resor
       const response = await fetch("/api/new-client/", { method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ firstName: fields.get("firstName"), lastName: fields.get("lastName"), email: fields.get("email"), phone: fields.get("phone"),
           pets: pets.map(id => ({ name: fields.get(`pet-name-${id}`), breed: fields.get(`pet-breed-${id}`), type: fields.get(`pet-type-${id}`) })),
-          services: fields.getAll("services"), marketingConsent: fields.get("marketingConsent") === "on", website: fields.get("website"),
+          services: fields.getAll("services"), serviceSelectionVersion: 2, marketingConsent: fields.get("marketingConsent") === "on", website: fields.get("website"),
           submissionId: submissionId.current, attribution }) });
       const result = await response.json();
       if (!response.ok || !result.ok) throw new Error(result.error || "We couldn’t confirm your submission. Please try again or call us.");
@@ -57,6 +57,16 @@ export function NewClientForm({ serviceMode = "resort" }: { serviceMode?: "resor
 
   return <form onSubmit={submit} className={styles.form}>
     <p className={styles.required}>Fields marked <span>*</span> are required.</p>
+    {serviceMode === "grooming" ? <input type="hidden" name="services" value="In-house grooming" /> : <fieldset disabled={busy} className={styles.section}>
+      <div className={styles.grid}>
+        <label className={styles.full}>Which service are you interested in? <span>*</span>
+          <select name="services" required defaultValue="">
+            <option value="" disabled>Select a service</option>
+            {SERVICES.filter(service => service !== "In-house grooming").map(service => <option key={service} value={service}>{service}</option>)}
+          </select>
+        </label>
+      </div>
+    </fieldset>}
     <fieldset disabled={busy} className={styles.section}>
       <legend><PawPrint size={22} aria-hidden="true" /> Your dog&apos;s profile</legend>
       {pets.map((id, index) => <div key={id} className={styles.pet}>
@@ -79,9 +89,6 @@ export function NewClientForm({ serviceMode = "resort" }: { serviceMode?: "resor
         <label>Email <span>*</span><input name="email" type="email" autoComplete="email" required maxLength={254} /></label>
       </div>
     </fieldset>
-    {serviceMode === "grooming" ? <input type="hidden" name="services" value="In-house grooming" /> : <fieldset disabled={busy} className={styles.services}><legend>Which services are you interested in?</legend>
-      <div>{SERVICES.filter(service => service !== "In-house grooming").map(service => <label key={service}><input type="checkbox" name="services" value={service} /><span>{service}</span></label>)}</div>
-    </fieldset>}
     <div className={styles.trap} aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
     <fieldset disabled={busy} className={styles.marketing}><legend>Marketing messages (optional)</legend>
     <label className={styles.consent}><input type="checkbox" name="marketingConsent" disabled={busy} /><span>{CONSENT_TEXT} View <a href="https://moego.pet/Html5/privacyPolicy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://moego.pet/Html5/termsAndConditions.html" target="_blank" rel="noopener noreferrer">Terms of Use</a>.</span></label>

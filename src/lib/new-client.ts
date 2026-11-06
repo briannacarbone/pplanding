@@ -27,6 +27,7 @@ export function parseIntake(value: unknown): Intake {
   });
   // Keep accepting legacy Grooming inquiries from tabs opened before this update.
   if (!Array.isArray(input.services) || input.services.some(s => s !== "Grooming" && !SERVICES.includes(s))) throw new Error("Please check your service selections.");
+  if (input.serviceSelectionVersion === 2 && input.services.length !== 1) throw new Error("Please select one service.");
   if (typeof input.marketingConsent !== "boolean") throw new Error("Please check your marketing preference.");
   const submissionId = string(input.submissionId, 36);
   if (!/^[\da-f]{8}(-[\da-f]{4}){3}-[\da-f]{12}$/i.test(submissionId)) throw new Error("Please refresh the page and try again.");
