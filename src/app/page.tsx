@@ -344,7 +344,7 @@ export default function HomePage() {
 
       <SiteFooter />
 
-      <StickyMobileCta showAfterId="home-hero" />
+      <StickyMobileCta ctaLabel="Book Now" />
     </main>
   );
 }
