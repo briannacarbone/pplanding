@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { ADDRESS_LINES, SITE } from "../lib/site";
 import { SiteHeader } from "./site-header";
+import { BookNowModal } from "./book-now-modal";
 import { SiteFooter } from "./site-footer";
 import { StickyMobileCta } from "./sticky-mobile-cta";
 import { ReviewCarousel } from "./review-carousel";
@@ -123,10 +124,7 @@ export default function HomePage() {
 
               <div className="lg:border-l lg:border-white/20 lg:pl-10">
                 <div className="pp-hero-action-panel pp-home-hero-action-panel flex flex-col items-start gap-4">
-                  <Link href="/book/" className="pp-cta">
-                    Get Started
-                    <span className="pp-cta-arrow" aria-hidden />
-                  </Link>
+                  <BookNowModal ctaHref="/new-client/" className="pp-cta" label="Get Started" />
                   <div className="flex items-center gap-2 text-sm text-white">
                     <Star className="h-4 w-4 fill-[var(--pp-mint)] text-[var(--pp-mint)]" aria-hidden />
                     <span>
