@@ -6,8 +6,6 @@
   --pp-main: #4e6b75;
   --pp-main-deep: #324953;
   --pp-night: #2f3f47;
-  --pp-dark-green: #294a3d;
-  --pp-dark-green-hover: #35634f;
   --pp-cream: #fbfaf6;
   --pp-off-white: #fbfaf6;
   --pp-sand: #e9dccd;
@@ -120,14 +118,14 @@ a {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  background: var(--pp-dark-green);
+  background: var(--pp-main);
   color: #fff;
-  border: 1px solid var(--pp-dark-green);
+  border: 1px solid var(--pp-main);
   transition: background 220ms ease, border-color 220ms ease;
 }
 .pp-cta-ghost:hover {
-  background: var(--pp-dark-green-hover);
-  border-color: var(--pp-dark-green-hover);
+  background: var(--pp-main-deep);
+  border-color: var(--pp-main-deep);
 }
 
 .pp-cta-ghost-dark {
