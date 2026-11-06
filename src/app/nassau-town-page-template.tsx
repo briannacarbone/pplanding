@@ -1,5 +1,5 @@
 import { Libre_Baskerville, Manrope } from "next/font/google";
-import Link from "next/link";
+import Link from "./booking-link";
 import {
   ArrowRight,
   GraduationCap,

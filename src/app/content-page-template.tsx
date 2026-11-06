@@ -1,6 +1,6 @@
 import { Libre_Baskerville, Manrope } from "next/font/google";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "./booking-link";
 import {
   ArrowRight, Bath, Brush, BrushCleaning, Camera, Check, ChevronDown, Clock, Dog, Droplets, Ear, Eye,
   Footprints, Heart, PawPrint, Scissors, Sparkles, Trees, Truck, Users,
@@ -119,13 +119,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
           ) : null}
           {section.cta ? (
             <div className="mt-10 flex justify-center">
-              <a
-                href={section.cta.href}
+              <Link href={section.cta.href}
                 className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/85 transition hover:text-[var(--pp-main)]"
               >
                 {section.cta.label}
                 <ChevronDown className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           ) : null}
         </>
@@ -247,13 +246,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
             ) : null}
             {section.cta ? (
               <div className="mt-8 flex justify-center">
-                <a
-                  href={section.cta.href}
+                <Link href={section.cta.href}
                   className="inline-flex items-center gap-2 border border-[var(--pp-mint-deep)] bg-[var(--pp-mint)] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--pp-night)] transition hover:bg-[var(--pp-mint-deep)]"
                 >
                   {section.cta.label}
                   <ChevronDown className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             ) : null}
           </div>
@@ -303,13 +301,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
             </div>
             {section.cta ? (
               <div className="mt-8 flex justify-center">
-                <a
-                  href={section.cta.href}
+                <Link href={section.cta.href}
                   className="inline-flex items-center gap-2 border border-[var(--pp-mint-deep)] bg-[var(--pp-mint)] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--pp-night)] transition hover:bg-[var(--pp-mint-deep)]"
                 >
                   {section.cta.label}
                   <ChevronDown className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             ) : null}
           </div>
@@ -611,13 +608,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
             ) : null}
             {section.cta ? (
               <div className="mt-10 flex justify-center">
-                <a
-                  href={section.cta.href}
+                <Link href={section.cta.href}
                   className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/85 transition hover:text-[var(--pp-main)]"
                 >
                   {section.cta.label}
                   <ChevronDown className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             ) : null}
           </div>
@@ -749,13 +745,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
             </div>
             {section.cta ? (
               <div className="mt-10 flex justify-center">
-                <a
-                  href={section.cta.href}
+                <Link href={section.cta.href}
                   className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/85 transition hover:text-[var(--pp-main)]"
                 >
                   {section.cta.label}
                   <ChevronDown className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             ) : null}
           </div>
@@ -803,13 +798,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
             </div>
             {section.cta ? (
               <div className="mt-10 flex justify-center">
-                <a
-                  href={section.cta.href}
+                <Link href={section.cta.href}
                   className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/85 transition hover:text-[var(--pp-main)]"
                 >
                   {section.cta.label}
                   <ChevronDown className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             ) : null}
           </div>
@@ -866,13 +860,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
             </div>
             {section.cta ? (
               <div className="mt-10 flex justify-center">
-                <a
-                  href={section.cta.href}
+                <Link href={section.cta.href}
                   className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/85 transition hover:text-[var(--pp-main)]"
                 >
                   {section.cta.label}
                   <ChevronDown className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             ) : null}
             {section.ctas?.length ? (
@@ -993,13 +986,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
             })}
             {section.cta ? (
               <div className="mt-10 flex justify-center">
-                <a
-                  href={section.cta.href}
+                <Link href={section.cta.href}
                   className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/85 transition hover:text-[var(--pp-main)]"
                 >
                   {section.cta.label}
                   <ChevronDown className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             ) : null}
           </div>
@@ -1150,13 +1142,12 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
             </div>
             {section.cta ? (
               <div className="mt-10 flex justify-center">
-                <a
-                  href={section.cta.href}
+                <Link href={section.cta.href}
                   className="inline-flex w-full items-center justify-center gap-2 border border-[var(--pp-mint-deep)] bg-[var(--pp-mint)] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--pp-night)] transition hover:bg-[var(--pp-mint-deep)] sm:w-auto"
                 >
                   {section.cta.label}
                   <ArrowRight className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             ) : null}
           </div>
@@ -1318,7 +1309,7 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
                       {page.hero}
                     </p>
                     <div className="pp-hero-actions mt-9 flex flex-col items-start gap-3">
-                      {page.slug === "mobile-grooming" ? (
+                      {page.slug === "mobile-grooming" && page.heroCtas.primary.label.toLowerCase() !== "book now" ? (
                         <BookNowModal ctaHref={page.heroCtas.primary.href} className="pp-cta" variant="grooming" label={page.heroCtas.primary.label} />
                       ) : (
                         <Link href={page.heroCtas.primary.href} className="pp-cta">

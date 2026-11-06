@@ -1,6 +1,6 @@
 import { Libre_Baskerville, Manrope } from "next/font/google";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "./booking-link";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { towns, type TownPage } from "../lib/content/towns";
 import { SITE } from "../lib/site";
