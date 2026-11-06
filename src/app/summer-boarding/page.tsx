@@ -363,7 +363,7 @@ export default function SummerBoardingPage() {
 
       <SiteFooter />
 
-      <StickyMobileCta ctaHref="/dog-boarding/" ctaLabel="Check Availability" />
+      <StickyMobileCta ctaHref="/dog-boarding/" ctaLabel="Get Started" />
     </main>
   );
 }

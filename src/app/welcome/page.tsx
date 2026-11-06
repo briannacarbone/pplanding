@@ -1,3 +1,4 @@
+import { BookNowModal } from "../book-now-modal";
 import type { Metadata } from "next";
 import { Libre_Baskerville, Manrope } from "next/font/google";
 import Image from "next/image";
@@ -169,14 +170,7 @@ export default function WelcomePage() {
                 </p>
 
               <div className="pp-hero-actions mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="#request"
-                  data-track="hero-request-availability"
-                  className="pp-cta min-h-[52px] !px-7"
-                >
-                  Check Availability
-                  <span className="pp-cta-arrow" aria-hidden />
-                </a>
+                <BookNowModal ctaHref="/new-client/" label="Get Started" track="hero-request-availability" className="pp-cta min-h-[52px] !px-7" />
                 <a
                   href={SITE.phone.href}
                   data-track="phone-click"
@@ -285,14 +279,7 @@ export default function WelcomePage() {
           </div>
 
           <div className="mt-12 text-center">
-            <a
-              href="#request"
-              data-track="services-request-availability"
-              className="pp-cta min-h-[52px] !px-7"
-            >
-              Check Availability
-              <span className="pp-cta-arrow" aria-hidden />
-            </a>
+            <BookNowModal ctaHref="/new-client/" label="Get Started" track="services-request-availability" className="pp-cta min-h-[52px] !px-7" />
           </div>
         </div>
       </section>
@@ -481,14 +468,7 @@ export default function WelcomePage() {
             day of play, or overnight boarding — we&rsquo;re here for your pet.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#request"
-              data-track="final-request-availability"
-              className="pp-cta min-h-[52px] !px-7"
-            >
-              Check Availability
-              <span className="pp-cta-arrow" aria-hidden />
-            </a>
+            <BookNowModal ctaHref="/new-client/" label="Get Started" track="final-request-availability" className="pp-cta min-h-[52px] !px-7" />
             <a
               href={SITE.phone.href}
               data-track="phone-click"

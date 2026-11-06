@@ -1,22 +1,11 @@
-import { NEW_CLIENT_FORM_URL } from "../../lib/booking";
+import { BookNowModal } from "../book-now-modal";
 
 export function BoardingFormModal({
   className = "",
-  label = "Check Availability",
+  label = "Get Started",
 }: {
   className?: string;
   label?: string;
 }) {
-  return (
-    <a
-      href={NEW_CLIENT_FORM_URL}
-      target="_blank"
-      rel="noopener"
-      data-track="moego-new-client-form"
-      className={className}
-    >
-      {label}
-      <span className="pp-cta-arrow" aria-hidden />
-    </a>
-  );
+  return <BookNowModal ctaHref="/new-client/" label={label} className={className} />;
 }
