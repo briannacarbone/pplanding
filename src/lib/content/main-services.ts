@@ -150,7 +150,6 @@ export const mainServicePages = {
     serviceType: "Dog Grooming",
     heroCtas: {
       primary: { label: "Book Now", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
       tertiary: { label: "View Pricing", href: "#pricing" },
     },
     sections: [

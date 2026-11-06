@@ -1315,9 +1315,11 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
                           <span className="pp-cta-arrow" aria-hidden />
                         </Link>
                       )}
-                      <a href={page.heroCtas.ghost.href} className="pp-cta-ghost">
-                        {page.heroCtas.ghost.label}
-                      </a>
+                      {page.heroCtas.ghost ? (
+                        <a href={page.heroCtas.ghost.href} className="pp-cta-ghost">
+                          {page.heroCtas.ghost.label}
+                        </a>
+                      ) : null}
                     </div>
                   </div>
                 </div>
