@@ -70,7 +70,7 @@ export function ReviewCarousel({ reviews }: { reviews: readonly Review[] }) {
                 key={review.name}
                 className="review-card flex shrink-0 flex-col gap-4 bg-white/10 p-6 sm:p-7"
               >
-                <div className="flex items-start justify-between gap-3">
+                <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="flex items-center gap-3">
                     <span
                       aria-hidden

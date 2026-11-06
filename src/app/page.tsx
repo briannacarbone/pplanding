@@ -101,7 +101,7 @@ export default function HomePage() {
 
           <div
             id="top"
-            className="pp-home-hero-content pt-16 pb-32 lg:pt-24 lg:pb-40"
+            className="pp-home-hero-content pt-12 pb-40 sm:pt-16 lg:pt-24 lg:pb-40"
           >
             <div>
               <div>
@@ -188,14 +188,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="bg-[linear-gradient(180deg,#6f8793_0%,#617783_100%)] px-5 py-18 text-white sm:px-8 lg:px-10 lg:py-24">
+      <section id="about" className="bg-[linear-gradient(180deg,#6f8793_0%,#617783_100%)] px-5 py-12 sm:py-18 text-white sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/72">
                 About Us
               </p>
-              <h2 className="mt-4 text-4xl leading-tight sm:text-5xl">
+              <h2 className="mt-4 text-3xl leading-tight sm:text-5xl">
                 Planet Pooch was founded in 2014 by Andy Gonzaga
               </h2>
               <p className="mt-5 text-base leading-8 text-white/78">
@@ -225,7 +225,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="facility-tour" className="bg-[var(--pp-cream)] px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
+      <section id="facility-tour" className="bg-[var(--pp-cream)] px-5 py-12 sm:py-16 sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="overflow-hidden border border-[rgba(50,73,83,0.12)] bg-white/50 shadow-[0_24px_70px_rgba(50,73,83,0.1)] lg:order-1">
             <LiteYouTubeEmbed
@@ -239,7 +239,7 @@ export default function HomePage() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
               Facility Tour
             </p>
-            <h2 className="mt-4 text-4xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
+            <h2 className="mt-4 text-3xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
               Take a closer look before you visit.
             </h2>
             <p className="mt-5 text-base leading-8 text-[rgba(47,42,39,0.72)]">
@@ -250,16 +250,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="testimonials" className="bg-[linear-gradient(180deg,#6f8793_0%,#617783_100%)] px-5 py-18 text-white sm:px-8 lg:px-10 lg:py-24">
+      <section id="testimonials" className="bg-[linear-gradient(180deg,#6f8793_0%,#617783_100%)] px-5 py-12 sm:py-18 text-white sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/72">
               Testimonials
             </p>
-            <h2 className="mt-4 text-4xl leading-tight sm:text-5xl">
+            <h2 className="mt-4 text-3xl leading-tight sm:text-5xl">
               Our clients say it best.
             </h2>
-            <div className="mt-5 flex items-center justify-center gap-2 text-sm text-white/78">
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-sm text-white/78">
               <span className="flex items-center gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-[#fbbc04] text-[#fbbc04]" />
@@ -286,16 +286,16 @@ export default function HomePage() {
 
       <section
         id="gallery"
-        className="bg-[var(--pp-cream)] px-5 py-18 sm:px-8 lg:px-10 lg:py-24"
+        className="bg-[var(--pp-cream)] px-5 py-12 sm:py-18 sm:px-8 lg:px-10 lg:py-24"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="bg-[var(--pp-mint)] p-8 shadow-[0_24px_70px_rgba(50,73,83,0.1)] sm:p-10 lg:p-14">
+          <div className="bg-[var(--pp-mint)] p-6 shadow-[0_24px_70px_rgba(50,73,83,0.1)] sm:p-10 lg:p-14">
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]/85">
                   Visit Us
                 </p>
-                <h2 className="mt-4 text-4xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
+                <h2 className="mt-4 text-3xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
                   Come see the Planet Pooch difference.
                 </h2>
                 <p className="mt-5 text-base leading-8 text-[var(--pp-ink)]/82">

@@ -321,3 +321,13 @@ main > section:first-child .pp-home-hero-title {
   .review-layout { gap: 16px; }
   .review-card { width: calc((100cqw - 120px - 48px) / 3); }
 }
+
+/* Give phone reviews the full content width; controls sit below the cards. */
+@media (max-width: 639px) {
+  .review-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 12px; }
+  .review-viewport { grid-column: 1 / -1; grid-row: 1; min-width: 0; }
+  .review-card { width: 100cqw; }
+  .review-side { grid-row: 2; }
+  .review-side:first-child { justify-self: end; }
+  .review-side:last-child { justify-self: start; }
+}
