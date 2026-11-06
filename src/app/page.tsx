@@ -73,6 +73,13 @@ const heroHighlights = [
     image: "/enrichment_home.jpg",
     copy: "Sensory play, scent work, agility, and gentle one-on-one challenges.",
   },
+  {
+    title: "In-House Grooming",
+    href: "/in-house-grooming/",
+    icon: Scissors,
+    image: "/Grooming.png",
+    copy: "Spa-quality grooming at our resort for daycare and boarding guests.",
+  },
 ] as const;
 
 
@@ -159,11 +166,11 @@ export default function HomePage() {
               Tailored care. Heartfelt experience.
             </p>
             <h2 className="mt-4 text-4xl leading-tight sm:text-5xl">
-              Five ways we care differently.
+              Six ways we care differently.
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
             {heroHighlights.map((item) => {
               const Icon = item.icon;
               return (
@@ -177,7 +184,7 @@ export default function HomePage() {
                       src={item.image}
                       alt={item.title}
                       fill
-                      sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) calc((100vw - 96px) / 2), 20vw"
+                      sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 767px) calc((100vw - 96px) / 2), (max-width: 1279px) 33vw, 200px"
                       className="object-cover transition duration-500 group-hover:scale-105"
                     />
                   </div>
