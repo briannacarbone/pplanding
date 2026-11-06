@@ -72,7 +72,7 @@ export function MobileMenu({ ctaHref }: { ctaHref: string }) {
               <p className="mb-2 mt-7 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Explore Planet Pooch</p>
               <div className="grid grid-cols-2 gap-x-5">{explore && "items" in explore && explore.items.map(item => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="flex min-h-11 items-center border-b border-white/10 text-sm text-white/85">{item.label}</Link>)}</div>
             </nav>
-            <div className="border-t border-white/15 pt-5">
+            <div className="mt-auto border-t border-white/15 pt-5">
               <div className="grid grid-cols-2 gap-3">
                 <Link href="/contact/" onClick={() => setOpen(false)} className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 text-sm font-semibold">Contact us</Link>
                 <BookNowModal ctaHref={ctaHref} className="pp-cta min-h-12 justify-center rounded-full px-3! gap-2! tracking-normal! whitespace-nowrap" icon="paw" />
