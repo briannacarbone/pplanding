@@ -103,7 +103,7 @@ export default function HomePage() {
             id="top"
             className="pp-home-hero-content pt-16 pb-32 lg:pt-24 lg:pb-40"
           >
-            <div className="max-w-xl">
+            <div>
               <div>
                 <h1 className="pp-home-hero-title max-w-xl text-white">
                   Enriching the lives of pets{" "}
@@ -117,9 +117,9 @@ export default function HomePage() {
               </div>
 
               <div className="mt-8">
-                <div className="pp-hero-action-panel pp-home-hero-action-panel flex flex-col items-start gap-4">
-                  <BookNowModal ctaHref="/new-client/" className="pp-cta" label="Get Started" />
-                  <div className="flex items-center gap-2 text-sm text-white/85">
+                <div className="pp-hero-action-panel pp-home-hero-action-panel flex flex-wrap items-center justify-between gap-6">
+                  <BookNowModal ctaHref="/new-client/" className="pp-cta order-2 ml-auto" label="Get Started" icon="paw" />
+                  <div className="order-1 flex items-center gap-2 text-sm text-white/85">
                     <Star className="h-4 w-4 fill-[var(--pp-mint)] text-[var(--pp-mint)]" aria-hidden />
                     <span>
                       <strong className="font-semibold">{SITE.reviews.rating}</strong> from {SITE.reviews.countDisplay} Long Island pet parents
@@ -129,7 +129,7 @@ export default function HomePage() {
 
               </div>
             </div>
-            <a href="#services" className="mt-12 inline-flex min-h-11 items-center gap-3 text-xs font-medium tracking-wide text-white/75 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+            <a href="#services" className="absolute bottom-20 left-1/2 inline-flex min-h-11 -translate-x-1/2 flex-col items-center gap-2 whitespace-nowrap text-xs font-medium tracking-wide text-white/75 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
               View our services
               <ArrowDown className="h-4 w-4" aria-hidden />
             </a>

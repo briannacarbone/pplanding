@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { X } from "lucide-react";
+import { PawPrint, X } from "lucide-react";
 import { MOBILE_GROOMING_NEW_CLIENT_FORM_URL } from "../lib/booking";
 import { SITE } from "../lib/site";
 
-export function BookNowModal({ ctaHref, className = "", variant = "full", label = "Book Now" }: { ctaHref: string; className?: string; variant?: "full" | "grooming"; label?: string }) {
+export function BookNowModal({ ctaHref, className = "", variant = "full", label = "Book Now", icon = "arrow" }: { ctaHref: string; className?: string; variant?: "full" | "grooming"; label?: string; icon?: "arrow" | "paw" }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
     <>
       <button type="button" onClick={() => setOpen(true)} className={className}>
         {label}
-        <span className="pp-cta-arrow" aria-hidden />
+        {icon === "paw" ? <PawPrint className="h-4 w-4" aria-hidden /> : <span className="pp-cta-arrow" aria-hidden />}
       </button>
 
       {open && (
