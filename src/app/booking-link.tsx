@@ -15,7 +15,7 @@ function labelText(children: ReactNode): string {
 /** Keep content-driven booking actions consistent with the shared popup. */
 export default function BookingLink(props: ComponentProps<typeof NextLink>) {
   const label = labelText(props.children).trim();
-  if (["book now", "get started"].includes(label.toLowerCase())) {
+  if (["book now", "get started", "book free consultation", "book a consultation", "book mobile grooming"].includes(label.toLowerCase())) {
     return <BookNowModal ctaHref="/new-client/" className={props.className} label={label} />;
   }
   return <NextLink {...props} />;
