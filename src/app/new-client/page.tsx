@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "../site-header";
 import { SiteFooter } from "../site-footer";
 import { SITE } from "../../lib/site";
-import { NewClientForm } from "./new-client-form";
+import { ServiceSelector } from "./service-selector";
 import styles from "./new-client.module.css";
 
 const title = "Get Started with Planet Pooch | Grooming, Daycare, Boarding & Training";
@@ -31,7 +31,7 @@ export default function NewClientPage() {
           </div>
           <div className="lg:border-l lg:border-white/20 lg:pl-10">
             <p className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl">
-              From grooming to daycare, boarding, training, and enrichment, we&apos;re here for you and your pup. Fill out this quick form and our team will help you find the right next step.
+              Tell us about your pup, and we&apos;ll help you find the right services.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function NewClientPage() {
     </div>
     <main id="main" className={styles.page}>
     <div className={styles.card}>
-      <NewClientForm />
+      <ServiceSelector />
     </div>
     </main>
     <SiteFooter />
