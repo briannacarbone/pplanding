@@ -34,7 +34,9 @@ const formatDate = (iso: string) =>
   });
 
 export default function BlogIndexPage() {
-  const posts = Object.values(blogPosts);
+  const posts = Object.values(blogPosts).sort((a, b) =>
+    (b.datePublished ?? "").localeCompare(a.datePublished ?? ""),
+  );
   const featured = posts.filter((p) => p.hasFullContent);
   const archive = posts.filter((p) => !p.hasFullContent);
 
@@ -63,10 +65,10 @@ export default function BlogIndexPage() {
       <section className="bg-white/55 px-5 py-14 sm:px-8 lg:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
-            Featured
+            Latest
           </p>
           <h2 className="mt-3 text-3xl leading-tight text-[var(--pp-ink)] sm:text-4xl">
-            Most-read articles
+            Latest articles
           </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {featured.map((p) => (

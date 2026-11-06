@@ -24,6 +24,8 @@ export type BlogPost = {
   image?: string;
 };
 
+// Backfilled dates use the first full-content commit when no original publication
+// date was recorded. Existing publication dates are preserved.
 const fullPosts: Record<string, BlogPost> = {
   "all-in-one-dog-care-daycare-boarding-training-grooming": {
     slug: "all-in-one-dog-care-daycare-boarding-training-grooming",
@@ -416,6 +418,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Planning summer travel? Give your pup a vacation of their own with spacious suites, supervised backyard play, climate-controlled indoor spaces, and daily report cards.",
     hasFullContent: true,
+    datePublished: "2026-06-02",
     intro:
       "Planning a summer vacation? Your dog deserves a vacation too. At Planet Pooch Pet Resort, our boarding experience is designed to keep dogs comfortable, active, and cared for while you're away.",
     sections: [
@@ -461,6 +464,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Memorial Day Weekend boarding books up fast. Here's what to pack, how to prepare your dog, and why reserving early matters for a stress-free holiday.",
     hasFullContent: true,
+    datePublished: "2026-05-20",
     intro:
       "Memorial Day Weekend is one of the busiest travel weekends of the year — and that means dog boarding reservations fill up fast. If you're planning a getaway, now is the perfect time to make sure your pup has a safe, comfortable place to stay while you're away.",
     sections: [
@@ -510,6 +514,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Socialization is one of the most important parts of raising a well-adjusted dog — and it's a key factor in preventing separation anxiety.",
     hasFullContent: true,
+    datePublished: "2026-05-06",
     intro:
       "When we bring a dog into our homes, we want them to be happy, well-behaved, and comfortable in all environments. Socialization is one of the most important aspects of raising a well-adjusted dog. It's not just about letting your dog play with other dogs or people — it's about exposing them to various experiences, environments, and situations so they can learn how to navigate the world confidently. But what happens when a dog isn't properly socialized? One common consequence is separation anxiety — a condition that can lead to destructive behaviors, excessive barking, and emotional distress when left alone.",
     sections: [
@@ -564,6 +569,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Dog daycare beats hiring a sitter for socialization, structure, professional supervision, and ongoing exercise. Here's why.",
     hasFullContent: true,
+    datePublished: "2026-05-06",
     intro:
       "When deciding between dog daycare and a dog sitter, daycare emerges as the superior choice for most pet owners. Here are the key advantages.",
     sections: [
@@ -619,6 +625,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Dog daycare provides a safe, supervised environment for your dog while you're away. Here's what it includes, why it works, and how to choose the right one.",
     hasFullContent: true,
+    datePublished: "2026-05-06",
     intro:
       "Dog daycare is a service that provides a safe, supervised environment where your dog can spend the day while you're away. Like daycare for children, dog daycare offers a place for dogs to socialize, play, and receive attention when their owners are at work, traveling, or otherwise occupied.",
     sections: [
@@ -662,6 +669,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Ten tips for keeping you and your dog safe on Long Island streets — proper equipment, visibility, traffic awareness, weather, and street smarts.",
     hasFullContent: true,
+    datePublished: "2026-05-06",
     intro:
       "Walking your dog is one of life's simple pleasures, but as pedestrian traffic and roadways get busier, safety should always be top of mind. Whether you're strolling through the park or heading to the corner store, here are key steps to keep you and your dog safe.",
     sections: [
@@ -717,6 +725,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Socialization and preventing loneliness are two of the biggest factors in a happy, balanced dog. Eight ways they make a difference.",
     hasFullContent: true,
+    datePublished: "2026-05-06",
     intro:
       "When it comes to raising a happy, healthy, well-adjusted dog, socialization and preventing loneliness are two key factors. Whether you're a first-time dog owner or a seasoned pet parent, understanding these can significantly improve your dog's quality of life.",
     sections: [
@@ -766,6 +775,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Pets provide unconditional love, encourage activity, lower blood pressure, and help us live in the moment. Ten ways they reduce stress.",
     hasFullContent: true,
+    datePublished: "2026-05-06",
     intro:
       "Stress has become part of daily life for many people — but one of the simplest and most effective ways to alleviate it is by having a pet. Whether it's a playful dog, a serene cat, or even a calming fish tank, animals can have a profound impact on your mental and emotional well-being.",
     sections: [
@@ -809,6 +819,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Whether your dog is the size of a teacup or a gentle giant, dog daycare offers socialization, exercise, mental stimulation, and peace of mind.",
     hasFullContent: true,
+    datePublished: "2026-05-06",
     intro:
       "If you're a dog parent, you've probably wondered if dog daycare is right for your furry friend. Whether your dog is the size of a teacup or a gentle giant, dog daycare can be a fantastic option for both small and large breeds.",
     sections: [
@@ -852,6 +863,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Dog grooming frequency depends on breed and coat type. Most dogs benefit from professional grooming every 4–6 weeks to maintain health and comfort.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "One of the most common questions we hear from pet parents is how often their dog actually needs to be groomed. The answer depends on your dog's breed, coat type, lifestyle, and skin sensitivity — but a good baseline is every 4–6 weeks for most dogs.",
     sections: [
@@ -906,6 +918,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Shaving a Goldendoodle is sometimes necessary for health and comfort, but regular professional grooming is the best way to prevent matting and skin issues.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "Goldendoodles have beautiful, thick coats — but they can also be high-maintenance. If your doodle's coat has gotten out of hand, you might be wondering whether shaving is the right call. Here's what you need to know.",
     sections: [
@@ -934,6 +947,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Regular flea and tick treatments protect your dog from parasites, disease, and discomfort — and safeguard your home and family too.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "Fleas and ticks are more than a nuisance — they're a genuine health risk for your dog and your household. Regular prevention is one of the most important things you can do as a pet parent, especially on Long Island where tick-borne diseases are common.",
     sections: [
@@ -973,6 +987,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Regular grooming isn't just cosmetic — it promotes healthy skin, prevents health issues, and keeps your pet comfortable. Here's why it matters.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "A lot of pet parents think of grooming as a way to keep their dog looking good — and it does — but the health benefits are just as important. Regular grooming is one of the simplest ways to keep your pet comfortable and catch problems early.",
     sections: [
@@ -1010,6 +1025,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Regular nail trimming prevents pain, injury, and mobility issues in dogs. Learn why it matters and tips for keeping nails at a healthy length.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "Nail trimming is one of those grooming tasks that's easy to put off — but overgrown nails can cause real problems for your dog. Here's why staying on top of it matters more than you might think.",
     sections: [
@@ -1056,6 +1072,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Mobile grooming brings professional care to your door — less stress for your pet, more convenience for you, and one-on-one attention every session.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "Mobile grooming has become a go-to for pet parents who want a calmer, more personalized grooming experience for their dog. Instead of a busy salon, the groomer comes to you — and the difference in your pet's comfort is noticeable.",
     sections: [
@@ -1111,6 +1128,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Spring shedding is natural — here's how to manage it with the right tools, brushing routine, and professional deshedding treatments.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "Every spring, pet parents notice the same thing: fur everywhere. Shedding is a natural process driven by changes in daylight and temperature, and it's your dog's way of swapping their thick winter coat for something lighter. Here's how to stay on top of it.",
     sections: [
@@ -1157,6 +1175,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Dog boarding provides peace of mind, professional care, socialization, and structured routines — a better option than leaving your dog at home alone.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "When you need to travel or be away for an extended period, boarding your dog at a professional facility gives both of you a better experience. Here's why it works.",
     sections: [
@@ -1200,6 +1219,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Enrichment activities provide mental and physical stimulation that reduce anxiety, build confidence, and strengthen the bond between you and your dog.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "Most dogs get plenty of physical exercise, but mental stimulation is just as important. Enrichment activities are structured games and exercises designed to keep your dog's mind sharp and their body active — and the benefits go well beyond keeping them busy.",
     sections: [
@@ -1238,6 +1258,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Dog training isn't just for puppies. Whether you're building a foundation or correcting old habits, training improves communication and quality of life at any age.",
     hasFullContent: true,
+    datePublished: "2026-05-19",
     intro:
       "There's a common misconception that training is only for puppies — but dogs benefit from structured training at every stage of life. Whether you're starting with a brand-new puppy or working with an adult dog, training builds communication, trust, and a better relationship.",
     sections: [
@@ -1277,6 +1298,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Labor Day is one of the busiest boarding weekends of the year and spots fill up fast. Here's why boarding beats the alternatives — and how to prepare for drop-off.",
     hasFullContent: true,
+    datePublished: "2026-08-11",
     intro:
       "Summer always seems to end faster than we expect. One minute you're planning beach days, and the next you're staring down Labor Day weekend with a road trip on the calendar and no plan for your pup. If that sounds familiar, you're not alone — and now is the time to get ahead of it.",
     sections: [
@@ -1327,6 +1349,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "The last two weeks of summer are our busiest stretch of the year. Here's why late-August boarding fills up fast, plus a short pre-boarding checklist.",
     hasFullContent: true,
+    datePublished: "2026-08-19",
     intro:
       "Labor Day weekend is closer than it feels. If there's one more trip on your calendar before the school year swallows everything — a long weekend at the lake, a family wedding, a final drive to the coast — now is the moment to sort out where your dog is staying.",
     sections: [
@@ -1372,6 +1395,7 @@ const fullPosts: Record<string, BlogPost> = {
     metaDescription:
       "Boarding your dog Columbus Day weekend (Oct 10–12)? Private suites, daily play and free medication at Planet Pooch in Franklin Square, NY. Book early.",
     hasFullContent: true,
+    datePublished: "2026-09-30",
     intro:
       "Columbus Day weekend runs Saturday, October 10 through Monday, October 12 this year, and for a lot of Long Island families it's the last real getaway before the holidays take over. Apple picking upstate, a foliage drive through Vermont, a wedding out of state, or just three quiet days to recharge.",
     sections: [
