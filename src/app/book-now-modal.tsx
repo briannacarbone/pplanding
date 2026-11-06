@@ -53,21 +53,13 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
             {variant === "full" ? (
               <div className="space-y-6">
                 <Link href="/new-client/" className="pp-cta pp-cta-sm w-full justify-center text-center">
-                  New Client
+                  Get Started
                 </Link>
-                <div className="space-y-5 border-t border-[var(--pp-sand)] pt-6 text-center">
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--pp-ink)]">Pet Resort</p>
-                    <a href={SITE.phone.href} className="mt-1 inline-flex min-h-11 items-center text-xl font-semibold text-[var(--pp-main-deep)] underline underline-offset-4">
-                      {SITE.phone.display}
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--pp-ink)]">Mobile Grooming</p>
-                    <a href="tel:+12023186526" className="mt-1 inline-flex min-h-11 items-center text-xl font-semibold text-[var(--pp-main-deep)] underline underline-offset-4">
-                      (202) 318-6526
-                    </a>
-                  </div>
+                <div className="border-t border-[var(--pp-sand)] pt-6 text-center">
+                  <p className="text-sm text-[var(--pp-ink)]">For Immediate Assistance Call</p>
+                  <a href={SITE.phone.href} className="mt-1 inline-flex min-h-11 items-center text-xl font-bold text-[var(--pp-main-deep)] underline underline-offset-4">
+                    Call {SITE.phone.display}
+                  </a>
                 </div>
               </div>
             ) : (
