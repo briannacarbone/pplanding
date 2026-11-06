@@ -52,7 +52,7 @@ export function NewClientForm() {
   if (done) return <div className={styles.success} ref={success} tabIndex={-1} role="status">
     <span className={styles.successIcon}><Check size={30} /></span><h2>You’re on our list!</h2>
     <p>Thanks for introducing your pup. Your information has been received, and our team will be in touch soon.</p>
-    <p>Questions? <a href={SITE.phone.href}>Call {SITE.phone.display}</a>.</p>
+    <p className={styles.immediateService}>For immediate service call us at <a href={SITE.phone.href}>{SITE.phone.display}</a>.</p>
   </div>;
 
   return <form onSubmit={submit} className={styles.form}>
