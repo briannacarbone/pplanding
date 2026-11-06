@@ -139,28 +139,28 @@ export default function HomePage() {
 
       <section
         id="services"
-        className="relative -mt-12 rounded-t-[3rem] bg-[var(--pp-cream)] px-5 pb-18 pt-14 text-[var(--pp-ink)] sm:px-8 lg:-mt-14 lg:rounded-t-[4rem] lg:px-10 lg:pt-16"
+        className="relative -mt-12 rounded-t-[3rem] bg-[var(--pp-cream)] px-5 pb-10 pt-10 sm:pb-18 sm:pt-14 text-[var(--pp-ink)] sm:px-8 lg:-mt-14 lg:rounded-t-[4rem] lg:px-10 lg:pt-16"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+            <p className="hidden sm:block text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
               Tailored care. Heartfelt experience.
             </p>
-            <h2 className="mt-4 text-4xl leading-tight sm:text-5xl">
+            <h2 className="text-2xl leading-tight sm:mt-4 sm:text-5xl">
               Six ways we care differently.
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+          <div className="mt-6 grid gap-3 sm:mt-12 sm:gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
             {heroHighlights.map((item) => {
               const Icon = item.icon;
               return (
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="group mx-auto w-full max-w-sm overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-md"
+                  className="group mx-auto flex w-full items-center overflow-hidden rounded-xl bg-white shadow-sm transition hover:shadow-md sm:block sm:max-w-sm sm:rounded-2xl"
                 >
-                  <div className="relative aspect-square w-full overflow-hidden">
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden sm:aspect-square sm:h-auto sm:w-full">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -169,15 +169,15 @@ export default function HomePage() {
                       className="object-cover transition duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="relative px-3 pb-4 pt-7 text-center">
-                    <div className="absolute -top-6 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-2 border-white bg-[var(--pp-cream)] shadow-sm">
+                  <div className="relative flex-1 px-4 py-3 sm:px-3 sm:pb-4 sm:pt-7 sm:text-center">
+                    <div className="absolute -top-6 left-1/2 hidden sm:flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-2 border-white bg-[var(--pp-cream)] shadow-sm">
                       <Icon className="h-5 w-5 stroke-[1.5] text-[var(--pp-gold-deep)]" />
                     </div>
-                    <h3 className="mt-2 font-display text-lg italic text-[var(--pp-night)] transition group-hover:text-[var(--pp-main)]" style={{ fontFamily: "var(--font-display), serif" }}>
+                    <h3 className="sm:mt-2 font-display text-base sm:text-lg sm:italic text-[var(--pp-night)] transition group-hover:text-[var(--pp-main)]" style={{ fontFamily: "var(--font-display), serif" }}>
                       {item.title}
                     </h3>
-                    <span className="mx-auto mt-3 block h-px w-10 bg-[var(--pp-gold-deep)]/40" aria-hidden />
-                    <p className="mx-auto mt-3 max-w-[16rem] text-sm leading-7 text-[rgba(47,42,39,0.78)]">
+                    <span className="mx-auto mt-3 hidden sm:block h-px w-10 bg-[var(--pp-gold-deep)]/40" aria-hidden />
+                    <p className="mx-auto mt-3 hidden sm:block max-w-[16rem] text-sm leading-7 text-[rgba(47,42,39,0.78)]">
                       {item.copy}
                     </p>
                   </div>
