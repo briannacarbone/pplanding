@@ -35,7 +35,7 @@ const formatDate = (iso: string) =>
 
 export default function BlogIndexPage() {
   const posts = Object.values(blogPosts).sort((a, b) =>
-    (b.datePublished ?? "").localeCompare(a.datePublished ?? ""),
+    b.datePublished.localeCompare(a.datePublished),
   );
   const featured = posts.filter((p) => p.hasFullContent);
   const archive = posts.filter((p) => !p.hasFullContent);

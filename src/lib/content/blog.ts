@@ -15,7 +15,7 @@ export type BlogPost = {
   intro?: string;
   sections?: BlogSection[];
   /** ISO-8601 publish date (YYYY-MM-DD). Used in Article JSON-LD. */
-  datePublished?: string;
+  datePublished: string;
   /** ISO-8601 last-modified date (YYYY-MM-DD). Defaults to datePublished. */
   dateModified?: string;
   /** Display name of the author. Defaults to the brand. */
@@ -1479,5 +1479,17 @@ export const blogPosts: Record<string, BlogPost> = {
   ...fullPosts,
   ...restoredPosts,
 };
+
+// Fail the build rather than publish a post with a missing or invalid sort date.
+for (const post of Object.values(blogPosts)) {
+  const date = post.datePublished;
+  if (
+    !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
+    !Number.isFinite(Date.parse(date)) ||
+    new Date(date).toISOString().slice(0, 10) !== date
+  ) {
+    throw new Error(`Blog post "${post.slug}" requires a valid datePublished (YYYY-MM-DD).`);
+  }
+}
 
 export type BlogSlug = string;
