@@ -42,7 +42,7 @@ body {
   font-style: normal;
 }
 
-.pp-home-hero-tagline {
+.pp-hero-tagline {
   max-width: 28rem;
   margin-top: 1.5rem;
   color: rgba(255, 255, 255, 0.9);
@@ -208,7 +208,7 @@ main > section:first-child h1 {
   line-height: 1.08;
 }
 
-main > section:first-child .pp-home-hero-title {
+.pp-page-hero .pp-hero-title {
   font-size: 2.5rem;
 }
 
@@ -230,7 +230,7 @@ main > section:first-child .pp-home-hero-title {
     font-size: 3.5rem;
   }
 
-  main > section:first-child .pp-home-hero-title {
+  .pp-page-hero .pp-hero-title {
     font-size: 3.125rem;
   }
 }
@@ -240,7 +240,7 @@ main > section:first-child .pp-home-hero-title {
     font-size: 4.25rem;
   }
 
-  main > section:first-child .pp-home-hero-title {
+  .pp-page-hero .pp-hero-title {
     font-size: 3.875rem;
   }
 }
@@ -283,18 +283,18 @@ main > section:first-child .pp-home-hero-title {
 /* A short landscape viewport needs a tighter hero so the full headline is
    visible; the sticky CTA supplies the primary conversion action below lg. */
 @media (orientation: landscape) and (max-height: 500px) and (max-width: 1023px) {
-  .pp-home-hero-content {
+  .pp-hero-content {
     padding-bottom: 5rem;
     padding-top: 2rem;
   }
 
-  main > section:first-child .pp-home-hero-title {
+  .pp-page-hero .pp-hero-title {
     font-size: 2.5rem;
     line-height: 1.04;
     max-width: 44rem;
   }
 
-  .pp-home-hero-tagline {
+  .pp-hero-tagline {
     margin-top: 0.75rem;
   }
 }
@@ -331,3 +331,20 @@ main > section:first-child .pp-home-hero-title {
   .review-side:first-child { justify-self: end; }
   .review-side:last-child { justify-self: start; }
 }
+
+/* Shared homepage hero treatment for all page templates. */
+.pp-page-hero { position: relative; isolation: isolate; overflow: hidden; }
+.pp-page-hero > div:not(.pp-hero-image-overlay) { position: relative; z-index: 1; }
+.pp-page-hero .pp-hero-title { max-width: 36rem; line-height: 1.08; }
+.pp-hero-content { padding-top: 3rem; padding-bottom: 10rem; }
+.pp-hero-stack { display: block; width: 100%; max-width: 80rem; margin-inline: auto; }
+.pp-hero-copy { max-width: 36rem; }
+.pp-page-hero .pp-hero-tagline { font-family: var(--font-body), Arial, sans-serif; }
+.pp-page-hero .pp-hero-title:not(:first-child) { margin-top: 1rem; }
+@media (min-width: 640px) { .pp-hero-content { padding-top: 4rem; } }
+@media (min-width: 1024px) { .pp-hero-content { padding-top: 6rem; } }
+@media (orientation: landscape) and (max-height: 500px) and (max-width: 1023px) {
+  .pp-hero-content { padding-top: 2rem; padding-bottom: 5rem; }
+}
+
+.pp-hero-content-with-footer { padding-bottom: 3rem; }

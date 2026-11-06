@@ -1276,10 +1276,9 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
       id="main"
       className={`${displaySerif.variable} ${bodySans.variable} min-h-screen bg-[var(--pp-cream)] text-[var(--pp-ink)]${page.slug === "dog-daycare" ? " pp-daycare-page" : ""}`}
     >
-      <section className={`relative overflow-hidden bg-[var(--pp-night)] text-white${page.heroCtas ? "" : " min-h-[520px]"}`}>
-        {page.image ? (
-          <Image
-            src={page.image}
+      <section className="pp-page-hero relative overflow-hidden bg-[var(--pp-night)] text-white">
+        <Image
+            src={page.image ?? "/hero-dog.jpg"}
             alt={`${page.title} at Planet Pooch`}
             fill
             sizes="100vw"
@@ -1287,24 +1286,23 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
             style={{ objectPosition: "62% center" }}
             preload
           />
-        ) : null}
         <div className="pp-hero-image-overlay absolute inset-0" />
-        <div className={`relative z-10 mx-auto flex max-w-7xl flex-col px-5 pt-5 sm:px-8 lg:px-10${page.heroCtas ? "" : " min-h-[520px] pb-14"}`}>
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col px-5 pt-5 sm:px-8 lg:px-10">
           <SiteHeader />
 
           {page.heroCtas ? (
             <>
-              <div id="top" className="py-12 lg:py-16">
-                <div className="grid w-full gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <div id="top" className="pp-hero-content pp-hero-content-with-footer">
+                <div className="pp-hero-stack">
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-[var(--pp-mint)]/85">
                       {page.eyebrow}
                     </p>
-                    <h1 className="pp-service-hero-title mt-7 max-w-xl text-white">{page.title}</h1>
+                    <h1 className="pp-hero-title text-white">{page.title}</h1>
                   </div>
-                  <div className="lg:border-l lg:border-white/20 lg:pl-10">
+                  <div className="pp-hero-copy">
                     <p
-                      className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl"
+                      className="pp-hero-tagline"
                     >
                       {page.hero}
                     </p>
@@ -1324,7 +1322,7 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
                   </div>
                 </div>
               </div>
-              <div className="mt-12 border-t border-white/15 pt-6 pb-16 lg:mt-14 lg:pb-20">
+              <div className="pb-24">
                 <div className={`flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/72 ${page.heroCtas.tertiary ? "justify-center lg:grid lg:grid-cols-3" : "flex-wrap justify-between"}`}>
                   <span className={`items-center gap-3 ${page.heroCtas.tertiary ? "hidden lg:flex" : "flex"}`}>
                     <span aria-hidden className="h-px w-8 bg-white/40" />
@@ -1344,13 +1342,13 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
               </div>
             </>
           ) : (
-            <div className="grid flex-1 w-full gap-12 py-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div className="pp-hero-content pp-hero-stack">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">{page.eyebrow}</p>
-                <h1 className="pp-service-hero-title mt-5 max-w-3xl text-white">{page.title}</h1>
+                <h1 className="pp-hero-title text-white">{page.title}</h1>
               </div>
-              <div className="lg:border-l lg:border-white/20 lg:pl-10">
-                <p className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl">{page.hero}</p>
+              <div className="pp-hero-copy">
+                <p className="pp-hero-tagline">{page.hero}</p>
               </div>
             </div>
           )}

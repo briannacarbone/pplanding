@@ -84,7 +84,7 @@ export default function HomePage() {
       id="main"
       className={`${displaySerif.variable} ${bodySans.variable} min-h-screen bg-[var(--pp-night)] text-[var(--pp-ink)]`}
     >
-      <section id="home-hero" className="relative overflow-hidden bg-[var(--pp-night)] text-white">
+      <section id="home-hero" className="pp-page-hero relative overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
           src="/hero-dog.jpg"
           alt="A happy dog lounging in a polished resort setting"
@@ -101,16 +101,16 @@ export default function HomePage() {
 
           <div
             id="top"
-            className="pp-home-hero-content pt-12 pb-40 sm:pt-16 lg:pt-24 lg:pb-40"
+            className="pp-hero-content pt-12 pb-40 sm:pt-16 lg:pt-24 lg:pb-40"
           >
             <div>
               <div>
-                <h1 className="pp-home-hero-title max-w-xl text-white">
+                <h1 className="pp-hero-title max-w-xl text-white">
                   Enriching the lives of pets{" "}
                   <span className="text-[var(--pp-mint)]">since 2014.</span>
                 </h1>
                 <p
-                  className="pp-home-hero-tagline"
+                  className="pp-hero-tagline"
                 >
                   Mobile grooming in Nassau County. Daycare, boarding & more on Long Island.
                 </p>

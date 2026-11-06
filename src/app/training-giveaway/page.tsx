@@ -60,7 +60,7 @@ export default function TrainingGiveawayPage() {
     <>
       <GiveawayPageView />
       <main id="main" className="overflow-hidden">
-        <section className="relative isolate min-h-[760px] bg-[var(--pp-night)] px-5 pb-20 pt-6 text-white sm:px-8 lg:px-10">
+        <section className="pp-page-hero relative isolate  bg-[var(--pp-night)] px-5  pt-6 text-white sm:px-8 lg:px-10">
           <Image
             src={trainingHero}
             alt="A dog participating in training at Planet Pooch"
@@ -80,13 +80,13 @@ export default function TrainingGiveawayPage() {
             </a>
           </header>
 
-          <div className="mx-auto grid min-h-[650px] max-w-7xl w-full gap-12 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="pp-hero-content pp-hero-stack">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--pp-mint)]">Instagram Giveaway</p>
-              <h1 className="mt-5 max-w-3xl text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">Win $800 in Dog Training</h1>
+              <h1 className="pp-hero-title text-white">Win $800 in Dog Training</h1>
             </div>
-            <div className="lg:border-l lg:border-white/20 lg:pl-10">
-              <p className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl">
+            <div className="pp-hero-copy">
+              <p className="pp-hero-tagline">
                 Enter for a chance to win a 4-class Planet Pooch dog training package.
               </p>
               <div className="mt-7 inline-flex items-center gap-3 border border-white/22 bg-black/15 px-5 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white backdrop-blur-sm">

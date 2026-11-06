@@ -1,3 +1,4 @@
+import { HeroBackdrop } from "../hero-backdrop";
 import type { Metadata } from "next";
 import { Libre_Baskerville, Manrope } from "next/font/google";
 import Link from "next/link";
@@ -45,16 +46,17 @@ export default function BlogIndexPage() {
       id="main"
       className={`${displaySerif.variable} ${bodySans.variable} min-h-screen bg-[var(--pp-cream)] text-[var(--pp-ink)]`}
     >
-      <section className="bg-[var(--pp-night)] px-5 pt-5 pb-14 text-white sm:px-8 lg:px-10 lg:pb-20">
+      <section className="pp-page-hero bg-[var(--pp-night)] px-5 pt-5  text-white sm:px-8 lg:px-10 ">
+        <HeroBackdrop />
         <div className="mx-auto max-w-7xl">
           <SiteHeader />
-          <div className="grid w-full gap-12 pt-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pt-16">
+          <div className="pp-hero-content pp-hero-stack">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">Blog</p>
-              <h1 className="mt-4 text-white">Notes on grooming, daycare, training, and life with dogs.</h1>
+              <h1 className="pp-hero-title text-white">Notes on grooming, daycare, training, and life with dogs.</h1>
             </div>
-            <div className="lg:border-l lg:border-white/20 lg:pl-10">
-              <p className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl">
+            <div className="pp-hero-copy">
+              <p className="pp-hero-tagline">
                 Our team writes about what we see day to day — grooming questions we get asked again and again, the science behind enrichment, seasonal pet care, and stories from the resort.
               </p>
             </div>

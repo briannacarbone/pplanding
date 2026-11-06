@@ -127,7 +127,7 @@ const photos: readonly GalleryPhoto[] = [
 export default function GalleryPage() {
   return (
     <main id="main" className="min-h-screen bg-[var(--pp-cream)] text-[var(--pp-ink)]">
-      <section className="relative overflow-hidden bg-[var(--pp-night)] text-white">
+      <section className="pp-page-hero relative overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
           src="/events/Untitled design-23.png"
           alt="Dogs enjoying time together at Planet Pooch"
@@ -139,15 +139,15 @@ export default function GalleryPage() {
         <div className="pp-hero-image-overlay absolute inset-0" />
         <div className="relative z-10 mx-auto max-w-7xl px-5 pt-5 sm:px-8 lg:px-10">
           <SiteHeader />
-          <div className="grid w-full gap-12 pb-20 pt-16 sm:pb-24 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-28">
+          <div className="pp-hero-content pp-hero-stack">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-mint)]">
               Life at Planet Pooch
               </p>
-              <h1 className="mt-4 text-white">The best days are dog days.</h1>
+              <h1 className="pp-hero-title text-white">The best days are dog days.</h1>
             </div>
-            <div className="lg:border-l lg:border-white/20 lg:pl-10">
-              <p className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl">
+            <div className="pp-hero-copy">
+              <p className="pp-hero-tagline">
                 Take a look at playtime, enrichment, special events, fresh grooms, and the everyday moments that make our resort feel like home.
               </p>
             </div>

@@ -204,7 +204,7 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
       id="main"
       className={`${displaySerif.variable} ${bodySans.variable} min-h-screen bg-[var(--pp-cream)] text-[var(--pp-ink)]`}
     >
-      <section className="relative min-h-[520px] overflow-hidden bg-[var(--pp-night)] text-white">
+      <section className="pp-page-hero relative  overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
           src={image}
           alt={`${copy.primary} in ${page.town}`}
@@ -215,18 +215,18 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
           preload
         />
         <div className="pp-hero-image-overlay absolute inset-0" />
-        <div className="relative z-10 mx-auto flex min-h-[520px] max-w-7xl flex-col px-5 pb-14 pt-5 sm:px-8 lg:px-10">
+        <div className="relative z-10 mx-auto flex  max-w-7xl flex-col px-5  pt-5 sm:px-8 lg:px-10">
           <SiteHeader />
 
-          <div className="grid flex-1 w-full gap-12 py-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-16">
+          <div className="pp-hero-content pp-hero-stack">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">
                 {copy.eyebrow} • {page.town}{page.region ? `, ${page.region}` : ""}
               </p>
-              <h1 className="mt-5 max-w-3xl text-white">{`${copy.primary} in ${page.town}${page.town.endsWith("County") || page.town === "North Shore" ? "" : ", NY"}`}</h1>
+              <h1 className="pp-hero-title text-white">{`${copy.primary} in ${page.town}${page.town.endsWith("County") || page.town === "North Shore" ? "" : ", NY"}`}</h1>
             </div>
-            <div className="lg:border-l lg:border-white/20 lg:pl-10">
-              <p className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl">{copy.hero(page.town)}</p>
+            <div className="pp-hero-copy">
+              <p className="pp-hero-tagline">{copy.hero(page.town)}</p>
               {page.distanceFromResort ? (
                 <p className="mt-3 max-w-2xl text-sm leading-7 text-[var(--pp-mint)]/90">
                   {page.distanceFromResort}

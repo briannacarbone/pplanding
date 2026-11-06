@@ -1,3 +1,4 @@
+import { HeroBackdrop } from "../hero-backdrop";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SITE } from "../../lib/site";
@@ -24,16 +25,17 @@ export default function GetStartedPage() {
   return (
     <main id="main" className="min-h-screen bg-[var(--pp-cream)] text-[var(--pp-ink)]">
       <AttributionCapture />
-      <div className="bg-[var(--pp-night)] px-5 pt-5 pb-14 text-white sm:px-8 lg:px-10 lg:pb-20">
+      <div className="pp-page-hero bg-[var(--pp-night)] px-5 pt-5  text-white sm:px-8 lg:px-10 ">
+        <HeroBackdrop />
         <div className="mx-auto max-w-7xl">
           <SiteHeader ctaHref="#new-client-form" />
-          <div className="grid w-full gap-12 pt-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pt-16">
+          <div className="pp-hero-content pp-hero-stack">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">Welcome to Planet Pooch</p>
-              <h1 className="mt-4 text-[2.75rem] leading-[1.08] text-white sm:text-[3.5rem] lg:text-[4.25rem]">Your pup&apos;s next adventure starts here.</h1>
+              <h1 className="pp-hero-title text-white">Your pup&apos;s next adventure starts here.</h1>
             </div>
-            <div className="lg:border-l lg:border-white/20 lg:pl-10">
-              <p className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl">
+            <div className="pp-hero-copy">
+              <p className="pp-hero-tagline">
                 Looking for daycare, boarding, grooming, or training? Tell us a little about you and your dog, and our team will follow up with availability and the best next step.
               </p>
             </div>

@@ -139,7 +139,7 @@ export default function WelcomePage() {
       className={`${displaySerif.variable} ${bodySans.variable} min-h-screen bg-[var(--pp-night)] text-[var(--pp-ink)]`}
     >
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-[var(--pp-night)] text-white">
+      <section className="pp-page-hero relative overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
           src="/hero-dog.jpg"
           alt="A happy dog lounging in a polished resort setting"
@@ -155,16 +155,16 @@ export default function WelcomePage() {
           <SiteHeader />
 
           {/* Hero content */}
-          <div className="pb-28 pt-14 lg:pb-36 lg:pt-20">
-            <div className="grid w-full gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="pp-hero-content">
+            <div className="pp-hero-stack">
               <div>
-                <h1 className="text-white">
+                <h1 className="pp-hero-title text-white">
                   Long Island pet care you{" "}
                   <span className="text-[var(--pp-mint)]/80">can actually trust.</span>
                 </h1>
               </div>
-              <div className="lg:border-l lg:border-white/20 lg:pl-10">
-                <p className="pp-hero-description max-w-md text-lg leading-relaxed text-white/90 sm:text-xl">
+              <div className="pp-hero-copy">
+                <p className="pp-hero-tagline">
                   Mobile grooming, daycare, boarding, training &amp; enrichment from a
                   family-run team trusted by 6,800+ Long Island puppies.
                 </p>
