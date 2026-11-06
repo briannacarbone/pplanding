@@ -346,5 +346,3 @@ main > section:first-child h1 {
 @media (orientation: landscape) and (max-height: 500px) and (max-width: 1023px) {
   .pp-hero-content { padding-top: 2rem; padding-bottom: 5rem; }
 }
-
-.pp-hero-content-with-footer { padding-bottom: 3rem; }

@@ -307,7 +307,6 @@ export type ContentPage = {
   image?: string | StaticImageData;
   heroCtas?: {
     primary: { label: string; href: string };
-    ghost?: { label: string; href: string };
     tertiary?: { label: string; href: string };
   };
   sections: ContentSection[];

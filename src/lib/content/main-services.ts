@@ -25,7 +25,6 @@ export const mainServicePages = {
     serviceType: "Mobile Pet Grooming",
     heroCtas: {
       primary: { label: "Book Now", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
       tertiary: { label: "View Pricing", href: "#pricing" },
     },
     sections: [
@@ -274,7 +273,6 @@ export const mainServicePages = {
     serviceType: "Dog Daycare",
     heroCtas: {
       primary: { label: "Free Evaluation + 1st Day", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
     },
     sections: [
       {
@@ -464,7 +462,6 @@ export const mainServicePages = {
     serviceType: "Dog Boarding",
     heroCtas: {
       primary: { label: "Book Now", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
     },
     sections: [
       {
@@ -673,7 +670,6 @@ export const mainServicePages = {
     serviceType: "Dog Training",
     heroCtas: {
       primary: { label: "Book FREE Consultation", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
     },
     sections: [
       {
@@ -1145,7 +1141,6 @@ export const mainServicePages = {
     serviceType: "Dog Enrichment Activities",
     heroCtas: {
       primary: { label: "Get Started", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
     },
     sections: [
       {
@@ -1267,7 +1262,6 @@ export const mainServicePages = {
     image: "/event_hero.jpg",
     heroCtas: {
       primary: { label: "Book an Event", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
     },
     sections: [
       {

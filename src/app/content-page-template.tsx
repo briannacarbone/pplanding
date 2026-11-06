@@ -1,3 +1,4 @@
+import { HeroScrollLink } from "./hero-scroll-link";
 import { Libre_Baskerville, Manrope } from "next/font/google";
 import Image from "next/image";
 import Link from "./booking-link";
@@ -1292,7 +1293,7 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
 
           {page.heroCtas ? (
             <>
-              <div id="top" className="pp-hero-content pp-hero-content-with-footer">
+              <div id="top" className="pp-hero-content">
                 <div className="pp-hero-stack">
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-[var(--pp-mint)]/85">
@@ -1315,31 +1316,14 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
                           <span className="pp-cta-arrow" aria-hidden />
                         </Link>
                       )}
-                      {page.heroCtas.ghost ? (
-                        <a href={page.heroCtas.ghost.href} className="pp-cta-ghost">
-                          {page.heroCtas.ghost.label}
+                      {page.heroCtas.tertiary ? (
+                        <a href={page.heroCtas.tertiary.href} className="inline-flex min-h-11 items-center gap-2 border border-[var(--pp-main)] bg-[var(--pp-main)] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition hover:border-[var(--pp-main-deep)] hover:bg-[var(--pp-main-deep)]">
+                          {page.heroCtas.tertiary.label}
+                          <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                         </a>
                       ) : null}
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="pb-24">
-                <div className={`flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/72 ${page.heroCtas.tertiary ? "justify-center lg:grid lg:grid-cols-3" : "flex-wrap justify-between"}`}>
-                  <span className={`items-center gap-3 ${page.heroCtas.tertiary ? "hidden lg:flex" : "flex"}`}>
-                    <span aria-hidden className="h-px w-8 bg-white/40" />
-                    Scroll to Explore
-                  </span>
-                  {page.heroCtas.tertiary ? (
-                    <a
-                      href={page.heroCtas.tertiary.href}
-                      className="justify-self-center inline-flex items-center gap-2 border border-[var(--pp-dark-green)] bg-[var(--pp-dark-green)] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition hover:border-[var(--pp-dark-green-hover)] hover:bg-[var(--pp-dark-green-hover)]"
-                    >
-                      {page.heroCtas.tertiary.label}
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </a>
-                  ) : null}
-                  <span className={page.heroCtas.tertiary ? "hidden justify-self-end lg:inline" : ""}>Long Island, New York</span>
                 </div>
               </div>
             </>
@@ -1354,6 +1338,7 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
               </div>
             </div>
           )}
+          {page.sections.length > 0 ? <HeroScrollLink href="#overview" label="Explore this page" /> : null}
         </div>
       </section>
 

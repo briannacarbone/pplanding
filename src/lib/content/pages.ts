@@ -91,7 +91,6 @@ export const contentPages = {
     image: "/hero-dog.jpg",
     heroCtas: {
       primary: { label: "Book Now", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
     },
     sections: [
       {
@@ -155,7 +154,6 @@ export const contentPages = {
     image: "/hero-dog.jpg",
     heroCtas: {
       primary: { label: "Book Now", href: "/book/" },
-      ghost: { label: "Learn More", href: "#overview" },
     },
     sections: [
       {
