@@ -1,4 +1,4 @@
-export const SERVICES = ["Boarding", "Daycare", "Grooming", "Training"] as const;
+export const SERVICES = ["Boarding", "Daycare", "Training", "In-house grooming"] as const;
 export const CONSENT_TEXT = 'I agree to receive automated and personalized marketing messages (such as reminders to help you rebook appointments, birthday messages celebrating your pet, and other marketing communications) via SMS and email from Planet Pooch Pet Resort at the cell number and email used when signing up. Consent is not a condition of any purchase. Reply "STOPM" in SMS to cancel at any time. Manage your email preferences via the link in the email footer. Msg frequency varies. Msg and data rates may apply.';
 
 export type Intake = {
@@ -25,7 +25,8 @@ export function parseIntake(value: unknown): Intake {
     if (!pet || pet.type !== "DOG") throw new Error("Please select Dog as the pet type.");
     return { name: string(pet.name), breed: string(pet.breed), type: "DOG" as const };
   });
-  if (!Array.isArray(input.services) || input.services.some(s => !SERVICES.includes(s))) throw new Error("Please check your service selections.");
+  // Keep accepting legacy Grooming inquiries from tabs opened before this update.
+  if (!Array.isArray(input.services) || input.services.some(s => s !== "Grooming" && !SERVICES.includes(s))) throw new Error("Please check your service selections.");
   if (typeof input.marketingConsent !== "boolean") throw new Error("Please check your marketing preference.");
   const submissionId = string(input.submissionId, 36);
   if (!/^[\da-f]{8}(-[\da-f]{4}){3}-[\da-f]{12}$/i.test(submissionId)) throw new Error("Please refresh the page and try again.");

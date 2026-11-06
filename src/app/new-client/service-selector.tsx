@@ -13,7 +13,7 @@ export function ServiceSelector() {
         {[{ value: "resort", label: "Pet Resort" }, { value: "mobile", label: "Mobile Grooming" }].map(option => (
           <label key={option.value} className="flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-gray-300 px-4 py-3 has-[:checked]:border-[#46654b] has-[:checked]:bg-[#f0f5ee]">
             <input type="radio" name="service" value={option.value} checked={service === option.value} onChange={event => setService(event.target.value)} className="h-4 w-4 accent-[#46654b]" />
-            <span>{option.label}</span>
+            <span><span className="block font-semibold">{option.label}</span>{option.value === "resort" && <span className="mt-1 block text-sm leading-relaxed text-[#5d6b6e]">Boarding, daycare, training &amp; in-house grooming</span>}</span>
           </label>
         ))}
       </div>

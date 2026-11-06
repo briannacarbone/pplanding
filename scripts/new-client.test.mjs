@@ -8,6 +8,15 @@ const valid = () => ({ firstName: 'Test', lastName: 'Inquiry', phone: '(516) 555
   pets: [{ name: 'Demo Pup', breed: 'Mixed Breed', type: 'DOG' }], services: ['Daycare'],
   marketingConsent: false, submissionId: '11111111-1111-4111-8111-111111111111', attribution: { utm_source: 'facebook' } });
 
+test('in-house grooming routes to Pet Resort while legacy Grooming retains its routing', () => {
+  const resort = buildLeadRequest(parseIntake({ ...valid(), services: ['In-house grooming'] }), 'company');
+  assert.equal(resort.lead.preferredBusinessId, 'biz3pcO');
+  assert.equal(resort.lead.allocateStaffId, 'stf9EkE');
+  assert.match(resort.lead.pets[0].notes[0].content, /Services: In-house grooming/);
+  const legacy = buildLeadRequest(parseIntake({ ...valid(), services: ['Grooming'] }), 'company');
+  assert.equal(legacy.lead.preferredBusinessId, 'bizVdfk');
+});
+
 test('normalizes contact information and accepts optional consent', () => {
   const data = parseIntake(valid());
   assert.equal(data.phone, '+15165550100'); assert.equal(data.email, 'test@example.com');
