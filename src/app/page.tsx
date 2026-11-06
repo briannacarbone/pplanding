@@ -2,6 +2,7 @@ import { Libre_Baskerville, Manrope } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  ArrowDown,
   GraduationCap,
   Home,
   MapPin,
@@ -128,6 +129,10 @@ export default function HomePage() {
 
               </div>
             </div>
+            <a href="#services" className="mt-12 inline-flex min-h-11 items-center gap-3 text-xs font-medium tracking-wide text-white/75 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              View our services
+              <ArrowDown className="h-4 w-4" aria-hidden />
+            </a>
           </div>
         </div>
       </section>

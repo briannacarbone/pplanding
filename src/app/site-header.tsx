@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import planetPoochLogo from "../../public/planet-pooch-logo.png";
-import { headerNavItems } from "../lib/nav";
+import { desktopNavItems } from "../lib/nav";
 import { NavDropdown } from "./nav-dropdown";
 import { MobileMenu } from "./mobile-menu";
 import { BookNowModal } from "./book-now-modal";
@@ -32,9 +32,9 @@ export function SiteHeader({ ctaHref = "/book/" }: SiteHeaderProps = {}) {
       </Link>
       <nav
         aria-label="Primary"
-        className="hidden flex-wrap items-center gap-x-6 gap-y-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/78 lg:flex"
+        className="ml-auto mr-8 hidden items-center gap-x-8 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/78 lg:flex"
       >
-        {headerNavItems.map((item) =>
+        {desktopNavItems.map((item) =>
           "items" in item ? (
             <NavDropdown key={item.label} label={item.label} items={item.items} />
           ) : (
@@ -49,9 +49,6 @@ export function SiteHeader({ ctaHref = "/book/" }: SiteHeaderProps = {}) {
         )}
       </nav>
       <div className="hidden shrink-0 items-center gap-2 whitespace-nowrap lg:flex">
-        <Link href="/contact/" className="pp-cta-ghost pp-cta-sm">
-          Contact
-        </Link>
         <BookNowModal ctaHref={ctaHref} className="pp-cta pp-cta-sm" />
       </div>
       <MobileMenu ctaHref={ctaHref} />

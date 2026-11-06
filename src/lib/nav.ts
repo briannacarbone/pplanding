@@ -20,3 +20,28 @@ export const headerNavItems: ReadonlyArray<NavItem> = [
   { label: "Gallery", href: "/gallery/" },
   { label: "Blog", href: "/blog/" },
 ];
+
+/** Compact desktop navigation; mobile keeps its existing service shortcuts. */
+export const desktopNavItems: ReadonlyArray<NavItem> = [
+  {
+    label: "Services",
+    items: [
+      { label: "Mobile Grooming", href: "/mobile-grooming/" },
+      { label: "In-House Grooming", href: "/in-house-grooming/" },
+      { label: "Daycare", href: "/dog-daycare/" },
+      { label: "Boarding", href: "/dog-boarding/" },
+      { label: "Training", href: "/dog-training/" },
+      { label: "Enrichment", href: "/enrichment/" },
+    ],
+  },
+  {
+    label: "Explore",
+    items: [
+      { label: "About Us", href: "/#about" },
+      { label: "Events", href: "/events/" },
+      { label: "Gallery", href: "/gallery/" },
+      { label: "Blog", href: "/blog/" },
+    ],
+  },
+  { label: "Contact", href: "/contact/" },
+];
