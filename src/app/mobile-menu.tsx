@@ -56,26 +56,26 @@ export function MobileMenu({ ctaHref }: { ctaHref: string }) {
             </div>
             <nav aria-label="Mobile navigation" className="py-7">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Find your care</p>
-              <Link href="/mobile-grooming/" onClick={() => setOpen(false)} className="flex min-h-20 items-center gap-4 rounded-2xl bg-[var(--pp-mint)] p-5 text-[var(--pp-night)]">
+              <Link href="/mobile-grooming/" onClick={() => setOpen(false)} className="flex min-h-16 items-center gap-3 rounded-2xl bg-[var(--pp-mint)] px-4 py-3 text-[var(--pp-night)]">
                 <Scissors className="h-6 w-6 shrink-0" aria-hidden />
-                <span className="flex-1"><span className="block font-display text-2xl">Mobile Grooming</span></span>
+                <span className="flex-1"><span className="block font-display text-xl">Mobile Grooming</span></span>
                 <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden />
               </Link>
-              <Link href="/in-house-grooming/" onClick={() => setOpen(false)} className="mt-3 flex min-h-20 items-center gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 text-white">
+              <Link href="/in-house-grooming/" onClick={() => setOpen(false)} className="mt-3 flex min-h-16 items-center gap-3 rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white">
                 <Scissors className="h-6 w-6 shrink-0 text-[var(--pp-mint)]" aria-hidden />
-                <span className="flex-1 text-2xl">In-House Grooming</span>
+                <span className="flex-1 text-xl">In-House Grooming</span>
                 <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden />
               </Link>
               <div className="mt-3 overflow-hidden rounded-2xl border border-white/20 bg-white/5">
-                <button type="button" onClick={() => setResortOpen(!resortOpen)} aria-expanded={resortOpen} aria-controls="mobile-resort-links" className="flex min-h-20 w-full items-center gap-4 p-5 text-left">
+                <button type="button" onClick={() => setResortOpen(!resortOpen)} aria-expanded={resortOpen} aria-controls="mobile-resort-links" className="flex min-h-16 w-full items-center gap-3 px-4 py-3 text-left">
                   <PawPrint className="h-6 w-6 shrink-0 text-[var(--pp-mint)]" aria-hidden />
-                  <span className="flex-1"><span className="block font-display text-2xl">Pet Resort</span></span>
+                  <span className="flex-1"><span className="block font-display text-xl">Pet Resort</span></span>
                   <ChevronDown className={`h-5 w-5 shrink-0 transition-transform ${resortOpen ? "rotate-180" : ""}`} aria-hidden />
                 </button>
                 {resortOpen && <div id="mobile-resort-links" className="border-t border-white/10 px-5 py-2">{resort && "items" in resort && resort.items.map(item => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="flex min-h-11 items-center justify-between gap-3 text-sm text-white/85 hover:text-[var(--pp-mint)]">{item.label}<ArrowUpRight className="h-4 w-4 text-white/40" aria-hidden /></Link>)}</div>}
               </div>
               <p className="mb-2 mt-7 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Explore Planet Pooch</p>
-              <div className="grid grid-cols-2 gap-x-5">{explore && "items" in explore && explore.items.map(item => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="flex min-h-11 items-center border-b border-white/10 text-sm text-white/85">{item.label}</Link>)}</div>
+              <div className="flex flex-col">{explore && "items" in explore && explore.items.map(item => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="flex min-h-11 items-center border-b border-white/10 text-sm text-white/85">{item.label}</Link>)}</div>
             </nav>
             <div className="mt-auto border-t border-white/15 pt-5">
               <div className="grid grid-cols-2 gap-3">
