@@ -7,13 +7,17 @@ import { NewClientForm } from "./new-client-form";
 export function ServiceSelector() {
   const [service, setService] = useState("resort");
   return <>
-    <div className="border-b border-gray-200 p-6 sm:px-10">
-      <label htmlFor="service-selector" className="mb-2 block font-semibold">Which service are you looking for?</label>
-      <select id="service-selector" value={service} onChange={event => setService(event.target.value)} className="min-h-12 w-full rounded-lg border border-gray-300 bg-white px-4 text-base">
-        <option value="resort">Pet Resort</option>
-        <option value="mobile">Mobile Grooming</option>
-      </select>
-    </div>
+    <fieldset className="border-0 border-b border-solid border-gray-200 p-6 sm:px-10">
+      <legend className="float-left mb-3 w-full font-semibold">Which service are you looking for?</legend>
+      <div className="clear-both flex flex-wrap gap-3">
+        {[{ value: "resort", label: "Pet Resort" }, { value: "mobile", label: "Mobile Grooming" }].map(option => (
+          <label key={option.value} className="flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-gray-300 px-4 py-3 has-[:checked]:border-[#46654b] has-[:checked]:bg-[#f0f5ee]">
+            <input type="radio" name="service" value={option.value} checked={service === option.value} onChange={event => setService(event.target.value)} className="h-4 w-4 accent-[#46654b]" />
+            <span>{option.label}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
     <div hidden={service !== "resort"}><NewClientForm /></div>
     {service === "mobile" && <div>
       <iframe src={MOBILE_GROOMING_NEW_CLIENT_FORM_URL} title="Mobile Grooming new client form" className="block h-[1000px] w-full border-0" />
