@@ -51,37 +51,23 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
             </h2>
 
             {variant === "full" ? (
-              <div className="grid grid-cols-2 gap-6">
-                {/* Mobile Grooming column */}
-                <div className="flex flex-col items-center gap-3">
-                  <h3
-                    className="text-lg text-[var(--pp-main-deep)]"
-                    style={{ fontFamily: "var(--font-display), serif", fontWeight: 500 }}
-                  >
-                    Mobile Grooming
-                  </h3>
-                  <a href={MOBILE_GROOMING_NEW_CLIENT_FORM_URL} target="_blank" rel="noopener" className="pp-cta pp-cta-sm w-full justify-center text-center">
-                    New Client
-                  </a>
-                  <a href="tel:+12023186526" className="pp-cta-sm w-full text-center bg-slate-700 text-white border border-slate-700 hover:bg-slate-800 transition">
-                    Call/Text (202) 318-6526
-                  </a>
-                </div>
-
-                {/* Pet Resort column */}
-                <div className="flex flex-col items-center gap-3">
-                  <h3
-                    className="text-lg text-[var(--pp-main-deep)]"
-                    style={{ fontFamily: "var(--font-display), serif", fontWeight: 500 }}
-                  >
-                    Pet Resort
-                  </h3>
-                  <Link href="/new-client/" className="pp-cta pp-cta-sm w-full justify-center text-center">
-                    New Client
-                  </Link>
-                  <a href="https://booking.moego.pet/ol/landing?name=PlanetPoochPetResort" target="_blank" rel="noopener" className="pp-cta-sm w-full text-center bg-slate-700 text-white border border-slate-700 hover:bg-slate-800 transition">
-                    Existing Client
-                  </a>
+              <div className="space-y-6">
+                <Link href="/new-client/" className="pp-cta pp-cta-sm w-full justify-center text-center">
+                  New Client
+                </Link>
+                <div className="space-y-5 border-t border-[var(--pp-sand)] pt-6 text-center">
+                  <div>
+                    <p className="text-sm font-semibold text-[var(--pp-ink)]">Pet Resort</p>
+                    <a href={SITE.phone.href} className="mt-1 inline-flex min-h-11 items-center text-xl font-semibold text-[var(--pp-main-deep)] underline underline-offset-4">
+                      {SITE.phone.display}
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-[var(--pp-ink)]">Mobile Grooming</p>
+                    <a href="tel:+12023186526" className="mt-1 inline-flex min-h-11 items-center text-xl font-semibold text-[var(--pp-main-deep)] underline underline-offset-4">
+                      (202) 318-6526
+                    </a>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -95,24 +81,17 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
               </div>
             )}
 
-            <div className={`mt-8 border-t border-[var(--pp-sand)] pt-6 ${variant === "full" ? "flex flex-wrap items-center justify-center gap-3" : "text-center"}`}>
-              {variant === "full" ? (
-                <p className="text-sm text-[var(--pp-ink)]/70">
-                  <a href={SITE.phone.href} className="font-semibold underline underline-offset-2">
-                    Call {SITE.phone.display}
-                  </a>{" "}
-                  or
-                </p>
-              ) : (
+            {variant === "grooming" && (
+              <div className="mt-8 border-t border-[var(--pp-sand)] pt-6 text-center">
                 <p className="mb-4 text-sm text-[var(--pp-ink)]/70">
                   Not ready to book, but want to learn more? Click the link below.
                 </p>
-              )}
-              <a href={ctaHref} className="pp-cta pp-cta-sm inline-flex">
-                Get Started
-                <span className="pp-cta-arrow" aria-hidden />
-              </a>
-            </div>
+                <a href={ctaHref} className="pp-cta pp-cta-sm inline-flex">
+                  Get Started
+                  <span className="pp-cta-arrow" aria-hidden />
+                </a>
+              </div>
+            )}
           </div>
         </div>
       )}
