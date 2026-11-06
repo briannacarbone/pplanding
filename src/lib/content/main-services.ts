@@ -169,7 +169,7 @@ export const mainServicePages = {
         calloutCard: {
           title: "Already booked daycare or boarding?",
           body: "Call us anytime to add a groom to an upcoming stay — we'll schedule the appointment around their daycare or boarding day.",
-          cta: { label: "Contact us", href: "/book/" },
+          cta: { label: "Contact us", href: "/contact/" },
         },
       },
       {
@@ -272,7 +272,7 @@ export const mainServicePages = {
     image: "/Daycare.png",
     serviceType: "Dog Daycare",
     heroCtas: {
-      primary: { label: "Free Evaluation + 1st Day", href: "/book/" },
+      primary: { label: "Get Started", href: "/new-client/" },
     },
     sections: [
       {
@@ -334,7 +334,7 @@ export const mainServicePages = {
             label: "Free evaluation + first daycare day",
             body:
               "We start with a complimentary evaluation. Staff observe your dog's behavior in our evaluation room as they acclimate to the space, then bring in another dog from a distance and progressively close the gap as comfort increases. Dogs who pass continue into their first day of daycare at no charge.",
-            cta: { label: "Book your free evaluation + first day", href: "/book/" },
+            cta: { label: "Get Started", href: "/new-client/" },
           },
         ],
       },
@@ -404,7 +404,7 @@ export const mainServicePages = {
         title: "Puppy Socialization Program",
         body:
           "$79 per session, three one-hour sessions. Supervised play with dogs of various sizes, enrichment activities (snuffle mats, frozen Kongs, treat hide-and-seek), outdoor potty breaks, and resource-guarding guidance. Requires Rabies vaccine plus current vaccination paperwork. Graduates receive a Certificate of Completion and become eligible for Group Play daycare.",
-        cta: { label: "Book a consultation", href: "/book/" },
+        cta: { label: "Get Started", href: "/new-client/" },
       },
       {
         type: "faq",
@@ -432,12 +432,6 @@ export const mainServicePages = {
               "Dogs over 1 year old must be spayed or neutered (unless a vet advises otherwise).",
           },
         ],
-      },
-      {
-        type: "callout",
-        title: "Book your dog's first visit",
-        body: "Reach us by phone or email to schedule your free meet-and-greet.",
-        cta: { label: "Book Now", href: "/book/" },
       },
       {
         type: "townLinks",
