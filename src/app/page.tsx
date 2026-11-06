@@ -14,6 +14,8 @@ import { ADDRESS_LINES, SITE } from "../lib/site";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { StickyMobileCta } from "./sticky-mobile-cta";
+import { ReviewCarousel } from "./review-carousel";
+import { googleReviews } from "../lib/google-reviews";
 import { LiteYouTubeEmbed } from "./lite-youtube-embed";
 
 const displaySerif = Libre_Baskerville({
@@ -73,36 +75,6 @@ const heroHighlights = [
   },
 ] as const;
 
-
-// Verbatim excerpts pulled from the Planet Pooch Google Business Profile.
-// Keep excerpts short and use service labels instead of relative dates so the
-// cards remain accurate between review-count refreshes.
-const googleReviews = [
-  {
-    name: "Katie Kaplan",
-    initials: "KK",
-    avatarBg: "bg-[var(--pp-main)]",
-    context: "Mobile grooming",
-    body:
-      "They are professional, gentle, and always right on time. My pet always finishes happy and looks amazing.",
-  },
-  {
-    name: "Daniella Vlakancic",
-    initials: "DV",
-    avatarBg: "bg-[var(--pp-gold-deep)]",
-    context: "Dog boarding",
-    body:
-      "They provide a daily report with pictures and a quick blurb, which was the highlight of my days while I was away!",
-  },
-  {
-    name: "Soraya Pharel",
-    initials: "SP",
-    avatarBg: "bg-[var(--pp-night)]",
-    context: "Dog daycare",
-    body:
-      "He felt completely safe and at ease. He had an incredible first day of daycare and came home happily exhausted.",
-  },
-] as const;
 
 export default function HomePage() {
   return (
@@ -320,49 +292,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {googleReviews.map((review) => (
-              <article
-                key={review.name}
-                className="flex flex-col gap-4 bg-white/10 p-6 backdrop-blur-sm sm:p-7"
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex items-center gap-3">
-                    <span
-                      aria-hidden
-                      className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold text-white ${review.avatarBg}`}
-                    >
-                      {review.initials}
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-white">{review.name}</p>
-                      <p className="text-xs text-white/70">{review.context}</p>
-                    </div>
-                  </div>
-                  <span
-                    aria-label="Posted on Google"
-                    title="Posted on Google"
-                    className="flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/45"
-                  >
-                    <span className="text-[#4285F4]">G</span>
-                    <span className="text-[#EA4335]">o</span>
-                    <span className="text-[#FBBC05]">o</span>
-                    <span className="text-[#4285F4]">g</span>
-                    <span className="text-[#34A853]">l</span>
-                    <span className="text-[#EA4335]">e</span>
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-[#fbbc04] text-[#fbbc04]" />
-                  ))}
-                </div>
-
-                <p className="text-sm leading-7 text-white/78">{review.body}</p>
-              </article>
-            ))}
-          </div>
+          <ReviewCarousel reviews={googleReviews} />
         </div>
       </section>
 

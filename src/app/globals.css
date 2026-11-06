@@ -290,3 +290,24 @@ main > section:first-child h1 {
     margin-top: 0.75rem;
   }
 }
+
+/* Repeated groups form a seamless review loop; native scrolling supports touch. */
+.review-viewport { scrollbar-width: none; overflow-anchor: none; }
+.review-viewport::-webkit-scrollbar { display: none; }
+.review-card { width: min(82vw, 360px); }
+.review-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 999px;
+  color: white;
+  cursor: pointer;
+}
+.review-control:hover { background: rgb(255 255 255 / 15%); }
+.review-control:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+@media (min-width: 768px) {
+  .review-card { width: calc((min(100vw - 80px, 1280px) - 48px) / 3); }
+}
