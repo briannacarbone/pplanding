@@ -112,13 +112,13 @@ export default function HomePage() {
             <div className="grid w-full gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
                 <h1 className="pp-home-hero-title max-w-xl text-white">
-                  Mobile grooming across Nassau County. Resort care for dogs across{" "}
-                  <span className="text-[var(--pp-mint)]">Long Island.</span>
+                  Enriching the lives of pets{" "}
+                  <span className="text-[var(--pp-mint)]">since 2014.</span>
                 </h1>
                 <p
                   className="pp-home-hero-tagline pp-hero-description"
                 >
-                  Enriching the lives of pets since 2014.
+                  Mobile grooming across Nassau County. Resort care for dogs across Long Island.
                 </p>
               </div>
 
