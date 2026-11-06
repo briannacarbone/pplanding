@@ -31,13 +31,6 @@ const bodySans = Manrope({
   variable: "--font-body",
 });
 
-const heroQuickServices = [
-  { title: "Mobile Grooming", href: "/mobile-grooming/", icon: Scissors },
-  { title: "Daycare", href: "/dog-daycare/", icon: PawPrint },
-  { title: "Boarding", href: "/dog-boarding/", icon: Home },
-  { title: "Training", href: "/dog-training/", icon: GraduationCap },
-] as const;
-
 const heroHighlights = [
   {
     title: "Mobile Grooming",
@@ -90,7 +83,7 @@ export default function HomePage() {
       id="main"
       className={`${displaySerif.variable} ${bodySans.variable} min-h-screen bg-[var(--pp-night)] text-[var(--pp-ink)]`}
     >
-      <section className="relative overflow-hidden bg-[var(--pp-night)] text-white">
+      <section id="home-hero" className="relative overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
           src="/hero-dog.jpg"
           alt="A happy dog lounging in a polished resort setting"
@@ -107,25 +100,25 @@ export default function HomePage() {
 
           <div
             id="top"
-            className="pp-home-hero-content pt-12 pb-24 lg:pt-16 lg:pb-32"
+            className="pp-home-hero-content pt-16 pb-32 lg:pt-24 lg:pb-40"
           >
-            <div className="grid w-full gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div className="max-w-xl">
               <div>
                 <h1 className="pp-home-hero-title max-w-xl text-white">
                   Enriching the lives of pets{" "}
                   <span className="text-[var(--pp-mint)]">since 2014.</span>
                 </h1>
                 <p
-                  className="pp-home-hero-tagline pp-hero-description"
+                  className="pp-home-hero-tagline"
                 >
-                  Mobile grooming across Nassau County. Resort care for dogs across Long Island.
+                  Mobile grooming in Nassau County. Daycare, boarding & more on Long Island.
                 </p>
               </div>
 
-              <div className="lg:border-l lg:border-white/20 lg:pl-10">
+              <div className="mt-8">
                 <div className="pp-hero-action-panel pp-home-hero-action-panel flex flex-col items-start gap-4">
                   <BookNowModal ctaHref="/new-client/" className="pp-cta" label="Get Started" />
-                  <div className="flex items-center gap-2 text-sm text-white">
+                  <div className="flex items-center gap-2 text-sm text-white/85">
                     <Star className="h-4 w-4 fill-[var(--pp-mint)] text-[var(--pp-mint)]" aria-hidden />
                     <span>
                       <strong className="font-semibold">{SITE.reviews.rating}</strong> from {SITE.reviews.countDisplay} Long Island pet parents
@@ -133,21 +126,6 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 gap-2 sm:gap-3">
-                  {heroQuickServices.map(({ title, href, icon: Icon }) => (
-                    <Link
-                      key={title}
-                      href={href}
-                      className="group flex items-center gap-3 border border-[var(--pp-main-deep)] bg-[var(--pp-main-deep)] px-4 py-3 transition hover:border-[var(--pp-main)] hover:bg-[var(--pp-main)]"
-                    >
-                      <Icon className="h-4 w-4 shrink-0 text-[var(--pp-mint)]" aria-hidden />
-                      <span className="text-sm font-semibold text-white">{title}</span>
-                      <span aria-hidden className="ml-auto text-white/40 transition group-hover:translate-x-0.5 group-hover:text-[var(--pp-mint)]">
-                        →
-                      </span>
-                    </Link>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
@@ -361,7 +339,7 @@ export default function HomePage() {
 
       <SiteFooter />
 
-      <StickyMobileCta />
+      <StickyMobileCta showAfterId="home-hero" />
     </main>
   );
 }
