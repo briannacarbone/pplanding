@@ -117,9 +117,9 @@ export default function HomePage() {
               </div>
 
               <div className="mt-8">
-                <div className="pp-hero-action-panel pp-home-hero-action-panel flex flex-wrap items-center justify-between gap-6">
-                  <BookNowModal ctaHref="/new-client/" className="pp-cta order-2 ml-auto" label="Get Started" icon="paw" />
-                  <div className="order-1 flex items-center gap-2 text-sm text-white/85">
+                <div className="pp-hero-action-panel pp-home-hero-action-panel flex flex-col items-start gap-4">
+                  <BookNowModal ctaHref="/new-client/" className="pp-cta" label="Get Started" icon="paw" />
+                  <div className="flex items-center gap-2 text-sm text-white/85">
                     <Star className="h-4 w-4 fill-[var(--pp-mint)] text-[var(--pp-mint)]" aria-hidden />
                     <span>
                       <strong className="font-semibold">{SITE.reviews.rating}</strong> from {SITE.reviews.countDisplay} Long Island pet parents
