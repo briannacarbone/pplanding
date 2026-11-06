@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { createPortal } from "react-dom";
 import { PawPrint, X } from "lucide-react";
 import { MOBILE_GROOMING_NEW_CLIENT_FORM_URL } from "../lib/booking";
 import { SITE } from "../lib/site";
 
-export function BookNowModal({ ctaHref, className = "", variant = "full", label = "Book Now", icon = "arrow" }: { ctaHref: string; className?: string; variant?: "full" | "grooming"; label?: string; icon?: "arrow" | "paw" }) {
+export function BookNowModal({ ctaHref, className = "", variant = "full", label = "Book Now", icon = "arrow", track }: { ctaHref: string; className?: string; variant?: "full" | "grooming"; label?: string; icon?: "arrow" | "paw" | "none"; track?: string }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -20,12 +21,12 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
 
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} className={className}>
+      <button type="button" onClick={() => setOpen(true)} data-track={track} className={className}>
         {label}
-        {icon === "paw" ? <PawPrint className="h-4 w-4" aria-hidden /> : <span className="pp-cta-arrow" aria-hidden />}
+        {icon === "none" ? null : icon === "paw" ? <PawPrint className="h-4 w-4" aria-hidden /> : <span className="pp-cta-arrow" aria-hidden />}
       </button>
 
-      {open && (
+      {open && createPortal(
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4"
           onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}
@@ -85,7 +86,7 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
               </div>
             )}
           </div>
-        </div>
+        </div>, document.body
       )}
     </>
   );

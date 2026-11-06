@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
+import { BookNowModal } from "./book-now-modal";
 import { SITE } from "../lib/site";
 
 type StickyMobileCtaProps = {
+  openBookingModal?: boolean;
   /** Show only after this section scrolls above the viewport. */
   showAfterId?: string;
   /** Where the primary CTA links. Defaults to the on-site booking page. */
@@ -29,6 +31,7 @@ const DEFAULT_HREF = "/book/";
  * on `/welcome/`) or link to the booking page (the default).
  */
 export function StickyMobileCta({
+  openBookingModal = false,
   showAfterId,
   ctaHref = DEFAULT_HREF,
   ctaLabel = "Check Availability",
@@ -59,6 +62,7 @@ export function StickyMobileCta({
         className="fixed inset-x-0 bottom-0 z-30 border-t border-[rgba(50,73,83,0.18)] bg-white/95 px-3 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-2 shadow-[0_-8px_24px_rgba(50,73,83,0.12)] backdrop-blur lg:hidden"
       >
         <div className="flex gap-2">
+          {openBookingModal ? <BookNowModal ctaHref={ctaHref} label={ctaLabel} track={ctaTrack} icon="none" className="inline-flex min-h-11 flex-1 items-center justify-center whitespace-nowrap rounded-full bg-[var(--pp-mint)] px-4 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--pp-night)] transition active:bg-[var(--pp-mint-deep)]" /> : (
           <a
             href={ctaHref}
             data-track={ctaTrack}
@@ -66,6 +70,7 @@ export function StickyMobileCta({
           >
             {ctaLabel}
           </a>
+          )}
           <a
             href={SITE.phone.href}
             data-track="phone-click"

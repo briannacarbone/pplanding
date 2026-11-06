@@ -344,7 +344,7 @@ export default function HomePage() {
 
       <SiteFooter />
 
-      <StickyMobileCta ctaLabel="Book Now" />
+      <StickyMobileCta ctaLabel="Book Now" ctaHref="/new-client/" openBookingModal />
     </main>
   );
 }
