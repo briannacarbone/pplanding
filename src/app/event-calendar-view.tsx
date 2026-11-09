@@ -158,7 +158,7 @@ export function EventCalendarView({ section }: { section: EventCalendarSection }
       <div className="border-b border-[rgba(50,73,83,0.10)] bg-[var(--pp-cream)] px-4 py-3 sm:px-5">
         <div className="hidden grid-cols-7 gap-px text-center sm:grid">
           {weekdayLabels.map((day) => (
-            <div key={day} className="text-[10px] font-bold uppercase tracking-[0.16em] text-[rgba(47,42,39,0.58)]">
+            <div key={day} className="text-[10px] font-bold uppercase tracking-[0.16em] text-[rgba(47,42,39,0.72)]">
               {day}
             </div>
           ))}

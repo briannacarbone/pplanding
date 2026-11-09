@@ -107,7 +107,7 @@ export default function BlogIndexPage() {
           <h2 className="mt-3 text-3xl leading-tight text-[var(--pp-ink)] sm:text-4xl">
             More from the Planet Pooch blog
           </h2>
-          <p className="mt-3 max-w-2xl text-sm italic leading-7 text-[rgba(47,42,39,0.6)]">
+          <p className="mt-3 max-w-2xl text-sm italic leading-7 text-[rgba(47,42,39,0.72)]">
             We&apos;re bringing the full archive back online as part of our migration. Each title
             below has a placeholder while we restore the original content.
           </p>

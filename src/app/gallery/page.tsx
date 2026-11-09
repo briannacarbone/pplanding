@@ -45,18 +45,18 @@ const photos: readonly GalleryPhoto[] = [
   },
   {
     src: "/Enrichment.png",
-    alt: "A dog enjoying an enrichment activity at Planet Pooch",
+    alt: "A dog carrying a red flying disc beside a blue play tunnel",
     caption: "Enrichment time",
   },
   {
     src: "/boarding/IMG_0687.jpg",
-    alt: "A happy dog during a stay at Planet Pooch",
+    alt: "A Planet Pooch team member sitting with several dogs beside a raised bed",
     caption: "Happy resort stays",
   },
   {
     src: "/events/IMG_3981.jpg",
-    alt: "Dogs participating in a Planet Pooch seasonal event",
-    caption: "Seasonal celebrations",
+    alt: "A dog in a party hat behind a table of treats and a cake reading Happy Birthday Ace",
+    caption: "Birthday celebrations",
     className: "lg:col-span-2",
   },
   {
@@ -66,14 +66,14 @@ const photos: readonly GalleryPhoto[] = [
   },
   {
     src: "/boarding/day-in-the-life.png",
-    alt: "Dogs spending the day together at Planet Pooch",
-    caption: "A day at Planet Pooch",
+    alt: "A dog standing in a private suite with a cushioned bed, rope toy, and wall-mounted television",
+    caption: "Inside a private suite",
     className: "sm:col-span-2 lg:col-span-1 lg:row-span-2",
   },
   {
     src: "/events/IMG_5076.jpg",
-    alt: "A dog posing for a photo at a Planet Pooch event",
-    caption: "Picture-perfect moments",
+    alt: "Dogs splashing in a shallow outdoor pool while a Planet Pooch team member holds a hose",
+    caption: "Splash-pool playtime",
   },
   {
     src: "/grooming-fresh.jpg",
@@ -82,18 +82,18 @@ const photos: readonly GalleryPhoto[] = [
   },
   {
     src: "/boarding/img_6687.jpg",
-    alt: "A dog enjoying supervised play at Planet Pooch",
-    caption: "Supervised play",
+    alt: "A person holding a dog's leash beside the Planet Pooch welcome sign",
+    caption: "A warm welcome",
     className: "lg:col-span-2",
   },
   {
     src: "/events/IMG_3976.PNG",
-    alt: "A festive dog event at Planet Pooch",
+    alt: "Close-up of a dog wearing a party hat, with other dogs nearby",
     caption: "Making memories",
   },
   {
     src: "/kissing-booth.png",
-    alt: "A dog posing at the Planet Pooch kissing booth",
+    alt: "Two dogs nuzzling beneath a Kissing Booth sign, with heart decorations and a Kisses 25 cents chalkboard",
     caption: "Lots of love",
   },
   {
@@ -108,7 +108,7 @@ const photos: readonly GalleryPhoto[] = [
   },
   {
     src: "/gallery/private-dog-suite.webp",
-    alt: "A private Planet Pooch dog suite with a raised bed, toys, and television",
+    alt: "A private Planet Pooch dog suite with a cushioned bed, rope toy, and wall-mounted television",
     caption: "Private spaces for rest",
   },
   {

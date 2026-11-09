@@ -591,7 +591,7 @@ export const mainServicePages = {
         eyebrow: "A day in the life",
         title: "A tail-wagging day at Planet Pooch",
         image: "/boarding/day-in-the-life.png",
-        imageAlt: "Planet Pooch boarding accommodations",
+        imageAlt: "A dog in a private suite with a cushioned bed, rope toy, and wall-mounted television",
         imagePosition: "left",
         items: [
           {
@@ -1396,7 +1396,7 @@ export const mainServicePages = {
         intro:
           "Check out our planned themed daycare days, including Foam Party, Paws, Luau, and Pupsicle Party.",
         images: [
-          { src: "/kissing-booth.png", alt: "Themed daycare event setup at Planet Pooch" },
+          { src: "/kissing-booth.png", alt: "Two dogs nuzzling beneath a Kissing Booth sign, with heart decorations and a Kisses 25 cents chalkboard" },
           { src: "/events/IMG_3976.PNG", alt: "Dog wearing a party hat during a Planet Pooch event" },
           { src: "/events/IMG_3981.jpg", alt: "Birthday party table and cake for a dog at Planet Pooch" },
           { src: "/events/IMG_5076.jpg", alt: "Dogs playing in a splash pool during a Planet Pooch daycare event" },

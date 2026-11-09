@@ -157,7 +157,7 @@ export function GroupTrainingSchedule({
 
   if (!isClient) {
     return (
-      <div className="mt-6 border border-[rgba(50,73,83,0.12)] bg-white/75 px-5 py-8 text-sm text-[rgba(47,42,39,0.64)]">
+      <div className="mt-6 border border-[rgba(50,73,83,0.12)] bg-white/75 px-5 py-8 text-sm text-[rgba(47,42,39,0.72)]">
         Loading the current class schedule…
       </div>
     );
@@ -271,7 +271,7 @@ export function GroupTrainingSchedule({
             );
           })
         ) : (
-          <p className="border border-[rgba(50,73,83,0.12)] bg-white/75 px-4 py-6 text-sm text-[rgba(47,42,39,0.64)] sm:col-span-2">
+          <p className="border border-[rgba(50,73,83,0.12)] bg-white/75 px-4 py-6 text-sm text-[rgba(47,42,39,0.72)] sm:col-span-2">
             No classes are scheduled during this period.
           </p>
         )}

@@ -242,7 +242,7 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
               </table>
             </div>
             {section.note ? (
-              <p className="mt-4 max-w-3xl text-xs italic leading-6 text-[rgba(47,42,39,0.62)]">
+              <p className="mt-4 max-w-3xl text-xs italic leading-6 text-[rgba(47,42,39,0.72)]">
                 {section.note}
               </p>
             ) : null}
@@ -299,7 +299,7 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
                     </table>
                   </div>
                   {table.note ? (
-                    <p className="mt-4 max-w-3xl text-xs italic leading-6 text-[rgba(47,42,39,0.62)]">{table.note}</p>
+                    <p className="mt-4 max-w-3xl text-xs italic leading-6 text-[rgba(47,42,39,0.72)]">{table.note}</p>
                   ) : null}
                 </div>
               ))}
@@ -361,7 +361,7 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
                       </p>
                       <p className="mt-3 text-3xl font-semibold leading-tight">{tier.price}</p>
                       {tier.cadence ? (
-                        <p className={`mt-1 text-xs ${dark ? "text-white/70" : "text-[rgba(47,42,39,0.6)]"}`}>
+                        <p className={`mt-1 text-xs ${dark ? "text-white/70" : "text-[rgba(47,42,39,0.72)]"}`}>
                           {tier.cadence}
                         </p>
                       ) : null}
@@ -456,7 +456,7 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
                     <p className="text-3xl font-semibold leading-none">
                       {price.price}
                       {price.originalPrice ? (
-                        <span className="ml-2 text-base font-normal text-white/45 line-through">
+                        <span className="ml-2 text-base font-normal text-white/70 line-through">
                           {price.originalPrice}
                         </span>
                       ) : null}
@@ -474,7 +474,7 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
                   <article key={level.name} className="bg-white/90 p-6 sm:p-7">
                     <h4 className="text-lg font-bold text-[var(--pp-ink)]">{level.name}</h4>
                     {level.requirement ? (
-                      <p className="mt-1.5 text-sm leading-6 text-[rgba(47,42,39,0.62)]">
+                      <p className="mt-1.5 text-sm leading-6 text-[rgba(47,42,39,0.72)]">
                         {level.requirement}
                       </p>
                     ) : null}
@@ -608,7 +608,7 @@ function SectionRenderer({ section, index }: { section: ContentSection; index: n
               </table>
             </div>
             {section.note ? (
-              <p className="mt-4 max-w-3xl text-xs italic leading-6 text-[rgba(47,42,39,0.62)]">
+              <p className="mt-4 max-w-3xl text-xs italic leading-6 text-[rgba(47,42,39,0.72)]">
                 {section.note}
               </p>
             ) : null}
