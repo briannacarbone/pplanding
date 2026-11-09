@@ -17,7 +17,7 @@ Primary references reviewed during this project:
 
 ## Evidence and deliverables
 
-Production remediation releases are PRs #126, #127 and #128. Current local and origin/main source is fabb460ff54fa60160b74b53a52f0933fd82b847 (PR #128, inquiry error recovery). Vercel deployment dpl_AyzsmdvF1XcnSHK81EyTbewCqEZr was rechecked READY, target production, with both public-domain aliases and no alias error. ACCESSIBILITY-AUDIT.md records findings and narrowly scoped evidence; historical build notes do not prove current release behavior. ACCESSIBILITY-WCAG-MATRIX.md lists all 55 A/AA criteria, still unverified at whole-site scope.
+Production remediation releases through PR #130 are live. PR #130 merged as af72efd134aedaa7698901433feb0253242d2587 after CI run 42556658586 passed for source e650545822e70baf4d0b3dbf67bfa7c6cd88ae8f. Its five corrected descriptions were verified in the hosted preview accessibility tree. Production deployment dpl_6qmjyz1dQunCsp4nxv9g5HZ37HVY reached READY for that merge SHA with both public domains and no alias error; the boarding description was confirmed on the live site. ACCESSIBILITY-AUDIT.md records scoped evidence; historical notes do not prove later release behavior. ACCESSIBILITY-WCAG-MATRIX.md lists all 55 A/AA criteria, still unverified at whole-site scope.
 
 Static structure and semantic checks cover 207 generated customer HTML pages. Measured contrast checks cover specific CSS pairs only. Browser checks cover selected dialogs, gallery keyboard operation, profile focus, skip navigation, native validation, and selected 320px layouts. None proves complete workflows or spoken screen-reader output.
 
@@ -31,6 +31,22 @@ Static structure and semantic checks cover 207 generated customer HTML pages. Me
 6. Attach direct evidence for each applicable criterion in the matrix, resolve failures, and rerun affected checks. Do not infer site-wide passes from a single route or static scan.
 7. Verify hosted preview, merge/deploy reviewed changes, and retest production journeys. Confirm support-channel operation and responsibility for accessibility reports and vendor follow-up.
 8. Complete legal applicability review and requirement-by-requirement completion audit before claiming full compliance.
+
+## Acceptance work and dependencies
+
+The release evidence above closes deployment of the implemented fixes, not the eight execution gates. No gate is fully closed. Continue remaining source/content review in parallel with the following work; this table does not reduce site or process scope.
+
+| Work | Required input or owner | Evidence needed to close |
+|---|---|---|
+| MoeGo remediation | Business/vendor contact; vendor changes to the four documented entry flows | Corrected hosted version, field/control names and relationships, keyboard add/remove/upload/date/submit operation, errors and success; full retest against ACCESSIBILITY-VENDOR-FINDINGS.md |
+| Complete delivery and booking | Identified disposable test customer and workflow, with expected delivery destination; account access through the normal sign-in flow | One controlled inquiry reaches the expected system exactly once; retry does not duplicate it; booking/authentication/recovery can be completed; retain test result and cleanup disposition. No synthetic production records until a test workflow is identified. |
+| Tour media | Original video/audio or accurate source transcript, and a content owner | Review the entire 8:35 tour; identify speech, meaningful sounds and visual-only information; publish and verify accurate synchronized captions and any required descriptive alternative. Unavailable player captions alone do not establish the full media requirements. |
+| Assistive technology | Desktop and mobile tester with actual screen-reader access | Record OS/browser/screen-reader versions and spoken output for navigation, menus/dialogs, gallery, pricing tables, calendars, every inquiry branch and complete external booking; include focus, errors/status and recovery. AX trees alone do not close this. |
+| Visual modes and input | Browser/device testing access | 200% zoom, 320px reflow, text spacing, forced colors, reduced motion, keyboard and touch across every distinct template and expanded/failed/success state; record exceptions and evidence rather than extrapolating from initial pages. |
+| Support operation | Named business owner for phone/email accessibility reports | Confirm both published channels work, establish routing and follow-up responsibility, and verify equivalent help for a blocked customer task. A displayed contact link is insufficient. |
+| Legal applicability | Business confirmation of operating jurisdictions and qualified review | Written determination of applicable obligations and outstanding actions, reconciled with technical findings; no automatic conformance or legal-compliance claim from CI. |
+
+For each manual result, record route, state, build/deployment, date, environment, exact steps, observed result, associated criterion and evidence location. Failed or missing results remain open. Vendor correspondence has not been sent; owner, media and legal-review requests remain unanswered. A separate request now asks for the controlled test workflow and screen-reader tester. Never include passwords in the audit.
 
 ## Regression and maintenance
 
