@@ -22,7 +22,7 @@ Every criterion starts UNVERIFIED. Local fixes or narrow structural checks do no
 | [1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [1.4.4 Resize Text](https://www.w3.org/TR/WCAG22/#resize-text) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [1.4.5 Images of Text](https://www.w3.org/TR/WCAG22/#images-of-text) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
-| [1.4.10 Reflow](https://www.w3.org/TR/WCAG22/#reflow) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
+| [1.4.10 Reflow](https://www.w3.org/TR/WCAG22/#reflow) | AA | UNVERIFIED | All 206 initial public routes measured no document-level overflow at 320px; ten-dog resort/grooming forms and nested mobile dialogs also fit. Element clipping, external frames and remaining states need manual evidence; see audit. |
 | [1.4.11 Non-text Contrast](https://www.w3.org/TR/WCAG22/#non-text-contrast) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [1.4.12 Text Spacing](https://www.w3.org/TR/WCAG22/#text-spacing) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [1.4.13 Content on Hover or Focus](https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |

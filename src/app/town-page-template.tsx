@@ -207,7 +207,7 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
       <section className="pp-page-hero relative  overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
           src={image}
-          alt={`${copy.primary} in ${page.town}`}
+          alt=""
           fill
           sizes="100vw"
           className="object-cover"

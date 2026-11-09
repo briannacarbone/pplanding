@@ -101,7 +101,7 @@ export default function SummerBoardingPage() {
       <section className="pp-page-hero relative overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
           src="/boarding/boarding_hero.jpg"
-          alt="Happy dog enjoying supervised play at Planet Pooch Pet Resort"
+          alt=""
           fill
           sizes="100vw"
           className="object-cover"
@@ -240,7 +240,7 @@ export default function SummerBoardingPage() {
             <div className="overflow-hidden rounded-2xl">
               <Image
                 src="/boarding/moon_sq.JPG"
-                alt="Dogs enjoying their boarding stay at Planet Pooch"
+                alt="A dog wearing a bandana sits on a cushioned bed in a private suite with a wall-mounted television"
                 width={800}
                 height={600}
                 sizes="(min-width: 1024px) 50vw, 100vw"

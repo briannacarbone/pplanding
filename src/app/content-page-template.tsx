@@ -1285,7 +1285,7 @@ export function ContentPageTemplate({ page }: ContentPageTemplateProps) {
       <section className="pp-page-hero relative overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
             src={page.image ?? "/hero-dog.jpg"}
-            alt={`${page.title} at Planet Pooch`}
+            alt=""
             fill
             sizes="100vw"
             className="object-cover"
