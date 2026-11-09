@@ -16,7 +16,7 @@ Every criterion starts UNVERIFIED. Local fixes or narrow structural checks do no
 | [1.3.2 Meaningful Sequence](https://www.w3.org/TR/WCAG22/#meaningful-sequence) | A | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [1.3.3 Sensory Characteristics](https://www.w3.org/TR/WCAG22/#sensory-characteristics) | A | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [1.3.4 Orientation](https://www.w3.org/TR/WCAG22/#orientation) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
-| [1.3.5 Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
+| [1.3.5 Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose) | AA | UNVERIFIED | Production resort/grooming customer fields expose given-name, family-name, tel and email autocomplete tokens. External forms and full-scope applicability remain open; see audit. |
 | [1.4.1 Use of Color](https://www.w3.org/TR/WCAG22/#use-of-color) | A | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [1.4.2 Audio Control](https://www.w3.org/TR/WCAG22/#audio-control) | A | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
@@ -45,7 +45,7 @@ Every criterion starts UNVERIFIED. Local fixes or narrow structural checks do no
 | [2.5.3 Label in Name](https://www.w3.org/TR/WCAG22/#label-in-name) | A | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [2.5.4 Motion Actuation](https://www.w3.org/TR/WCAG22/#motion-actuation) | A | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [2.5.7 Dragging Movements](https://www.w3.org/TR/WCAG22/#dragging-movements) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
-| [2.5.8 Target Size (Minimum)](https://www.w3.org/TR/WCAG22/#target-size-minimum) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
+| [2.5.8 Target Size (Minimum)](https://www.w3.org/TR/WCAG22/#target-size-minimum) | AA | UNVERIFIED | Initial-state bounding-box measurements on 29 desktop/mobile routes found no close-spacing candidates. See audit exclusions; interactive states and external processes remain unverified. |
 | [3.1.1 Language of Page](https://www.w3.org/TR/WCAG22/#language-of-page) | A | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [3.1.2 Language of Parts](https://www.w3.org/TR/WCAG22/#language-of-parts) | AA | UNVERIFIED | Applicability and full-scope test evidence pending |
 | [3.2.1 On Focus](https://www.w3.org/TR/WCAG22/#on-focus) | A | UNVERIFIED | Applicability and full-scope test evidence pending |

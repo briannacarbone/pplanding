@@ -17,7 +17,7 @@ Primary references reviewed during this project:
 
 ## Evidence and deliverables
 
-The first remediation release merged through https://github.com/dfeleppa/pplanding/pull/126 as 6c39d4bc8b86bd707956ce43000488028adaca3b and is live on the public domains. Vercel production deployment dpl_DnrKfoc1FYcja9JgmwJYkMPSwpqT is READY with those domain aliases. Follow-up work is on codex/public-site-accessibility-followup. ACCESSIBILITY-AUDIT.md records findings and narrowly scoped evidence; historical build notes do not prove current release behavior. ACCESSIBILITY-WCAG-MATRIX.md lists all 55 A/AA criteria, still unverified at whole-site scope.
+Production remediation releases are PRs #126, #127 and #128. Current local and origin/main source is fabb460ff54fa60160b74b53a52f0933fd82b847 (PR #128, inquiry error recovery). Vercel deployment dpl_AyzsmdvF1XcnSHK81EyTbewCqEZr was rechecked READY, target production, with both public-domain aliases and no alias error. ACCESSIBILITY-AUDIT.md records findings and narrowly scoped evidence; historical build notes do not prove current release behavior. ACCESSIBILITY-WCAG-MATRIX.md lists all 55 A/AA criteria, still unverified at whole-site scope.
 
 Static structure and semantic checks cover 207 generated customer HTML pages. Measured contrast checks cover specific CSS pairs only. Browser checks cover selected dialogs, gallery keyboard operation, profile focus, skip navigation, native validation, and selected 320px layouts. None proves complete workflows or spoken screen-reader output.
 

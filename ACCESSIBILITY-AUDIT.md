@@ -161,3 +161,28 @@ A separate attempted browser zoom check did not change measured viewport width o
 The public form previously displayed raw transport or JSON parsing errors. It now uses plain retry guidance for network failure, invalid JSON, null/empty responses and responses without useful server guidance. Specific server-provided validation/recovery messages remain available. No success is announced when the response cannot confirm submission.
 
 Expanded the isolated component check to both resort and in-house grooming branches. Passing checks cover pending focus/status, duplicate prevention, server error, rejected network request, invalid JSON, null JSON, error focus, retained first-name value, re-enabled fieldsets, retry with stable submission ID, correct service payload, initially unchecked marketing consent and success focus. Fetch is entirely mocked; no external data was sent. Tests dispatch submit events and therefore do not establish native browser constraint-validation behavior or live delivery. Targeted ESLint and production build passed. This change is not yet released.
+
+
+## Released inquiry recovery and target-size evidence
+
+PR #128 is merged as fabb460ff54fa60160b74b53a52f0933fd82b847 in local and origin/main. Vercel deployment dpl_AyzsmdvF1XcnSHK81EyTbewCqEZr was rechecked READY, target production, with both public-domain aliases and no alias error. Earlier unreleased notes describe historical test state.
+
+Retained Chrome measurements cover initial states of 29 routes at desktop and 320x640: home, mobile-grooming, in-house-grooming, dog-daycare, dog-boarding, dog-training, enrichment, events, gallery, book, new-client, get-started, contact, blog, welcome, summer-boarding, grooming-packages, nassau-pricing, cat-experience, pet-grooming-hamptons, partners, were-hiring, requirements, agreement, privacy-policy, terms, accessibility, sitemap-index and training-giveaway. No undersized target had a nearby target intersecting the measured spacing circle. Mobile undersized candidates remained on home (1), get-started (3), contact (75) and training-giveaway (4); small dimensions alone do not establish failure.
+
+Method: visible native links/buttons/inputs/selects/textareas/summary controls, using the first associated label bounding box when available, excluding disabled/hidden/inert/sr-only content. Either dimension under 24 CSS pixels identifies a candidate. Compare its center to other small-target centers (24px) or larger-target bounding boxes (12px radius). Nested pairs are excluded. Multi-line hit regions, clipping, overlays, custom controls, iframes, open dialogs and expanded forms are not fully represented. This does not establish WCAG 2.5.8 conformance. Temporary viewport override reset.
+
+
+## Production inquiry labels, input purpose and profile limit
+
+On /new-client/ in Chrome, selected Pet Resort using Space. Accessibility tree exposed meaningful labels for the service, dog fields, customer fields and optional consent. Read-only DOM confirmed firstName/given-name, lastName/family-name, phone/tel and email/email autocomplete tokens. Selected In-House Grooming with Space and confirmed the same four visible customer-field labels/tokens; selector focus remained on the selected radio. This verifies markup and exposed names, not actual browser autofill or spoken screen-reader output.
+
+Nine successive keyboard activations of Additional dog produced ten named groups, Dog 1 through Dog 10. Focus reached pet-type-9, the add button disappeared at the ten-profile limit, and no visible non-hidden input/select lacked an associated label. Switching to grooming and back retained the ten resort profiles. Removing Dog 10 with Enter left nine groups, focused pet-type-8 and updated status to Dog 10 removed, 9 dog profiles remain. No details, consent or submission were sent.
+
+Expanded desktop form target measurements identified the inline consent Privacy Policy/Terms of Use links as small and overlapping the checkbox label bounding rectangle. These are links within a sentence; the label-bounding-box approximation does not establish a target-size failure. Complete hit-region and interaction-state coverage remains open.
+
+
+## Visible service selection indicator
+
+The service selector visually hid its native radio inputs and indicated selection only through background/border color. Restored visible 18px native radio controls and reserved left padding in desktop/mobile cards. Native selected-state shape is now visible; labels and keyboard behavior remain native. Local Chrome inspection confirmed appearance:auto, clip-path:none, all three 18px controls, Space selection and ArrowDown moving selection/focus to grooming. At 320px, document width was 305px and the selected indicator and wrapped labels remained visible. Actual OS forced-colors testing remains unverified.
+
+Production Webpack build passed. An initial default Turbopack build failed resolving internal Google font imports; repeating the default build after the Webpack build passed without dependency or source changes. Both builds included this CSS change. This selector fix is not yet released.
