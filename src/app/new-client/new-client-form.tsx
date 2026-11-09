@@ -51,14 +51,18 @@ export function NewClientForm({ serviceMode = "resort" }: { serviceMode?: "resor
     submissionId.current ??= crypto.randomUUID();
     const query = new URLSearchParams(window.location.search);
     const attribution = Object.fromEntries(["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid"].map(key => [key, query.get(key) ?? ""]));
+    const recoveryMessage = "We couldn’t confirm your submission. Your details are still here. Please check your connection and try again, or call our team.";
     try {
       const response = await fetch("/api/new-client/", { method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ firstName: fields.get("firstName"), lastName: fields.get("lastName"), email: fields.get("email"), phone: fields.get("phone"),
           pets: pets.map(id => ({ name: fields.get(`pet-name-${id}`), breed: fields.get(`pet-breed-${id}`), type: fields.get(`pet-type-${id}`) })),
           services: fields.getAll("services"), serviceSelectionVersion: 2, marketingConsent: fields.get("marketingConsent") === "on", website: fields.get("website"),
           submissionId: submissionId.current, attribution }) });
-      const result = await response.json();
-      if (!response.ok || !result.ok) throw new Error(result.error || "We couldn’t confirm your submission. Please try again or call us.");
+      const result = await response.json().catch(() => null);
+      if (!response.ok || !result?.ok) {
+        setError(typeof result?.error === "string" && result.error.trim() ? result.error : recoveryMessage);
+        return;
+      }
       setDone(true);
       // An analytics failure must never turn a saved inquiry into a form error.
       try { window.fbq?.("track", "Lead", { content_name: "New client form" }, { eventID: result.eventId }); } catch { /* non-blocking */ }
@@ -69,7 +73,7 @@ export function NewClientForm({ serviceMode = "resort" }: { serviceMode?: "resor
         });
       } catch { /* non-blocking */ }
       requestAnimationFrame(() => { success.current?.focus(); success.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "center" }); });
-    } catch (error) { setError(error instanceof Error ? error.message : "Please try again or call us."); }
+    } catch { setError(recoveryMessage); }
     finally { submitting.current = false; setBusy(false); }
   }
 
