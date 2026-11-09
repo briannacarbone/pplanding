@@ -50,7 +50,7 @@ export default function GetStartedPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
                 src="/hero-dog.jpg"
-                alt="A dog at Planet Pooch"
+                alt="A curly-coated dog resting its chin on a sofa beside a window"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"

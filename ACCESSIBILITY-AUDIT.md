@@ -186,3 +186,14 @@ Expanded desktop form target measurements identified the inline consent Privacy 
 The service selector visually hid its native radio inputs and indicated selection only through background/border color. Restored visible 18px native radio controls and reserved left padding in desktop/mobile cards. Native selected-state shape is now visible; labels and keyboard behavior remain native. Local Chrome inspection confirmed appearance:auto, clip-path:none, all three 18px controls, Space selection and ArrowDown moving selection/focus to grooming. At 320px, document width was 305px and the selected indicator and wrapped labels remained visible. Actual OS forced-colors testing remains unverified.
 
 Production Webpack build passed. An initial default Turbopack build failed resolving internal Google font imports; repeating the default build after the Webpack build passed without dependency or source changes. Both builds included this CSS change. This selector fix is not yet released.
+
+
+## Service selector production release
+
+PR #129 merged as 9d5ecee7189ed660ee33c244e5f9ae4ce39bd1dc after CI run 42556209256 succeeded for head e31979f0cb8fe60745f7113daa48104638ec5b96. Exact preview dpl_9pPcnZrKm7MmX3oo3t2Huo8cYW2H passed Space/ArrowDown selection and focus checks; all native radio indicators measured 18px with appearance:auto and no clipping. Production dpl_4uxXymopgJjPbXa91JVWqN5tgRe4 reached READY for the merge SHA with both domains and no alias error. Public-domain DOM and keyboard checks confirmed the indicators and resort selection. The attempted production screenshot timed out; no screenshot evidence or actual forced-colors test is claimed.
+
+## Shared service image content review
+
+Visually inspected nine original assets: hero-dog.jpg, grooming-fresh.jpg, van1.jpg, boarding/moon.JPG, enrichment_home.jpg, gallery/daycare-playroom.webp, gallery/outdoor-dog-play.webp, gallery/indoor-daycare-play.webp and our-resort-exterior.jpeg. Corrected the shared portrait description on home, welcome and get-started to the visible dog resting its chin on a sofa beside a window, removing unsupported resort-setting language. Clarified that van1 shows the grooming table, tub and cabinets inside the van. Corrected moon.JPG from plural dogs to one bandana-wearing dog on a bed in a private suite with television. The groomed Yorkie, agility, three daycare and exterior descriptions were consistent with the inspected content.
+
+Targeted ESLint and production build passed. Parsed the five affected generated HTML pages and verified each corrected img alt. Text-only changes add no hooks, events, fetching or dependencies. This remains a scoped content review; all site images and rendered crop contexts are not yet verified. These image-description changes are not yet released.

@@ -71,7 +71,7 @@ export const mainServicePages = {
         intro:
           "We partner with Wag N Tails and Hanvey Engineering to outfit our grooming vehicles.",
         image: "/van1.jpg",
-        imageAlt: "Planet Pooch mobile grooming van",
+        imageAlt: "Inside a mobile grooming van, with a grooming table, bathing tub, and storage cabinets",
         items: [
           "Cleaned between every appointment",
           "Built-in equipment, fresh water, and power — you don't need to provide anything.",
@@ -464,7 +464,7 @@ export const mainServicePages = {
         title: "Overnight care that feels like home.",
         cta: { label: "Pricing", href: "#pricing" },
         image: "/boarding/moon.JPG",
-        imageAlt: "Dogs enjoying their boarding stay at Planet Pooch",
+        imageAlt: "A dog wearing a bandana sits on a cushioned bed in a private suite with a wall-mounted television",
         paragraphs: [
           "Leaving your dog overnight can be stressful — for both of you. At Planet Pooch, our boarding program is designed to feel like a natural extension of your dog's day. They'll enjoy playtime with our daycare pack and settle in for a cozy night of rest.",
         ],

@@ -142,7 +142,7 @@ export default function WelcomePage() {
       <section className="pp-page-hero relative overflow-hidden bg-[var(--pp-night)] text-white">
         <Image
           src="/hero-dog.jpg"
-          alt="A happy dog lounging in a polished resort setting"
+          alt="A curly-coated dog resting its chin on a sofa beside a window"
           fill
           sizes="100vw"
           className="object-cover"
