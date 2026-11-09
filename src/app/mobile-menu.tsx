@@ -10,7 +10,7 @@ import { BookNowModal } from "./book-now-modal";
 export function MobileMenu({ ctaHref }: { ctaHref: string }) {
   const [open, setOpen] = useState(false);
   const [resortOpen, setResortOpen] = useState(false);
-  const panel = useRef<HTMLDivElement>(null);
+  const panel = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const resort = desktopNavItems.find(item => item.label === "Pet Resort");
   const explore = desktopNavItems.find(item => item.label === "Explore");
@@ -20,25 +20,19 @@ export function MobileMenu({ ctaHref }: { ctaHref: string }) {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     document.documentElement.dataset.mobileMenuOpen = "true";
-    panel.current?.querySelector<HTMLButtonElement>("button")?.focus();
-    function onKey(event: KeyboardEvent) {
-      // The booking dialog handles its own keyboard interaction.
-      if (!panel.current?.contains(document.activeElement)) return;
-      if (document.activeElement?.closest('[aria-label="Book Now"]')) return;
-      if (event.key === "Escape") setOpen(false);
-      if (event.key === "Tab") {
-        const items = Array.from(panel.current.querySelectorAll<HTMLElement>('a[href], button, [tabindex="0"]')).filter(item => item.getClientRects().length);
-        const first = items[0], last = items[items.length - 1];
-        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
-        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
-      }
-    }
-    document.addEventListener("keydown", onKey);
+    const element = panel.current;
+    const opener = trigger.current;
+    element?.showModal();
+    element?.querySelector<HTMLButtonElement>("button")?.focus();
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener("change", closeOnDesktop);
     return () => {
       document.body.style.overflow = previousOverflow;
       delete document.documentElement.dataset.mobileMenuOpen;
-      document.removeEventListener("keydown", onKey);
-      trigger.current?.focus();
+      element?.close();
+      desktop.removeEventListener("change", closeOnDesktop);
+      if (opener?.getClientRects().length) opener.focus();
     };
   }, [open]);
 
@@ -48,7 +42,7 @@ export function MobileMenu({ ctaHref }: { ctaHref: string }) {
         <Menu className="h-6 w-6" />
       </button>
       {open && (
-        <div ref={panel} className="fixed inset-0 z-40 overflow-y-auto bg-[var(--pp-night)] text-white lg:hidden" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <dialog ref={panel} onCancel={() => setOpen(false)} onClose={() => setOpen(false)} className="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none overflow-y-auto border-0 bg-[var(--pp-night)] p-0 text-white lg:hidden" aria-label="Navigation menu">
           <div className="mx-auto flex min-h-full max-w-xl flex-col px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
             <div className="flex items-center justify-between border-b border-white/15 py-5">
               <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-3 text-lg font-semibold"><PawPrint className="h-6 w-6 text-[var(--pp-mint)]" aria-hidden />Planet Pooch</Link>
@@ -85,7 +79,7 @@ export function MobileMenu({ ctaHref }: { ctaHref: string }) {
               <a href={SITE.phone.href} data-track="phone-click" className="mt-3 flex min-h-11 items-center justify-center gap-2 text-sm text-white/75"><Phone className="h-4 w-4" aria-hidden />{SITE.phone.display}</a>
             </div>
           </div>
-        </div>
+        </dialog>
       )}
     </>
   );

@@ -29,7 +29,7 @@ export default function NewClientPage() {
         <div className="pp-hero-content pp-hero-stack">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">Let&apos;s get to know your pup</p>
-            <h1 className="pp-hero-title text-white">Get started with Planet Pooch.</h1>
+            <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">Get started with Planet Pooch.</h1>
           </div>
           <div className="pp-hero-copy">
             <p className="pp-hero-tagline">

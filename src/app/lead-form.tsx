@@ -3,7 +3,7 @@ import { NEW_CLIENT_FORM_URL } from "../lib/booking";
 export function LeadForm() {
   return (
     <div className="flex min-h-[320px] flex-col items-center justify-center bg-white px-7 py-12 text-center sm:px-10">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]">
         New Client Form
       </p>
       <h3 className="mt-4 text-3xl leading-tight text-[var(--pp-ink)]">

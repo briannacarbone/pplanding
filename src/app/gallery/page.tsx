@@ -144,7 +144,7 @@ export default function GalleryPage() {
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-mint)]">
               Life at Planet Pooch
               </p>
-              <h1 className="pp-hero-title text-white">The best days are dog days.</h1>
+              <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">The best days are dog days.</h1>
             </div>
             <div className="pp-hero-copy">
               <p className="pp-hero-tagline">
@@ -160,7 +160,7 @@ export default function GalleryPage() {
           <GalleryGrid photos={photos} />
 
           <div className="mt-16 border-t border-[var(--pp-night)]/12 pt-12 text-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/75">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]">
               Ready to join the fun?
             </p>
             <h2 className="mx-auto mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { createPortal } from "react-dom";
 import { PawPrint, X } from "lucide-react";
@@ -9,14 +9,20 @@ import { SITE } from "../lib/site";
 
 export function BookNowModal({ ctaHref, className = "", variant = "full", label = "Book Now", icon = "arrow", track }: { ctaHref: string; className?: string; variant?: "full" | "grooming"; label?: string; icon?: "arrow" | "paw" | "none"; track?: string }) {
   const [open, setOpen] = useState(false);
+  const dialog = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     if (!open) return;
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpen(false);
-    }
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    const element = dialog.current;
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousOverflow = document.body.style.overflow;
+    element?.showModal();
+    document.body.style.overflow = "hidden";
+    return () => {
+      element?.close();
+      document.body.style.overflow = previousOverflow;
+      if (previousFocus?.isConnected) previousFocus.focus();
+    };
   }, [open]);
 
   return (
@@ -27,14 +33,15 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
       </button>
 
       {open && createPortal(
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4"
+        <dialog
+          ref={dialog}
+          className="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none overflow-y-auto border-0 bg-transparent p-4 backdrop:bg-black/60 open:flex open:items-center open:justify-center"
           onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}
-          role="dialog"
-          aria-modal="true"
+          onCancel={(event) => { event.stopPropagation(); setOpen(false); }}
+          onClose={(event) => { event.stopPropagation(); setOpen(false); }}
           aria-label="Book Now"
         >
-          <div className="relative w-full max-w-lg rounded-lg bg-[var(--pp-cream)] p-8 shadow-2xl sm:p-10">
+          <div className="relative my-auto w-full max-w-lg shrink-0 rounded-lg bg-[var(--pp-cream)] p-8 shadow-2xl sm:p-10">
             <button
               type="button"
               onClick={() => setOpen(false)}
@@ -53,7 +60,7 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
 
             {variant === "full" ? (
               <div className="space-y-6">
-                <Link href="/new-client/" className="pp-cta pp-cta-sm w-full justify-center text-center">
+                <Link href="/new-client/" onClick={() => setOpen(false)} className="pp-cta pp-cta-sm w-full justify-center text-center">
                   Get Started
                 </Link>
                 <div className="border-t border-[var(--pp-sand)] pt-6 text-center">
@@ -86,7 +93,7 @@ export function BookNowModal({ ctaHref, className = "", variant = "full", label 
               </div>
             )}
           </div>
-        </div>, document.body
+        </dialog>, document.body
       )}
     </>
   );

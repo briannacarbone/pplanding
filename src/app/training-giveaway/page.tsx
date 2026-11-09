@@ -83,7 +83,7 @@ export default function TrainingGiveawayPage() {
           <div className="pp-hero-content pp-hero-stack">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--pp-mint)]">Instagram Giveaway</p>
-              <h1 className="pp-hero-title text-white">Win $800 in Dog Training</h1>
+              <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">Win $800 in Dog Training</h1>
             </div>
             <div className="pp-hero-copy">
               <p className="pp-hero-tagline">

@@ -223,7 +223,7 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
               <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">
                 {copy.eyebrow} • {page.town}{page.region ? `, ${page.region}` : ""}
               </p>
-              <h1 className="pp-hero-title text-white">{`${copy.primary} in ${page.town}${page.town.endsWith("County") || page.town === "North Shore" ? "" : ", NY"}`}</h1>
+              <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">{`${copy.primary} in ${page.town}${page.town.endsWith("County") || page.town === "North Shore" ? "" : ", NY"}`}</h1>
             </div>
             <div className="pp-hero-copy">
               <p className="pp-hero-tagline">{copy.hero(page.town)}</p>
@@ -261,7 +261,7 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
         {page.localIntro ? (
           <div className="mx-auto mb-12 max-w-7xl">
             <div className="max-w-3xl border-l-2 border-[var(--pp-main)]/30 pl-6">
-              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]">
                 In your neighborhood
               </p>
               <p className="mt-3 text-lg leading-8 text-[rgba(47,42,39,0.86)]">
@@ -272,18 +272,21 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
         ) : null}
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
-              Why mobile?
+            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]">
+              Why Planet Pooch?
             </p>
             <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
-              {copy.intro(page.town)}
+              {copy.primary} for {page.town} families.
             </h2>
+            <p className="mt-5 text-lg leading-8 text-[rgba(47,42,39,0.86)]">
+              {copy.intro(page.town)}
+            </p>
           </div>
 
           <div className="grid gap-3">
             {page.localFeatures && page.localFeatures.length > 0 ? (
               <div className="mb-2 border border-[var(--pp-main)]/25 bg-[var(--pp-mint)]/15 px-5 py-4">
-                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/80">
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]">
                   What {page.town} dog parents ask
                 </p>
                 <ul className="mt-3 space-y-2">
@@ -314,7 +317,7 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
 
       <section className="bg-white/55 px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]">
             {copy.whats.title}
           </p>
           <h2 className="mt-3 max-w-3xl text-3xl leading-tight sm:text-4xl">
@@ -336,7 +339,7 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
 
       <section className="px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]">
             More from Planet Pooch
           </p>
           <h2 className="mt-3 text-3xl leading-tight">Explore related services.</h2>
@@ -358,7 +361,7 @@ export function TownPageTemplate({ page }: { page: TownPage }) {
       {nearby.length > 0 ? (
         <section className="px-5 pb-16 sm:px-8 lg:px-10 lg:pb-20">
           <div className="mx-auto max-w-7xl border-t border-[rgba(50,73,83,0.16)] pt-14">
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]">
               Nearby service areas
             </p>
             <h2 className="mt-3 text-3xl leading-tight">

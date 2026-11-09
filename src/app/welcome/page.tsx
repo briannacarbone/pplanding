@@ -158,7 +158,7 @@ export default function WelcomePage() {
           <div className="pp-hero-content">
             <div className="pp-hero-stack">
               <div>
-                <h1 className="pp-hero-title text-white">
+                <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">
                   Long Island pet care you{" "}
                   <span className="text-[var(--pp-mint)]/80">can actually trust.</span>
                 </h1>
@@ -213,7 +213,7 @@ export default function WelcomePage() {
               <p className="text-3xl font-semibold text-[var(--pp-night)] sm:text-4xl" style={{ fontFamily: "var(--font-display), serif" }}>
                 {stat.value}
               </p>
-              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--pp-main)]/70">
+              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--pp-main-deep)]">
                 {stat.label}
               </p>
             </div>
@@ -225,7 +225,7 @@ export default function WelcomePage() {
       <section className="bg-[var(--pp-cream)] px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]">
               Choose your service
             </p>
             <h2 className="mt-4 text-4xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
@@ -246,7 +246,7 @@ export default function WelcomePage() {
                   <div className="relative aspect-square w-full overflow-hidden">
                     <Image
                       src={svc.image}
-                      alt={svc.title}
+                      alt=""
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                       className="object-cover transition duration-500 group-hover:scale-105"
@@ -259,7 +259,7 @@ export default function WelcomePage() {
                         aria-hidden
                       />
                     </div>
-                    <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+                    <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main-deep)]">
                       {svc.title}
                     </p>
                     <h3 className="mt-2 text-lg leading-snug text-[var(--pp-ink)] sm:text-xl">
@@ -285,7 +285,7 @@ export default function WelcomePage() {
       </section>
 
       {/* ── About / Trust ── */}
-      <section className="bg-[linear-gradient(180deg,#6f8793_0%,#617783_100%)] px-5 py-16 text-white sm:px-8 lg:px-10 lg:py-24">
+      <section className="bg-[linear-gradient(180deg,#324953_0%,#2f3f47_100%)] px-5 py-16 text-white sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
@@ -332,7 +332,7 @@ export default function WelcomePage() {
       <section className="bg-[var(--pp-cream)] px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]">
               Real Reviews
             </p>
             <h2 className="mt-4 text-4xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
@@ -374,7 +374,7 @@ export default function WelcomePage() {
                       {review.name}
                     </p>
                     <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--pp-main)]/75">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--pp-main-deep)]">
                         {review.service}
                       </p>
                       <span
@@ -394,7 +394,7 @@ export default function WelcomePage() {
 
                 <div
                   className="flex items-center gap-0.5"
-                  aria-label="5 out of 5 stars"
+                  role="img" aria-label="5 out of 5 stars"
                 >
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
@@ -420,7 +420,7 @@ export default function WelcomePage() {
       >
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]">
               Request availability
             </p>
             <h2 className="mt-4 text-4xl leading-tight text-[var(--pp-ink)] sm:text-5xl">

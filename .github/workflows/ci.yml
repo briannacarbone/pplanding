@@ -24,3 +24,20 @@ jobs:
 
       - name: Typecheck
         run: npx tsc --noEmit
+
+      - name: Check inquiry feedback without network delivery
+        run: node scripts/check-form-feedback.cjs
+
+      - name: Build public pages
+        run: npm run build
+
+      - name: Check page accessibility structure
+        run: npm run check:a11y:structure
+
+      - name: Check measured form contrast
+        run: npm run check:a11y:contrast
+
+      # Static checks exclude visual rendering and interactive states.
+      # Passing CI does not establish full WCAG conformance.
+      - name: Check static accessibility semantics
+        run: npm run check:a11y:semantics

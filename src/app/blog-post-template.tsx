@@ -112,7 +112,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
           <div className="pp-hero-content pp-hero-stack">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">Planet Pooch Blog</p>
-              <h1 className="pp-hero-title text-white">{post.title}</h1>
+              <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">{post.title}</h1>
             </div>
             <div className="pp-hero-copy">
               {post.intro ? <p className="pp-hero-tagline">{post.intro}</p> : null}
@@ -133,12 +133,12 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
           />
           <Link
             href="/blog"
-            className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75 transition hover:text-[var(--pp-night)]"
+            className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main-deep)] transition hover:text-[var(--pp-night)]"
           >
             ← Back to Blog
           </Link>
           {post.datePublished ? (
-            <time dateTime={post.datePublished} className="mt-4 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--pp-main)]/65">
+            <time dateTime={post.datePublished} className="mt-4 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--pp-main-deep)]">
               {new Date(`${post.datePublished}T12:00:00`).toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",
@@ -191,7 +191,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
           )}
 
           <section className="mt-14 border border-[rgba(50,73,83,0.18)] bg-white/60 p-6 sm:p-8">
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main-deep)]">
               Curious about a service?
             </p>
             <h2 className="mt-2 text-2xl text-[var(--pp-ink)] sm:text-3xl">
@@ -211,7 +211,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
 
           {relatedPosts.length > 0 ? (
             <section className="mt-12">
-              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main-deep)]">
                 Related reads
               </p>
               <h2 className="mt-2 text-2xl text-[var(--pp-ink)] sm:text-3xl">More from the blog</h2>

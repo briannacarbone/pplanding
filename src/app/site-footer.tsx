@@ -21,6 +21,7 @@ const footerLinks = {
     { label: "Blog", href: "/blog/" },
   ],
   legal: [
+    { label: "Accessibility and help", href: "/accessibility/" },
     { label: "Pet Services Agreement", href: "/agreement/" },
     { label: "Requirements", href: "/requirements/" },
     { label: "Privacy Policy", href: "/privacy-policy/" },
@@ -36,7 +37,7 @@ const footerLinks = {
 export function SiteFooter() {
   return (
     <footer id="contact" className="bg-[var(--pp-night)] px-5 pb-8 pt-14 text-white sm:px-8 lg:px-10 lg:pb-10 lg:pt-16">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.1fr]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.1fr]">
         <div>
           <Image
             src={planetPoochLogo}
@@ -118,7 +119,7 @@ export function SiteFooter() {
               className="flex min-h-11 items-center gap-3 transition hover:text-white lg:min-h-0 lg:items-start"
             >
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-white/55" />
-              <span>{SITE.email}</span>
+              <span className="min-w-0 break-all">{SITE.email}</span>
             </a>
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-white/55" />

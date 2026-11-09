@@ -8,10 +8,10 @@ type Review = (typeof googleReviews)[number];
 
 export function ReviewCarousel({ reviews }: { reviews: readonly Review[] }) {
   const viewport = useRef<HTMLDivElement>(null);
-  const paused = useRef(false);
+  const paused = useRef(true);
   const hovered = useRef(false);
   const focused = useRef(false);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
   function pause(value: boolean) {
     paused.current = value;
     setIsPaused(value);
@@ -55,7 +55,8 @@ export function ReviewCarousel({ reviews }: { reviews: readonly Review[] }) {
     const element = viewport.current;
     if (!element) return;
     const card = element.querySelector<HTMLElement>("article");
-    element.scrollLeft += direction * ((card?.getBoundingClientRect().width ?? 320) + 24);
+    const step = (card?.getBoundingClientRect().width ?? 320) + 24;
+    element.scrollLeft = (Math.round(element.scrollLeft / step) + direction) * step;
   }
 
   return (
@@ -97,7 +98,7 @@ export function ReviewCarousel({ reviews }: { reviews: readonly Review[] }) {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
+                <div className="flex items-center gap-0.5" role="img" aria-label="5 out of 5 stars">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-[#fbbc04] text-[#fbbc04]" />
                   ))}

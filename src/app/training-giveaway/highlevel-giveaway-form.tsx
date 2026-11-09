@@ -55,7 +55,6 @@ export function HighLevelGiveawayForm() {
               display: "block",
               background: "white",
             }}
-            scrolling="no"
             loading="lazy"
           />
           <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
@@ -68,6 +67,9 @@ export function HighLevelGiveawayForm() {
           Loading giveaway entry form...
         </div>
       )}
+      <p className="bg-white px-6 py-4 text-sm text-[var(--pp-ink)]">
+        Trouble using the form? <a href={formSrc} target="_blank" rel="noopener noreferrer" className="underline">Open the giveaway form in a new tab</a>.
+      </p>
     </div>
   );
 }

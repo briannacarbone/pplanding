@@ -105,7 +105,7 @@ export default function HomePage() {
           >
             <div>
               <div>
-                <h1 className="pp-hero-title max-w-xl text-white">
+                <h1 id="page-content" tabIndex={-1} className="pp-hero-title max-w-xl text-white">
                   Enriching the lives of pets{" "}
                   <span className="text-[var(--pp-mint)]">since 2014.</span>
                 </h1>
@@ -140,7 +140,7 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="hidden sm:block text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+            <p className="hidden sm:block text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]">
               Tailored care. Heartfelt experience.
             </p>
             <h2 className="text-2xl leading-tight sm:mt-4 sm:text-5xl">
@@ -160,7 +160,7 @@ export default function HomePage() {
                   <div className="relative h-16 w-16 shrink-0 overflow-hidden sm:aspect-square sm:h-auto sm:w-full">
                     <Image
                       src={item.image}
-                      alt={item.title}
+                      alt=""
                       fill
                       sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 767px) calc((100vw - 96px) / 2), (max-width: 1279px) 33vw, 200px"
                       className="object-cover transition duration-500 group-hover:scale-105"
@@ -185,7 +185,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="bg-[linear-gradient(180deg,#6f8793_0%,#617783_100%)] px-5 py-12 sm:py-18 text-white sm:px-8 lg:px-10 lg:py-24">
+      <section id="about" className="bg-[linear-gradient(180deg,#324953_0%,#2f3f47_100%)] px-5 py-12 sm:py-18 text-white sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
@@ -233,7 +233,7 @@ export default function HomePage() {
           </div>
 
           <div className="lg:order-2">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]">
               Facility Tour
             </p>
             <h2 className="mt-4 text-3xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
@@ -247,7 +247,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="testimonials" className="bg-[linear-gradient(180deg,#6f8793_0%,#617783_100%)] px-5 py-12 sm:py-18 text-white sm:px-8 lg:px-10 lg:py-24">
+      <section id="testimonials" className="bg-[linear-gradient(180deg,#324953_0%,#2f3f47_100%)] px-5 py-12 sm:py-18 text-white sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/72">

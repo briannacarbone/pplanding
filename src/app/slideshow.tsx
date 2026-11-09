@@ -12,15 +12,16 @@ type SlideshowProps = {
 
 export function Slideshow({ images, interval = 4000 }: SlideshowProps) {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(true);
   const hasMultipleImages = images.length > 1;
 
   useEffect(() => {
-    if (!hasMultipleImages) return;
+    if (!hasMultipleImages || paused) return;
     const id = setInterval(() => {
       setCurrent((i) => (i + 1) % images.length);
     }, interval);
     return () => clearInterval(id);
-  }, [hasMultipleImages, images.length, interval]);
+  }, [hasMultipleImages, images.length, interval, paused]);
 
   function showPrevious() {
     if (!hasMultipleImages) return;
@@ -35,14 +36,19 @@ export function Slideshow({ images, interval = 4000 }: SlideshowProps) {
   if (images.length === 0) return null;
 
   return (
-    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
+    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl" role="region" aria-label="Photo gallery" aria-roledescription="carousel" onFocusCapture={() => setPaused(true)} onMouseEnter={() => setPaused(true)}>
+      {hasMultipleImages && <button type="button" onClick={() => setPaused((value) => !value)} className="absolute bottom-4 left-4 z-10 min-h-11 bg-[var(--pp-night)] px-4 py-2 text-white">
+        {paused ? "Start slideshow" : "Pause slideshow"}
+      </button>}
+      <span className="sr-only" aria-live={paused ? "polite" : "off"} aria-atomic="true">Image {current + 1} of {images.length}: {images[current]?.alt}</span>
       {images.map((img, i) => (
         <Image
           key={i}
           src={img.src}
           alt={img.alt}
+          aria-hidden={i !== current}
           fill
-          className={`object-cover transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+          className={`object-cover transition-opacity duration-700 motion-reduce:transition-none ${i === current ? "opacity-100" : "opacity-0"}`}
         />
       ))}
       <button

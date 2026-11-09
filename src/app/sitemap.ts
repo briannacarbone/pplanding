@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Contact + booking
   entries.push(make("/contact", SERVICE_PRIORITY, "monthly"));
+  entries.push(make("/accessibility", SUPPORT_PRIORITY, "monthly"));
   entries.push(make("/book", SERVICE_PRIORITY, "monthly"));
   entries.push(
     make("/gallery", SUBPAGE_PRIORITY, "monthly", {

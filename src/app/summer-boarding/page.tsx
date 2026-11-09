@@ -119,7 +119,7 @@ export default function SummerBoardingPage() {
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-mint)]/90">
                   Summer 2026 — Spots Are Limited
                 </p>
-                <h1 className="pp-hero-title text-white">
+                <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">
                   Summer boarding your dog will{" "}
                   <span className="text-[var(--pp-mint)]/80">
                     actually enjoy.
@@ -179,7 +179,7 @@ export default function SummerBoardingPage() {
               >
                 {stat.value}
               </p>
-              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--pp-main)]/70">
+              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--pp-main-deep)]">
                 {stat.label}
               </p>
             </div>
@@ -192,7 +192,7 @@ export default function SummerBoardingPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main-deep)]">
                 Why Planet Pooch
               </p>
               <h2 className="mt-4 text-4xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
@@ -252,7 +252,7 @@ export default function SummerBoardingPage() {
       </section>
 
       {/* ── Section 2: Reviews ── */}
-      <section className="bg-[linear-gradient(180deg,#6f8793_0%,#617783_100%)] px-5 py-14 text-white sm:px-8 lg:px-10 lg:py-20">
+      <section className="bg-[linear-gradient(180deg,#324953_0%,#2f3f47_100%)] px-5 py-14 text-white sm:px-8 lg:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/72">
@@ -317,7 +317,7 @@ export default function SummerBoardingPage() {
 
                 <div
                   className="flex items-center gap-0.5"
-                  aria-label="5 out of 5 stars"
+                  role="img" aria-label="5 out of 5 stars"
                 >
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star

@@ -35,6 +35,20 @@ body {
   font-family: var(--font-body, Arial, Helvetica, sans-serif);
 }
 
+/* Two-tone focus remains visible on both the dark hero and light content. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #1a252b;
+}
+
+@media (forced-colors: active) {
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 3px solid Highlight;
+    box-shadow: none;
+  }
+}
+
 .pp-hero-description {
   font-family: var(--font-hero-description), Georgia, serif;
   font-style: normal;
@@ -52,12 +66,23 @@ body {
 
 .pp-hero-image-overlay {
   background:
-    linear-gradient(90deg, rgba(15, 25, 29, 0.76) 0%, rgba(15, 25, 29, 0.5) 48%, rgba(15, 25, 29, 0.28) 100%),
+    linear-gradient(90deg, rgba(15, 25, 29, 0.82) 0%, rgba(15, 25, 29, 0.78) 48%, rgba(15, 25, 29, 0.75) 100%),
     linear-gradient(180deg, rgba(20, 30, 36, 0.32) 0%, transparent 45%, rgba(20, 30, 36, 0.5) 100%);
 }
 
 html[data-mobile-menu-open="true"] [data-sticky-mobile-cta] {
   display: none;
+}
+
+/* Keep keyboard-scrolled content above the fixed mobile booking controls. */
+@media (max-width: 63.999rem) {
+  html:has([data-sticky-mobile-cta]) {
+    scroll-padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+  }
+
+  :where(a, button, input, select, textarea, summary, [tabindex]) {
+    scroll-margin-block: 1rem;
+  }
 }
 
 a {
@@ -183,6 +208,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
   .pp-cta,
   .pp-cta-ghost,
   .pp-cta-arrow {

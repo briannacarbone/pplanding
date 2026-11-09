@@ -53,7 +53,7 @@ export default function BlogIndexPage() {
           <div className="pp-hero-content pp-hero-stack">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">Blog</p>
-              <h1 className="pp-hero-title text-white">Notes on grooming, daycare, training, and life with dogs.</h1>
+              <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">Notes on grooming, daycare, training, and life with dogs.</h1>
             </div>
             <div className="pp-hero-copy">
               <p className="pp-hero-tagline">
@@ -66,7 +66,7 @@ export default function BlogIndexPage() {
 
       <section className="bg-white/55 px-5 py-14 sm:px-8 lg:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main-deep)]">
             Latest
           </p>
           <h2 className="mt-3 text-3xl leading-tight text-[var(--pp-ink)] sm:text-4xl">
@@ -81,7 +81,7 @@ export default function BlogIndexPage() {
               >
                 <div>
                   {p.datePublished ? (
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--pp-main)]/65">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--pp-main-deep)]">
                       {formatDate(p.datePublished)}
                     </p>
                   ) : null}
@@ -101,7 +101,7 @@ export default function BlogIndexPage() {
 
       <section className="px-5 py-14 sm:px-8 lg:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main)]/75">
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--pp-main-deep)]">
             Archive
           </p>
           <h2 className="mt-3 text-3xl leading-tight text-[var(--pp-ink)] sm:text-4xl">

@@ -22,7 +22,7 @@ const bodySans = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: { absolute: "Book Now | Planet Pooch Pet Resort" },
+  title: { absolute: "Contact Planet Pooch | Phone, Email & Location" },
   description: `Book mobile grooming, daycare, boarding, training, or enrichment with ${SITE.legalName} in ${SITE.address.locality}, ${SITE.address.region}. Call ${SITE.phone.display} or email ${SITE.email}.`,
   alternates: { canonical: "/contact/" },
 };
@@ -35,7 +35,7 @@ function AreasWeServe() {
     <section id="areas" className="bg-white px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]/70">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--pp-main)]">
             Areas We Serve
           </p>
           <h2 className="mt-4 text-4xl leading-tight text-[var(--pp-ink)] sm:text-5xl">
@@ -96,7 +96,7 @@ export default function ContactPage() {
               <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--pp-mint)]">
                 Book Now
               </p>
-              <h1 className="pp-hero-title text-white">Let&apos;s plan the right care.</h1>
+              <h1 id="page-content" tabIndex={-1} className="pp-hero-title text-white">Let&apos;s plan the right care.</h1>
             </div>
             <div className="pp-hero-copy">
               <p className="pp-hero-tagline">
@@ -109,7 +109,7 @@ export default function ContactPage() {
       </section>
 
       <section className="relative -mt-12 rounded-t-[3rem] bg-[var(--pp-cream)] px-5 py-16 sm:px-8 lg:-mt-14 lg:rounded-t-[4rem] lg:px-10 lg:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-3">
           <article className="border border-[rgba(50,73,83,0.12)] bg-white/55 p-7 shadow-[0_14px_40px_rgba(50,73,83,0.08)]">
             <Phone className="h-5 w-5 text-[var(--pp-main)]" />
             <h2 className="mt-5 text-2xl leading-tight">Call us</h2>
@@ -134,10 +134,10 @@ export default function ContactPage() {
             </p>
             <a
               href={`mailto:${SITE.email}`}
-              className="mt-6 inline-flex min-h-11 items-center gap-2 text-base font-semibold text-[var(--pp-main-deep)] transition hover:text-[var(--pp-night)]"
+              className="mt-6 inline-flex min-h-11 max-w-full items-center gap-2 text-base font-semibold text-[var(--pp-main-deep)] transition hover:text-[var(--pp-night)]"
             >
-              {SITE.email}
-              <ArrowRight className="h-4 w-4" />
+              <span className="min-w-0 break-all">{SITE.email}</span>
+              <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />
             </a>
           </article>
 

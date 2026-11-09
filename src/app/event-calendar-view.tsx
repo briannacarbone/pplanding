@@ -120,7 +120,7 @@ export function EventCalendarView({ section }: { section: EventCalendarSection }
             <CalendarDays className="h-6 w-6 stroke-[1.5] text-[var(--pp-mint)]" />
           </div>
           <div>
-            <h3 className="text-2xl leading-tight">{formatRange(visibleStart, visibleEnd)}</h3>
+            <h3 aria-live="polite" aria-atomic="true" className="text-2xl leading-tight">{formatRange(visibleStart, visibleEnd)}</h3>
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-3">
@@ -178,10 +178,15 @@ export function EventCalendarView({ section }: { section: EventCalendarSection }
             >
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--pp-main)] sm:hidden">
+                  <p aria-hidden="true" className="text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--pp-main)] sm:hidden">
                     {weekdayLabels[day.getDay()]}
                   </p>
-                  <p className="mt-0.5 text-sm font-semibold text-[var(--pp-ink)]">{formatDayHeader(day)}</p>
+                  <h4 className="mt-0.5 text-sm font-semibold text-[var(--pp-ink)]">
+                    <time dateTime={dateKey(day)}>
+                      <span aria-hidden="true">{formatDayHeader(day)}</span>
+                      <span className="sr-only">{new Intl.DateTimeFormat("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(day)}</span>
+                    </time>
+                  </h4>
                 </div>
                 {isToday ? (
                   <span className="bg-[var(--pp-mint)] px-2 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[var(--pp-night)]">
