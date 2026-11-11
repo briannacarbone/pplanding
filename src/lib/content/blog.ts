@@ -27,6 +27,79 @@ export type BlogPost = {
 // Backfilled dates use the first full-content commit when no original publication
 // date was recorded. Existing publication dates are preserved.
 const fullPosts: Record<string, BlogPost> = {
+  "dog-boarding-franklin-square-home-away-from-home": {
+    slug: "dog-boarding-franklin-square-home-away-from-home",
+    title: "Your Dog's Home Away From Home: Boarding at Planet Pooch Pet Resort",
+    metaTitle: "Dog Boarding in Franklin Square, NY | Planet Pooch Blog",
+    metaDescription:
+      "Going away? Give your pup a vacation of their own. Group play and one-on-one dog boarding at Planet Pooch Pet Resort in Franklin Square, NY — book early for the holidays.",
+    hasFullContent: true,
+    datePublished: "2026-11-11",
+    intro:
+      "Going away? Give your pup a vacation of their own at Planet Pooch Pet Resort in Franklin Square, NY! Whether you're planning a weekend getaway, a family vacation, or traveling for the holidays, finding the right place for your dog to stay is important. At Planet Pooch Pet Resort, we make boarding a comfortable, fun, and personalized experience so you can enjoy your time away knowing your pup is in caring hands.",
+    sections: [
+      {
+        heading: "More Than Just a Place to Stay",
+        paragraphs: [
+          "At Planet Pooch, we believe every dog deserves a vacation filled with comfort, attention, and activities they'll love!",
+          "We offer a variety of boarding accommodations to suit different dogs' needs, along with personalized care from our dedicated team. Whether your pup loves making new friends or prefers some extra one-on-one attention, we have options to make their stay enjoyable.",
+        ],
+      },
+      {
+        heading: "Boarding Designed Around Your Dog",
+        paragraphs: [
+          "Every dog has a different personality, which is why we offer boarding experiences tailored to their preferences.",
+          "Group Play Boarding: Perfect for social pups who love making friends! Dogs can enjoy supervised playtime with compatible furry friends, giving them plenty of opportunities to socialize, exercise, and have fun throughout their stay.",
+          "One-on-One Boarding: Not every dog enjoys group play, and that's perfectly okay! Our one-on-one boarding option provides individualized attention, enrichment activities, and quality time with our team.",
+          "From exciting play sessions to relaxing downtime, we focus on making each dog's stay as enjoyable as possible.",
+        ],
+      },
+      {
+        heading: "Comfort, Care & Plenty of Attention",
+        paragraphs: [
+          "We know that being away from home can be an adjustment for some dogs. That's why our team works to create a welcoming environment where every guest receives the care and attention they deserve.",
+          "Our boarding experience includes:",
+        ],
+        bullets: [
+          "Comfortable accommodations with multiple suite options",
+          "Regular outdoor bathroom breaks",
+          "Supervised activities and personalized attention",
+          "Feeding routines based on your dog's needs",
+          "Medication administration when needed",
+          "Evening tuck-ins to help pups settle in for the night",
+        ],
+      },
+      {
+        paragraphs: [
+          "Our goal is to help every dog feel comfortable, cared for, and right at home.",
+        ],
+      },
+      {
+        heading: "Make Their Stay Even Better!",
+        paragraphs: [
+          "Want to treat your pup to something extra during their vacation? Planet Pooch offers enrichment opportunities and grooming services to make their stay even more special.",
+          "Whether it's extra individual attention, an engaging activity, or a refreshing grooming appointment before heading home, there are plenty of ways to personalize your dog's boarding experience.",
+        ],
+      },
+      {
+        heading: "Planning a Holiday Getaway? Book Early!",
+        paragraphs: [
+          "The holiday season is one of the busiest times for dog boarding. Whether you're traveling for Thanksgiving, Christmas, New Year's, or an upcoming vacation, booking ahead helps ensure your pup has a spot reserved.",
+          "At Planet Pooch, we want your dog to enjoy their getaway just as much as you enjoy yours!",
+        ],
+      },
+      {
+        heading: "Book Your Dog's Next Vacation at Planet Pooch!",
+        paragraphs: [
+          "Located in Franklin Square, NY, Planet Pooch Pet Resort proudly welcomes dogs from surrounding Long Island communities, including Garden City, New Hyde Park, Floral Park, Elmont, Valley Stream, and beyond.",
+          "Whether your dog is joining us for one night or an extended stay, our team is here to make their boarding experience special.",
+          "Ready to plan your pup's stay? Contact Planet Pooch Pet Resort today to learn more about our boarding options and reserve your dog's next getaway!",
+          "Because your dog deserves a vacation, too!",
+        ],
+      },
+    ],
+  },
+
   "all-in-one-dog-care-daycare-boarding-training-grooming": {
     slug: "all-in-one-dog-care-daycare-boarding-training-grooming",
     title: "Looking for Trusted, All-in-One Care for Your Dog? Meet Planet Pooch Pet Resort",
